@@ -4,14 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomeController extends Controller
+class AboutController extends Controller
 {
-    public function show(){
-    	
-		return view('home',$this->getsettings());
-    }
-    
-    public function getsettings(){
+	public function show()
+	{
+
+		return view('about',$this->getsettings());
+	}
+
+	public function getsettings()
+	{
 		$arr 			= [];
 		$arr["settings"]["email"]		= "test@test.com";
 		$arr["settings"]["phone"]		= "+90 322 3259988";
@@ -21,13 +23,12 @@ class HomeController extends Controller
 		$arr["settings"]["linkedin"]	= "+90 322 3259988";
 		$arr["settings"]["menu"]		= [
 			["url" => "/","text" => "#"],
-			["url" => "/dente/public/about","text" => "Hakkımızda"],
+			["url" => "/about","text" => "Hakkımızda"],
 			["url" => "/services","text" => "Servisler","sub"=> [["url" => "sub","text" => "Menu1"]] ],
 			["url" => "/appointment","text" => "Randevu" ],
 			["url" => "/contact","text" => "İletişim" ],
 
 		];
 		return $arr;
-    }
-    
+	}
 }
