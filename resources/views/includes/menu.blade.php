@@ -13,13 +13,13 @@
 		<div class="container py-2">
 			<div class="row align-items-center">
 				<div class="col-6">
-					<a href="#" class="p-2 pl-0">
+					<a href="{{$settings["twitter"]}}" class="p-2 pl-0">
 						<span class="icon-twitter"></span></a>
-					<a href="#" class="p-2 pl-0">
+					<a href="{{$settings["facebook"]}}" class="p-2 pl-0">
 						<span class="icon-facebook"></span></a>
-					<a href="#" class="p-2 pl-0">
+					<a href="{{$settings["linkedin"]}}" class="p-2 pl-0">
 						<span class="icon-linkedin"></span></a>
-					<a href="#" class="p-2 pl-0">
+					<a href="{{$settings["instagram"]}}" class="p-2 pl-0">
 						<span class="icon-instagram"></span></a>
 				</div>
 				<div class="col-6">
@@ -42,7 +42,7 @@
 			<div class="row align-items-center">
 				<div class="col-2">
 					<h2 class="mb-0 site-logo">
-						<a href="/">Dente</a></h2>
+						<a href="{{asset('')}}">Dente</a></h2>
 				</div>
 				<div class="col-10">
 					<nav class="site-navigation text-right" role="navigation">
@@ -52,28 +52,24 @@
 									<span class="icon-menu h3"></span></a></div>
 
 							<ul class="site-menu js-clone-nav d-none d-lg-block">
-								<li class="active">
-									<a href="index.html">#</a>
-								</li>
-								<li>
-									<a href="about.html">Hakkımızda</a></li>
-								<li class="has-children">
-									<a href="patients.html">Hizmetler</a>
-									<ul class="dropdown arrow-top">
-										<li>
-											<a href="#">Menu One</a></li>
-										<li>
-											<a href="#">Menu Two</a></li>
-										<li>
-											<a href="#">Menu Three</a></li>
-									</ul>
-								</li>
-								<li>
-									<a href="news.html">News</a></li>
-								<li>
-									<a href="services.html">Services</a></li>
-								<li>
-									<a href="/contact">İletişim</a></li>
+								@foreach ($settings["menu"] as $k=>$v)
+								<li class="@if ($k==0) active @endif @if (isset($v["sub"])) has-children @endif">
+										<a href="{{$v["url"]}}">{{$v["text"]}}</a>
+										@if (isset($v["sub"]))
+											<ul class="dropdown arrow-top">
+											@foreach ($v["sub"] as $s)
+												<li>
+													<a href="{{$s["url"]}}">{{$s["text"]}}</a>
+												</li>
+											@endforeach
+											</ul>
+										@endif
+																				
+									</li>
+									
+									
+								@endforeach
+
 							</ul>
 						</div>
 					</nav>

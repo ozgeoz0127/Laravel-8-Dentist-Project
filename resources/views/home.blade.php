@@ -5,9 +5,9 @@
 	<div class="container">
 		<div class="row align-items-center">
 			<div class="col-md-7">
-				<span class="sub-text">We Priority Your</span>
-				<h1>Your
-					<strong>New Smile</strong></h1>
+				<span class="sub-text">Önceliğimiz</span>
+				<h1>Sağlıklı
+					<strong>Gülüşünüz</strong></h1>
 			</div>
 		</div>
 	</div>
