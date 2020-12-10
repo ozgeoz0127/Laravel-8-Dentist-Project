@@ -66,9 +66,11 @@
 										@endif
 																				
 									</li>
-									
-									
 								@endforeach
+								<li>
+									<a  data-toggle="modal" href="#loginmodal" class="btn btn-primary" style="font-weight: bold;font-size: 12px; padding: 5px 10px;">ÜYE GİRİŞİ</a>
+								</li>
+
 
 							</ul>
 						</div>
@@ -78,3 +80,27 @@
 		</div>
 	</div>
 </div>
+
+ <div class="modal " id="loginmodal" tabindex="-1" role="dialog">
+	<div class="modal-dialog" role="document">
+	<div class="modal-content">
+		<div class="modal-header">
+				<h5 class="modal-title">Üye Girişi</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+		</div>
+		<div class="modal-body">
+			<form method="post" action='' name="login_form">
+				<p><input type="text" class="form-control" name="eid" id="email" placeholder="Email"></p>
+					<p><input type="password" class="form-control" name="passwd" placeholder="Password"></p>
+				<p>
+					<button type="submit" class="btn btn-primary">Sign in</button>
+					<a href="#">Forgot Password?</a>
+				</p>
+			</form>
+		</div>
+	</div>
+	</div>
+</div>
+
