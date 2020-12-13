@@ -22,7 +22,7 @@
 						<span class="icon flaticon-tooth font-weight-light text-white h2"></span>
 					</div>
 					<div class="text">
-						<h3>Periontodology</h3>
+						<h3>Ağız ve Diş Bakımı</h3>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 					</div>
 				</div>

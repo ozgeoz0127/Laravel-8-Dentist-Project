@@ -4,7 +4,7 @@ body {
   color: #4d4d4d;
   font-weight: 300;
   font-size: 1.1rem;
-  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+font-family: 'Roboto', sans-serif; }
 
 ::-moz-selection {
   background: #000;
@@ -495,7 +495,7 @@ a {
 
 .site-heading {
   font-weight: 300;
-  text-transform: uppercase;
+
   font-size: 2rem; }
   @media (min-width: 768px) {
     .site-heading {
@@ -534,7 +534,6 @@ a {
   .site-block-feature h3 {
     font-size: 15px;
     letter-spacing: .1em;
-    text-transform: uppercase;
     color: #fff; }
   .site-block-feature p {
     color: rgba(255, 255, 255, 0.4);

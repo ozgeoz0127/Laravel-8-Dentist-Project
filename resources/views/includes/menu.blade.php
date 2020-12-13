@@ -68,6 +68,10 @@
 									</li>
 								@endforeach
 								<li>
+									<a  data-toggle="modal" href="#loginmodal" class="btn btn-success" style="font-weight: bold;font-size: 12px; padding: 5px 10px;">RANDEVU</a>
+								</li>
+								<li>|</li>
+								<li>
 									<a  data-toggle="modal" href="#loginmodal" class="btn btn-primary" style="font-weight: bold;font-size: 12px; padding: 5px 10px;">ÜYE GİRİŞİ</a>
 								</li>
 

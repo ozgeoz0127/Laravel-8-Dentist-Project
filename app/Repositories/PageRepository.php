@@ -1,12 +1,10 @@
 <?php
+namespace App\Repositories;
 
-namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
-class SettingsController extends Controller
+class PageRepository
 {
-	public function settings()
+	public static function settings()
 	{
 		$arr 			= [];
 		$arr["settings"]["email"]		= "test@test.com";
@@ -15,6 +13,7 @@ class SettingsController extends Controller
 		$arr["settings"]["facebook"]	= "+90 322 3259988";
 		$arr["settings"]["instagram"]	= "+90 322 3259988";
 		$arr["settings"]["linkedin"]	= "+90 322 3259988";
+		$arr["settings"]["title"]		= "Test";
 		$arr["settings"]["menu"]		= [
 			["url" => "/","text" => "#"],
 			["url" => "about","text" => "Hakkımızda"],
@@ -26,3 +25,5 @@ class SettingsController extends Controller
 		return $arr;
 	}
 }
+
+
