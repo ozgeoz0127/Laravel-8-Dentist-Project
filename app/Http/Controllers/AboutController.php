@@ -9,7 +9,7 @@ class AboutController extends Controller
 	public function show()
 	{
 		$s = PageRepository::settings();
-		return view('home',$s);
+		return view('about',$s);
 	}
 
 }

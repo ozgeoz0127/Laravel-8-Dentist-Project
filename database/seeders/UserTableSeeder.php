@@ -19,6 +19,8 @@ class UserTableSeeder extends Seeder
 			'email' => 'admin@user',
 			'password' => md5('010101'),
 			'role' => 'admin',
+			"created_at"	=> date("Y-m-d h:i:s"),
+			"updated_at"	=> date("Y-m-d h:i:s")
 		]);
     }
 }

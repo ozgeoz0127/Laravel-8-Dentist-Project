@@ -15,10 +15,10 @@ class PageRepository
 		$arr["settings"]["linkedin"]	= "+90 322 3259988";
 		$arr["settings"]["title"]		= "Test";
 		$arr["settings"]["menu"]		= [
-			["url" => "/","text" => "#"],
+			["url" => "home","text" => "#"],
 			["url" => "about","text" => "Hakkımızda"],
 			["url" => "services","text" => "Servisler","sub"=> [["url" => "sub","text" => "Menu1"]] ],
-			["url" => "appointment","text" => "Randevu" ],
+			["url" => "gallery","text" => "Galeri" ],
 			["url" => "contact","text" => "İletişim" ],
 
 		];

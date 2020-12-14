@@ -877,3 +877,8 @@ a {
     background: #f23a2e;
     color: #fff;
     border: 1px solid transparent; }
+
+div {
+	transition: all 0.5s ease;
+	
+}

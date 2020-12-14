@@ -16,4 +16,5 @@ use App\Http\Controllers\AboutController;
 */
 
 Route::get('/', [HomeController::class,'show']);
+Route::get('/home', [HomeController::class,'show']);
 Route::get('/about', [AboutController::class,'show']);
