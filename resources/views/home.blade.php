@@ -169,8 +169,8 @@
 	<div class="text order-1">
 		<h2 class="site-heading text-black mb-3">Başarı
 			<strong>Öykümüz</strong></h2>
-		<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id cum vel, eius nulla inventore aperiam excepturi molestias incidunt, culpa alias repudiandae, a nobis libero vitae repellendus temporibus vero sit natus.</p>
-		<p>Dolores perferendis ipsam animi fuga, dolor pariatur aliquam esse. Modi maiores minus velit iste enim sunt iusto, dolore totam consequuntur incidunt illo voluptates vero quaerat excepturi. Iusto dolor, cum et.</p>
+		<p class="lead">''Kendine yapılmasını istemediğin davranışı başkasına yapma!'' düsturunu ilkelerinden biri olarak benimseyen kurumumuz, hastalarımızın tüm haklarına saygılı davranmaya, sadece tedavi etmeye değil, bireyi ağız ve diş sağlığını korumaya yönelik bilgilendirmeye de özen göstermekteyiz.</p>
+		<p>Kurulduğumuz yıldan bu yana, sadece bölgemizde değil, tüm ülke çapında referans gösterilen kurumumuzun hedefi; daha iyi hizmet ve daha ileri teknoloji ile her geçen gün başarısını arttırarak hizmetlerine devam etmektir.</p>
 	</div>
 
 </div>

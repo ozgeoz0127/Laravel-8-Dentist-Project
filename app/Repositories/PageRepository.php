@@ -17,7 +17,14 @@ class PageRepository
 		$arr["settings"]["menu"]		= [
 			["url" => "home","text" => "#"],
 			["url" => "about","text" => "Hakkımızda"],
-			["url" => "services","text" => "Servisler","sub"=> [["url" => "sub","text" => "Menu1"]] ],
+			["url" => "services","text" => "Hizmetler","sub"=> [
+				["icon"=> "flaticon-dentist-chair", "url" => "pages/agız","text" => "Ağız Ve Diş Bakımı"],
+				["icon"=> "flaticon-tooth", "url" => "sub","text" => "Genel Kontrol"],
+				["icon"=> "flaticon-dentist-tools", "url" => "sub","text" => "Dolgu Kanal Tedavisi"],
+				["icon"=> "flaticon-tooth-pliers", "url" => "sub","text" => "Diş Çekimi"],
+				["icon"=> "flaticon-tooth-whitening", "url" => "sub","text" => "Diş Beyazlatma"],
+				["icon"=> "flaticon-first-aid", "url" => "sub","text" => "Önleyici Bakım"],
+				] ],
 			["url" => "gallery","text" => "Galeri" ],
 			["url" => "contact","text" => "İletişim" ],
 

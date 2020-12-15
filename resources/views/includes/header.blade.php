@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
 	<title>Dente - {{$settings["title"]?? null}}</title>
 	<meta charset="utf-8">
@@ -17,7 +17,7 @@
 		<link rel="stylesheet" href="{{ asset('css/bootstrap-datepicker.css') }}">
 		<link rel="stylesheet" href="{{ asset('fonts/flaticon/font/flaticon.css') }}">
 		<link rel="stylesheet" href="{{ asset('css/aos.css') }}">
-		<link rel="stylesheet" href="{{ asset('css/style.css?123') }}">
+		<link rel="stylesheet" href="{{ asset('css/style.css?'.time()) }}">
 		<script src="{{asset('js/jquery-3.3.1.min.js')}}"> </script>
 		<script src="{{asset('js/jquery-migrate-3.0.1.min.js')}}"> </script>
 		<script src="{{asset('js/jquery-ui.js')}}"> </script>

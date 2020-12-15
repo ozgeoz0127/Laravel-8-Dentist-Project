@@ -882,3 +882,24 @@ div {
 	transition: all 0.5s ease;
 	
 }
+
+.site-footer .list-unstyled li {
+	display:inline-block
+}
+.site-footer .list-unstyled li a{
+	padding-right:10px
+}
+
+.site-footer {
+	padding: 2em 0;
+}
+
+.site-footer .mb-5, .my-5 {
+	margin-bottom: 0 !important;
+}
+.menuicon span{
+	display:inline-block
+}
+.menuicon span:first-child{
+	font-size:50px
+}

@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +20,5 @@ use App\Http\Controllers\AboutController;
 Route::get('/', [HomeController::class,'show']);
 Route::get('/home', [HomeController::class,'show']);
 Route::get('/about', [AboutController::class,'show']);
+Route::get('/pages/{p}', [PageController::class,'show']);
+Route::get('/contact', [ContactController::class,'show']);
