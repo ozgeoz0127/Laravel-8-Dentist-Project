@@ -44,7 +44,7 @@
 						<div class="col-md-3">
 							<button type="submit" class="btn btn-info">Kaydet</button>
 						</div>
-						<div class="col-md-9 text-right load" style="line-height:46px"></div>
+						<div class="col-md-9 text-right load" style="line-height:36px"></div>
 						
 					</div>
 				</form>

@@ -1,0 +1,20 @@
+body {
+	font-size: 0.9rem !important;
+
+}
+
+.btn {
+	padding: 5px 10px !important;
+	letter-spacing: .05em !important;
+}
+
+#loginformbutton,#registerbuttonbutton {
+	color:#444 !important;
+}
+#loginformbutton:Hover,#registerbuttonbutton:hover {
+	color: #000 !important;
+}
+#loginformbutton.active,#registerbuttonbutton.active {
+	color: #000 !important;
+	font-weight:bold;
+}

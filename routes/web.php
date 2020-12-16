@@ -6,6 +6,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,4 @@ Route::get('/about', [AboutController::class,'show']);
 Route::get('/pages/{p}', [PageController::class,'show']);
 Route::get('/contact', [ContactController::class,'show']);
 Route::any('/reservation', [ReservationController::class,'show']);
+Route::any('/login', [LoginController::class,'show']);

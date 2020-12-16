@@ -1,5 +1,5 @@
-@include('layouts.header')
-
+@extends('layouts.default')
+@section('content')
  <div class="site-blocks-cover aos-init aos-animate inner-page" style="background-image: url({{asset("images/hero_bg_2.jpg")}});" data-aos="fade" data-stellar-background-ratio="0.5">
 	<div class="container">
 		<div class="row align-items-center">
@@ -30,5 +30,4 @@
 		</div>
 	</div>
 </div>
-
-@include('layouts.footer')
+@stop
