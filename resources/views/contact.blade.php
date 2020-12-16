@@ -1,4 +1,4 @@
-@include('includes.header') 
+@include('layouts.header') 
  
  <div class="site-blocks-cover inner-page" style="background-image: url({{asset("images/contact_header.jpg")}});" data-aos="fade" data-stellar-background-ratio="0.5">
 	<div class="container">
@@ -124,4 +124,4 @@
 	</div>
 </div>
 
-@include('includes.footer')
+@include('layouts.footer')

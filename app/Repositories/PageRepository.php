@@ -29,7 +29,34 @@ class PageRepository
 			["url" => "contact","text" => "İletişim" ],
 
 		];
+		$arr["settings"]["doctors"] = self::getdoctors();
+		$arr["settings"]["cures"] = self::getcure();
+
 		return $arr;
+	}
+	
+	public static function getdoctors()
+	{
+		$r=[];
+		$doc = \DB::table('user')->where('role', "dishekimi")->get()->toArray();
+		if (count($doc) > 0) {
+			foreach ($doc as $k=>$v) {
+				$r[] = ["name" => $v->name,"surname" => $v->surname,"id" => $v->id];	
+			}
+
+			return $r;		
+		}
+
+	}
+	
+	public static function getcure()
+	{
+		$r=[];
+		$r[]= ["name" => "Diş Çekimi","id" => 1];
+		$r[]= ["name" => "Diş Beyazlatma","id" => 2];
+		$r[]= ["name" => "Genel Bakım","id" => 3];
+		
+		return $r;
 	}
 }
 

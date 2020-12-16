@@ -1,4 +1,4 @@
-@include('includes.header')
+@include('layouts.header')
 
  <div class="site-blocks-cover aos-init aos-animate inner-page" style="background-image: url({{asset("images/hero_bg_2.jpg")}});" data-aos="fade" data-stellar-background-ratio="0.5">
 	<div class="container">
@@ -31,4 +31,4 @@
 	</div>
 </div>
 
-@include('includes.footer')
+@include('layouts.footer')

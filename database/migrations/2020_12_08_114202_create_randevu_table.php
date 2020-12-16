@@ -20,9 +20,6 @@ class CreateRandevuTable extends Migration
 			$table->timestamp('date')->nullable();
 			$table->timestamp('time')->nullable();
 			$table->integer('hekim_id')->autoIncrement(false);
-			$table->text('description')->nullable();
-			$table->string('image')->nullable();
-			$table->string('categoryid')->nullable();
 			$table->string('ip',255)->nullable();
 			$table->text('note')->nullable();
 			$table->string('status',1);
