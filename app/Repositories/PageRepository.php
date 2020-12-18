@@ -18,8 +18,8 @@ class PageRepository
 			["url" => "home","text" => "#"],
 			["url" => "about","text" => "Hakkımızda"],
 			["url" => "services","text" => "Hizmetler","sub"=> [
-				["icon"=> "flaticon-dentist-chair", "url" => "pages/agız","text" => "Ağız Ve Diş Bakımı"],
-				["icon"=> "flaticon-tooth", "url" => "sub","text" => "Genel Kontrol"],
+				["icon"=> "flaticon-dentist-chair", "url" => "pages/agiz-ve-dis-bakimi","text" => "Ağız Ve Diş Bakımı"],
+				["icon"=> "flaticon-tooth", "url" => "pages/genel-kontrol","text" => "Genel Kontrol"],
 				["icon"=> "flaticon-dentist-tools", "url" => "sub","text" => "Dolgu Kanal Tedavisi"],
 				["icon"=> "flaticon-tooth-pliers", "url" => "sub","text" => "Diş Çekimi"],
 				["icon"=> "flaticon-tooth-whitening", "url" => "sub","text" => "Diş Beyazlatma"],

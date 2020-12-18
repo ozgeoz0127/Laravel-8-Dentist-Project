@@ -7,8 +7,32 @@ use App\Repositories\PageRepository;
 
 class PageController extends Controller
 {
-    public function show(Request  $request){
+    public function show(Request  $request, $url){
 		$s = PageRepository::settings();
-		return view('about',$s);
+		$s["settings"]["subpagetitle"]	= $this->findurltitle($url,$s);
+
+		return view('pages',$s);
     }
+    
+    
+	public function findurltitle($url, $s)	{
+		$menu = $s["settings"]["menu"];
+		
+		foreach ($menu as $k => $v) {
+			if ($v["url"] == "pages/".$url) {
+				return $v["text"];
+			}
+			if (isset($v["sub"])) {
+				foreach ($v["sub"] as $a=>$b) {
+					if ($b["url"] == "pages/".$url) {
+						return $b["text"];
+					}				
+				}
+			}
+		}
+		
+		return "test";
+							
+	}
+            
 }

@@ -18,3 +18,10 @@ body {
 	color: #000 !important;
 	font-weight:bold;
 }
+
+.pagestitle {
+	margin-top:15%;
+}
+.pagestitle h1{
+	font-size: 4rem !important;
+}

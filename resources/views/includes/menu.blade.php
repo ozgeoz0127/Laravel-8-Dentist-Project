@@ -54,12 +54,12 @@
 							<ul class="site-menu js-clone-nav d-none d-lg-block">
 								@foreach ($settings["menu"] as $k=>$v)
 								<li class="@if ($k==0) active @endif @if (isset($v["sub"])) has-children @endif">
-										<a href="{{$v["url"]}}">{{$v["text"]}}</a>
+									<a href="{{asset($v["url"])}}">{{$v["text"]}}</a>
 										@if (isset($v["sub"]))
 											<ul class="dropdown arrow-top">
 											@foreach ($v["sub"] as $s)
 												<li>
-													<a href="{{$s["url"]}}" class="menuicon">{{$s["text"]}}</a>
+													<a href="{{asset($s["url"])}}" class="menuicon">{{$s["text"]}}</a>
 												</li>
 											@endforeach
 											</ul>
