@@ -18,12 +18,12 @@ class PageRepository
 			["url" => "home","text" => "#"],
 			["url" => "about","text" => "Hakkımızda"],
 			["url" => "services","text" => "Hizmetler","sub"=> [
-				["icon"=> "flaticon-dentist-chair", "url" => "pages/agiz-ve-dis-bakimi","text" => "Ağız Ve Diş Bakımı"],
-				["icon"=> "flaticon-tooth", "url" => "pages/genel-kontrol","text" => "Genel Kontrol"],
-				["icon"=> "flaticon-dentist-tools", "url" => "pages/dolgu-kanal-tedavisi","text" => "Dolgu Kanal Tedavisi"],
-				["icon"=> "flaticon-tooth-pliers", "url" => "pages/dis-cekimi","text" => "Diş Çekimi"],
-				["icon"=> "flaticon-tooth-whitening", "url" => "pages/dis-beyazlatma","text" => "Diş Beyazlatma"],
-				["icon"=> "flaticon-first-aid", "url" => "pages/onleyici-bakim","text" => "Önleyici Bakım"],
+				["icon"=> "flaticon-dentist-chair", "url" => "services/agiz-ve-dis-bakimi","text" => "Ağız Ve Diş Bakımı"],
+				["icon"=> "flaticon-tooth", "url" => "services/genel-kontrol","text" => "Genel Kontrol"],
+				["icon"=> "flaticon-dentist-tools", "url" => "services/dolgu-kanal-tedavisi","text" => "Dolgu Kanal Tedavisi"],
+				["icon"=> "flaticon-tooth-pliers", "url" => "services/dis-cekimi","text" => "Diş Çekimi"],
+				["icon"=> "flaticon-tooth-whitening", "url" => "services/dis-beyazlatma","text" => "Diş Beyazlatma"],
+				["icon"=> "flaticon-first-aid", "url" => "services/onleyici-bakim","text" => "Önleyici Bakım"],
 				] ],
 			["url" => "gallery","text" => "Galeri" ],
 			["url" => "contact","text" => "İletişim" ],
@@ -41,7 +41,7 @@ class PageRepository
 		$doc = \DB::table('user')->where('role', "dishekimi")->get()->toArray();
 		if (count($doc) > 0) {
 			foreach ($doc as $k=>$v) {
-				$r[] = ["name" => $v->name,"surname" => $v->surname,"id" => $v->id];	
+				$r[$v->id] = ["name" => $v->name,"surname" => $v->surname,"id" => $v->id];	
 			}
 
 			return $r;		
@@ -52,9 +52,9 @@ class PageRepository
 	public static function getcure()
 	{
 		$r=[];
-		$r[]= ["name" => "Diş Çekimi","id" => 1];
-		$r[]= ["name" => "Diş Beyazlatma","id" => 2];
-		$r[]= ["name" => "Genel Bakım","id" => 3];
+		$r[1]= ["name" => "Diş Çekimi","id" => 1];
+		$r[2]= ["name" => "Diş Beyazlatma","id" => 2];
+		$r[3]= ["name" => "Genel Bakım","id" => 3];
 		
 		return $r;
 	}

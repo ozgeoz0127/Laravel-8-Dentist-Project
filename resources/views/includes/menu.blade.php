@@ -103,7 +103,7 @@
 	</div>
 </div>
 
-@include("modal.reservation")
+@include("modal.appointment")
 @include("modal.login")
 
 
