@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class ReservationController extends Controller
 {
@@ -37,19 +38,21 @@ class ReservationController extends Controller
 		
 	}
 	
-	public function newuser($p){
+	public function newuser($user)
+	{
 		
-		\DB::table('user')->insert([
-			'name' => $p["name"],
-			'surname' => $p["surname"],
-			'email' => $p["email"],
-			'password' => md5('012701'),
-			'role' => 'user',
-			"created_at"	=> date("Y-m-d h:i:s"),
-			"updated_at"	=> date("Y-m-d h:i:s")
-		]);
+	
+		$new = new \App\Models\User();
+		$new->name 		= $user['name'];
+		$new->surname 	= $user['surname'];
+		$new->email 	= $user['email'];
+		$new->role 		= "user";
+		$new->password 	= Hash::make("012701");
+		$new->save();
 		
-		return \DB::getPdo()->lastInsertId();
+		return $new->id;
+
+
 		
 	}
 	
