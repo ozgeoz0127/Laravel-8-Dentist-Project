@@ -62,14 +62,18 @@
 				url: formurl,
 				data: $(this).serialize()
 			}).done(function(c) {
-				if ($.isNumeric(c)) {
-					load.html("<span class='text-success'>Randevunuz başarı ile kaydedildi.</span>");
+				if (c.auth) {
+					load.html("<span class='text-success'>Hoşgeldiniz.</span>");
 					setTimeout(function() {
-						$('#reservationmodal').modal("hide")
+						if (c.redirect == "refresh") {
+							location.reload(false);
+						}else {
+							location.href = c.redirect;	
+						}
 
 					} ,1500);
 				} else {
-					load.html("<span class='text-danger'>Bir hata oluştu...</span>");
+					load.html("<span class='text-danger'>Bilgileriniz kontrol ediniz...</span>");
 				}
 			});
 			return false;

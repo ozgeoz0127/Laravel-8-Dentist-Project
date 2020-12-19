@@ -24,8 +24,8 @@ class ReservationController extends Controller
 		\DB::table('randevu')->insert([
 			'user_id' => $user,
 			'tedavi_id' => $post["cure"],
-			'date' => $post["date"],
-			'time' => $post["hour"],
+			'date' => date("Y-m-d",strtotime($post["date"])),
+			'time' => ($post["hour"].":".$post["minute"]),
 			'hekim_id' => $post["doctor"],
 			'ip' => \Request::ip(),
 			'note' => '',

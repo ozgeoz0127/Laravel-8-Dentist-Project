@@ -10,7 +10,7 @@
 						<ul class="list-unstyled">
 							@foreach ($settings["menu"] as $k=>$v)
 							<li>
-								<a href="{{asset($v["url"])}}">{{$v["text"]}}</a>
+								<a href="{{url($v["url"])}}">{{$v["text"]}}</a>
 							</li>
 							@endforeach
 						</ul>

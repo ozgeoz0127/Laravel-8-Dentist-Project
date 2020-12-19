@@ -3,9 +3,43 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class UserTableSeeder extends Seeder
 {
+
+	private $users = [
+		[
+			'name' => 'Admin',
+			'surname' => 'Admin',
+			'email' => 'admin@user',
+			'password' => '012701',
+			'role' => 'admin'
+		],
+		[
+			'name' => 'Yüksel',
+			'surname' => 'Çelik',
+			'email' => 'yuksel@user',
+			'password' => '012701',
+			'role' => 'dishekimi',
+		],
+		[
+			'name' => 'Özge',
+			'surname' => 'Öz',
+			'email' => 'ozge@user',
+			'password' => '012701',
+			'role' => 'dishekimi',
+		],
+		[
+			'name' => 'Test',
+			'surname' => 'test',
+			'email' => 'test@user',
+			'password' => '012701',
+			'role' => 'user',
+		],
+
+	];
+	
     /**
      * Run the database seeds.
      *
@@ -13,46 +47,15 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-		\DB::table('user')->insert([
-			'name' => 'Admin',
-			'surname' => 'Admin',
-			'email' => 'admin@user',
-			'password' => md5('012701'),
-			'role' => 'admin',
-			"created_at"	=> date("Y-m-d h:i:s"),
-			"updated_at"	=> date("Y-m-d h:i:s")
-		]);
-		
-		
-		\DB::table('user')->insert([
-			'name' => 'Yüksel',
-			'surname' => 'Çelik',
-			'email' => 'yuksel@user',
-			'password' => md5('012701'),
-			'role' => 'dishekimi',
-			"created_at"	=> date("Y-m-d h:i:s"),
-			"updated_at"	=> date("Y-m-d h:i:s")
-		]);
-		
-		\DB::table('user')->insert([
-			'name' => 'Özge',
-			'surname' => 'Öz',
-			'email' => 'ozge@user',
-			'password' => md5('012701'),
-			'role' => 'dishekimi',
-			"created_at"	=> date("Y-m-d h:i:s"),
-			"updated_at"	=> date("Y-m-d h:i:s")
-		]);
-		
-		\DB::table('user')->insert([
-			'name' => 'Test',
-			'surname' => 'test',
-			'email' => 'test@user',
-			'password' => md5('012701'),
-			'role' => 'user',
-			"created_at"	=> date("Y-m-d h:i:s"),
-			"updated_at"	=> date("Y-m-d h:i:s")
-		]);
+		foreach ($this->users as $user) {
+			$new = new \App\Models\User();
+			$new->name = $user['name'];
+			$new->surname = $user['surname'];
+			$new->email = $user['email'];
+			$new->role = $user['role'];
+			$new->password = Hash::make($user['password']);
+			$new->save();
+		}
 		
     }
 }

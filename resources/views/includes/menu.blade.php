@@ -54,12 +54,12 @@
 							<ul class="site-menu js-clone-nav d-none d-lg-block">
 								@foreach ($settings["menu"] as $k=>$v)
 								<li class="@if ($k==0) active @endif @if (isset($v["sub"])) has-children @endif">
-									<a href="{{asset($v["url"])}}">{{$v["text"]}}</a>
+									<a href="{{url($v["url"])}}">{{$v["text"]}}</a>
 										@if (isset($v["sub"]))
 											<ul class="dropdown arrow-top">
 											@foreach ($v["sub"] as $s)
 												<li>
-													<a href="{{asset($s["url"])}}" class="menuicon">{{$s["text"]}}</a>
+													<a href="{{url($s["url"])}}" class="menuicon">{{$s["text"]}}</a>
 												</li>
 											@endforeach
 											</ul>
@@ -67,13 +67,31 @@
 																				
 									</li>
 								@endforeach
-								<li>
-									<a  data-toggle="modal" href="#reservationmodal" class="btn btn-success" style="font-weight: bold;font-size: 12px; padding: 5px 10px;">RANDEVU</a>
-								</li>
-								<li>|</li>
+								
+		@if(Auth::check())
+		<li class="  has-children ">
+			<a href="#">Bilgilerim</a>
+			<ul class="dropdown arrow-top">
+				<li>
+					<a href="{{url("/profile/userinfo")}}" >Bilgilerim</a>
+					<a href="{{url("/profile/appointment")}}" >Randevularım</a>
+					<a href="{{url("/logout")}}" >Çıkış</a>
+				</li>
+
+			</ul>
+
+		</li>
+		@else
 								<li>
 									<a  data-toggle="modal" href="#loginmodal" class="btn btn-primary" style="font-weight: bold;font-size: 12px; padding: 5px 10px;">ÜYELik</a>
 								</li>
+		@endif
+								
+								
+								<li>
+									<a  data-toggle="modal" href="#reservationmodal" class="btn btn-success" style="font-weight: bold;font-size: 12px; padding: 5px 10px;">RANDEVU</a>
+								</li>
+
 
 
 							</ul>

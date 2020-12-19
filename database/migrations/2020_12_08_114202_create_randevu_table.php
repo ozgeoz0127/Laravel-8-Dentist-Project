@@ -18,7 +18,7 @@ class CreateRandevuTable extends Migration
 			$table->integer('user_id')->autoIncrement(false);
 			$table->integer('tedavi_id')->autoIncrement(false);
 			$table->timestamp('date')->nullable();
-			$table->timestamp('time')->nullable();
+			$table->time('time')->nullable();
 			$table->integer('hekim_id')->autoIncrement(false);
 			$table->string('ip',255)->nullable();
 			$table->text('note')->nullable();
