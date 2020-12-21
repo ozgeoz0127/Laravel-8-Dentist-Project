@@ -20,11 +20,14 @@
 		<link rel="stylesheet" href="{{ asset('css/aos.css') }}">
 		<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 		<link rel="stylesheet" href="{{ asset('css/dente.css?'.time()) }}">
+
 		<script src="{{asset('js/jquery-3.3.1.min.js')}}"> </script>
 		<script src="{{asset('js/jquery-migrate-3.0.1.min.js')}}"> </script>
 		<script src="{{asset('js/jquery-ui.js')}}"> </script>
 		<script src="{{asset('js/popper.min.js')}}"> </script>
 		<script src="{{asset('js/bootstrap.min.js')}}"> </script>
+
+
 
 </head>
 <body>

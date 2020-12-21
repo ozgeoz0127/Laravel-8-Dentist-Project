@@ -14,6 +14,9 @@ class PageRepository
 		$arr["settings"]["instagram"]	= "+90 322 3259988";
 		$arr["settings"]["linkedin"]	= "+90 322 3259988";
 		$arr["settings"]["title"]		= "Test";
+		$arr["settings"]["address"]		= "Mehmet Nuri Sabuncu Bulvarı No:59, 01130 Seyhan/Adana";
+		$arr["settings"]["phone"]		= "(0322) 459 27 43";
+		$arr["settings"]["fax"]			= "(0322) 459 27 43";
 		$arr["settings"]["menu"]		= [
 			["url" => "home","text" => "#"],
 			["url" => "about","text" => "Hakkımızda"],
@@ -30,9 +33,22 @@ class PageRepository
 
 		];
 		$arr["settings"]["doctors"] = self::getdoctors();
-		$arr["settings"]["cures"] = self::getcure();
+		$arr["settings"]["cures"] 	= self::getcure();
+		$arr["settings"]["gallery"]	= self::gallery();
 
 		return $arr;
+	}
+	
+	public static function gallery() {
+		$list = [];
+		$list[] = "hero_bg_1.jpg";
+		$list[] = "hero_bg_2.jpg";
+		$list[] = "hero_bg_1.jpg";
+		$list[] = "hero_bg_2.jpg";
+		$list[] = "hero_bg_1.jpg";
+		$list[] = "hero_bg_2.jpg";
+		return $list;		
+		
 	}
 	
 	public static function getdoctors()
