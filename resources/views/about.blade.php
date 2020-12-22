@@ -30,4 +30,7 @@
 		</div>
 	</div>
 </div>
+
+@include("includes.usercomment")
+
 @stop
