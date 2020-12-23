@@ -28,6 +28,7 @@ class PageRepository
 				["icon"=> "flaticon-tooth-whitening", "url" => "services/dis-beyazlatma","text" => "Diş Beyazlatma"],
 				["icon"=> "flaticon-first-aid", "url" => "services/onleyici-bakim","text" => "Önleyici Bakım"],
 				] ],
+			["url" => "faq","text" => "S.S.S" ],
 			["url" => "gallery","text" => "Galeri" ],
 			["url" => "contact","text" => "İletişim" ],
 
@@ -35,6 +36,7 @@ class PageRepository
 		$arr["settings"]["doctors"] = self::getdoctors();
 		$arr["settings"]["cures"] 	= self::getcure();
 		$arr["settings"]["gallery"]	= self::gallery();
+		$arr["settings"]["faq"]		= self::faq();
 
 		return $arr;
 	}
@@ -49,6 +51,20 @@ class PageRepository
 		$list[] = "hero_bg_2.jpg";
 		return $list;		
 		
+	}
+	
+	public static function faq()
+	{
+		$list = [];
+		$list[]= [
+			"query"		=> "test soru",
+			"answer"	=> "cevap test"
+		];
+		$list[]= [
+			"query"		=> "test soru",
+			"answer"	=> "cevap test"
+		];
+		return $list;
 	}
 	
 	public static function getdoctors()

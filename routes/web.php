@@ -9,6 +9,7 @@ use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\FaqController;
 
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminUserController;
@@ -38,6 +39,7 @@ Route::get('/', [HomeController::class,'show']);
 Route::get('/home', [HomeController::class,'show']);
 Route::get('/about', [AboutController::class,'show']);
 Route::get('/gallery', [GalleryController::class,'show']);
+Route::get('/faq', [FaqController::class,'show']);
 Route::get('/services/{url}', [ServiceController::class,'show']);
 Route::get('/profile/{url}', [ProfileController::class,'show']);
 Route::get('/services', function () {

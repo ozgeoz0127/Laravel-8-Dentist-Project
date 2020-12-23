@@ -3,8 +3,8 @@
 		<div class="row">
 			<div class="col-md-12 pr-md-12 text-left mb-5">
 				@if(!Auth::check())
-					<div class="col-md-12 col-xs-12 uyelogin" style="z-index:10;background:#fff;opacity:0.7;position:absolute">
-						<span class="col-md-12 col-xs-12 text-danger" style="font-weight:bold;padding-left: 35%;min-height:300px">Yorum Yapmak için üye girişi yapınız</span>
+				<div class="col-md-12 col-xs-12 uyelogin" style="min-height:300px;z-index:10;background:#fff;opacity:0.7;position:absolute">
+						<span class="col-md-12 col-xs-12 text-danger" style="font-weight:bold;padding-left: 35%;">Yorum Yapmak için üye girişi yapınız</span>
 					</div>
 				@endif
 
@@ -14,8 +14,16 @@
 					</div>
 					<div class="row form-group">
 						<div class="col-md-12">
-							<input type="hidden" name="user" id="user" value="@if(!Auth::check()) 0 @else {{Auth::user()->id}} @endif">
-							<textarea name="message" id="message" cols="30" rows="5" class="form-control" placeholder="Yorumunuz"></textarea>
+							<select name="type" @if(!Auth::check()) disabled @endif class="form-control">
+								<option>Sık Sorulan Sorular</option>
+								<option>Bu sayfa Hakkında</option>
+							</select>
+						</div>
+					</div>
+					<div class="row form-group">
+						<div class="col-md-12">
+							<input type="hidden" name="user" @if(!Auth::check()) disabled @endif id="user" value="@if(!Auth::check()) 0 @else {{Auth::user()->id}} @endif">
+							<textarea name="message" @if(!Auth::check()) disabled @endif id="message" cols="30" rows="5" class="form-control" placeholder="Yorumunuz"></textarea>
 						</div>
 					</div>
 

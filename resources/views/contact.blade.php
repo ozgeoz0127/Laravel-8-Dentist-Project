@@ -42,7 +42,7 @@
 
 			<div class="row form-group">
 				<div class="col-md-12">
-					<input type="submit" value="Send" class="btn btn-primary">
+					<input type="submit" value="Gönder" class="btn btn-primary">
 				</div>
 			</div>
 
