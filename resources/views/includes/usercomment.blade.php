@@ -13,12 +13,12 @@
 						<h3 ><strong>Yorumunuz</strong> Bizim için değerli</h3>
 					</div>
 					<div class="row form-group">
-						<div class="col-md-12">
-							<select name="type" @if(!Auth::check()) disabled @endif class="form-control">
-								<option>Sık Sorulan Sorular</option>
-								<option>Bu sayfa Hakkında</option>
-							</select>
-						</div>
+						<label class="btn btn-warning">
+							<input type="radio" name="type" @if(!Auth::check()) disabled @endif autocomplete="off"> Sık Sorulan Sorular
+						</label>
+						<label class="btn btn-warning">
+							<input type="radio" name="type" @if(!Auth::check()) disabled @endif autocomplete="off"> Hizmetler Hakkında
+						</label>
 					</div>
 					<div class="row form-group">
 						<div class="col-md-12">

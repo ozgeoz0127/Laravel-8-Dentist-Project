@@ -62,9 +62,6 @@
 		<a href="{{$settings["instagram"]}}" class="p-2 pl-0">
 			<span class="icon-instagram"></span> / {{$settings["instagram"]}}
 		</a>
-		<a href="{{$settings["linkedin"]}}" class="p-2 pl-0">
-			<span class="icon-linkedin"></span> / {{$settings["linkedin"]}}
-		</a>
 		
 		<p class="lead">{{$settings["address"]}}</p>
 		<p >Telefon : {{$settings["phone"]}} - Fax : {{$settings["fax"]}}</p>

@@ -6,17 +6,9 @@ class PageRepository
 {
 	public static function settings()
 	{
-		$arr 			= [];
-		$arr["settings"]["email"]		= "test@test.com";
-		$arr["settings"]["phone"]		= "+90 322 3259988";
-		$arr["settings"]["twitter"]		= "+90 322 3259988";
-		$arr["settings"]["facebook"]	= "+90 322 3259988";
-		$arr["settings"]["instagram"]	= "+90 322 3259988";
-		$arr["settings"]["linkedin"]	= "+90 322 3259988";
-		$arr["settings"]["title"]		= "Test";
-		$arr["settings"]["address"]		= "Mehmet Nuri Sabuncu Bulvarı No:59, 01130 Seyhan/Adana";
-		$arr["settings"]["phone"]		= "(0322) 459 27 43";
-		$arr["settings"]["fax"]			= "(0322) 459 27 43";
+		$arr 							= [];
+		$arr["settings"]				= self::getsettings();
+
 		$arr["settings"]["menu"]		= [
 			["url" => "home","text" => "#"],
 			["url" => "about","text" => "Hakkımızda"],
@@ -80,6 +72,13 @@ class PageRepository
 		}
 
 	}
+	public static function getsettings()
+	{
+		$set = \DB::table('setting')->get()->toArray();
+		
+		return (array)$set[0];
+	}
+	
 	
 	public static function getcure()
 	{

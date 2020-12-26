@@ -16,7 +16,7 @@ class AdminAuthController extends Controller
 	{
 		
 		$param = $request->only('email', 'password');
-		dd($param);
+		dd($param);exit;
 
 	}
 }

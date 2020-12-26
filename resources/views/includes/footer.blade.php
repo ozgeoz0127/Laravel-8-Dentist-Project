@@ -32,8 +32,6 @@
 								<span class="icon-twitter"></span></a>
 							<a href="{{$settings["instagram"]}}" class="pl-3 pr-3">
 								<span class="icon-instagram"></span></a>
-							<a href="{{$settings["linkedin"]}}" class="pl-3 pr-3">
-								<span class="icon-linkedin"></span></a>
 						</div>
 					</div>
 				</div>

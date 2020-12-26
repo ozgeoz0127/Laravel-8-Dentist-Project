@@ -17,8 +17,6 @@
 						<span class="icon-twitter"></span></a>
 					<a href="{{$settings["facebook"]}}" class="p-2 pl-0">
 						<span class="icon-facebook"></span></a>
-					<a href="{{$settings["linkedin"]}}" class="p-2 pl-0">
-						<span class="icon-linkedin"></span></a>
 					<a href="{{$settings["instagram"]}}" class="p-2 pl-0">
 						<span class="icon-instagram"></span></a>
 				</div>

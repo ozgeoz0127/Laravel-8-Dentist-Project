@@ -29,11 +29,15 @@ use App\Http\Controllers\Admin\AdminSettingsController;
 */
 
 // admin roots
-Route::get('/admin', [AdminHomeController::class,'show']);
-Route::get('/admin/users', [AdminUserController::class,'show']);
-Route::any('/admin/login', [AdminAuthController::class,'login']);
-Route::any('/admin/appointments', [AdminAppointmentController::class,'show']);
-Route::any('/admin/settings', [AdminSettingsController::class,'show']);
+//Route::group( ['prefix' => 'admin',  'middleware' => 'auth'], function() {
+Route::group( ['prefix' => 'admin'], function() {
+		Route::get('/', [AdminHomeController::class,'show']);
+		Route::get('users', [AdminUserController::class,'show']);
+		Route::any('login', [AdminAuthController::class,'login']);
+		Route::any('appointments', [AdminAppointmentController::class,'show']);
+		Route::any('settings', [AdminSettingsController::class,'show']);
+});
+
 
 Route::get('/', [HomeController::class,'show']);
 Route::get('/home', [HomeController::class,'show']);
