@@ -33,9 +33,10 @@ class AdminSettingsController extends Controller
 	
     public function show(Request $request){
 		$post = $request->post();
-		if (count($post) > 0) {
-			$this->save($post);
-		}
+		
+			if (count($post) > 0) {
+				$this->save($post);
+			}
     	
     	$s = PageRepository::settings();
 		return view('admin.settings',$s);
