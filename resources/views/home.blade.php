@@ -30,7 +30,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4">
-				<a href="asd" class="servicelink">
+				<a href="{{url("services/agiz-ve-dis-bakimi")}}" class="servicelink">
 					<div class="site-block-feature d-flex p-4 rounded mb-4">
 						<div class="mr-3">
 							<span class="icon flaticon-tooth font-weight-light text-white h2"></span>
@@ -43,7 +43,7 @@
 				</a>
 			</div>
 			<div class="col-lg-4">
-				<a href="asd" class="servicelink">
+				<a href="{{url("services/dis-beyazlatma")}}" class="servicelink">
 					<div class="site-block-feature d-flex p-4 rounded mb-4">
 						<div class="mr-3">
 							<span class="icon flaticon-tooth-whitening font-weight-light text-white h2"></span>
@@ -56,7 +56,7 @@
 				</a>
 			</div>
 			<div class="col-lg-4">
-				<a href="asd" class="servicelink">
+				<a href="{{url("services/onleyici-bakim")}}" class="servicelink">
 					<div class="site-block-feature d-flex p-4 rounded mb-4">
 						<div class="mr-3">
 							<span class="icon flaticon-first-aid-kit font-weight-light text-white h2"></span>

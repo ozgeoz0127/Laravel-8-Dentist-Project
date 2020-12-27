@@ -12,11 +12,15 @@ use Illuminate\Support\Facades\Hash;
 
 class AdminAuthController extends Controller
 {
+
+	/*
 	public function login(LoginRequest $request)
 	{
 		
 		$param = $request->only('email', 'password');
-		dd($param);exit;
+		dd($param);
+		exit;
 
 	}
+	*/
 }

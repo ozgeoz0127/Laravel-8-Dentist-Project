@@ -33,7 +33,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="./typography.html">
+				<a href="{{url("logout")}}">
 					<i class="nc-icon nc-user-run"></i>
 					<p>Çıkış</p>
 				</a>

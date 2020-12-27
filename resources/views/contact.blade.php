@@ -63,7 +63,7 @@
 			<span class="icon-instagram"></span> / {{$settings["instagram"]}}
 		</a>
 		
-		<p class="lead">{{$settings["address"]}}</p>
+		<p class="lead">{!! $settings["address"] !!}</p>
 		<p >Telefon : {{$settings["phone"]}} - Fax : {{$settings["fax"]}}</p>
 		<p >{{$settings["email"]}}</p>
 	</div>

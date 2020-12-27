@@ -28,12 +28,15 @@ use App\Http\Controllers\Admin\AdminSettingsController;
 |
 */
 
+Route::any('admin/login', function() {
+	return view('admin.login');
+})->name('admin.login');
+
 // admin roots
 //Route::group( ['prefix' => 'admin',  'middleware' => 'auth'], function() {
-Route::group( ['prefix' => 'admin'], function() {
+Route::group( ['prefix' => 'admin',"middleware" => "auth"], function() {
 		Route::get('/', [AdminHomeController::class,'show']);
 		Route::get('users', [AdminUserController::class,'show']);
-		Route::any('login', [AdminAuthController::class,'login']);
 		Route::any('appointments', [AdminAppointmentController::class,'show']);
 		Route::any('settings', [AdminSettingsController::class,'show']);
 });
@@ -55,7 +58,7 @@ Route::get('/profile', function () {
 
 Route::get('/contact', [ContactController::class,'show']);
 Route::any('/appointment', [AppointmentController::class,'show']);
-Route::any('/login', [AuthController::class,'login']);
+Route::any('/login', [AuthController::class,'login'])->name('login');
 Route::any('/register', [AuthController::class,'register']);
 Route::get('/logout', [AuthController::class,'logout']);
 

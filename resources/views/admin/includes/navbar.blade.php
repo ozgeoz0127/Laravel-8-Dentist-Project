@@ -38,7 +38,7 @@
 					</a>
 					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
 						<a class="dropdown-item" href="{{url("admin/settings")}}">Ayarlar</a>
-						<a class="dropdown-item" href="{{url("admin/logout")}}">Çıkış</a>
+						<a class="dropdown-item" href="{{url("logout")}}">Çıkış</a>
 
 					</div>
 				</li>

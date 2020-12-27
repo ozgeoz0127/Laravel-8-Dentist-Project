@@ -15,6 +15,7 @@ class AuthController extends Controller
 		
 		return response()->json([
 			"auth"		=> Auth::attempt($credentials),
+			"role"		=> (is_null(Auth::user()) ? "null" : Auth::user()->role),
 			"redirect"	=> "refresh"
 		]);
 		
