@@ -16,6 +16,8 @@ use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\AdminAuthController;
 use App\Http\Controllers\Admin\AdminAppointmentController;
 use App\Http\Controllers\Admin\AdminSettingsController;
+use App\Http\Controllers\Admin\AdminCuresController;
+use App\Http\Controllers\Admin\AdminGallerysController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,6 +41,11 @@ Route::group( ['prefix' => 'admin',"middleware" => "auth"], function() {
 		Route::get('users', [AdminUserController::class,'show']);
 		Route::any('appointments', [AdminAppointmentController::class,'show']);
 		Route::any('settings', [AdminSettingsController::class,'show']);
+		Route::any('cures', [AdminCuresController::class,'show']);
+			Route::any('cures/getdata', [AdminCuresController::class,'getdata']);
+			Route::any('cures/save', [AdminCuresController::class,'save']);
+			Route::any('cures/delete/{id}', [AdminCuresController::class,'delete']);
+		Route::any('gallerys', [AdminGallerysController::class,'show']);
 });
 
 

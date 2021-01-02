@@ -120,26 +120,10 @@
 	</div>
 </div>
 <script>
-	$(function(){
-		ClassicEditor
-		.create( document.querySelector('#address') )
-		.then( editor => {
-			console.log( 'Editor was initialized', editor );
-			myEditor = editor;
-		} )
-		.catch( error => {
-			console.error( error );
-		} );
-		
-		$("#settingsform").submit(function(){
-			
-			$("#address").val(myEditor.getData());
-			return true;
-			
-		});
-		
-		
-	})
+
+	$(document).ready(function() {
+		$('#address').summernote();
+	});
 
 </script>
 

@@ -57,7 +57,7 @@
 											<ul class="dropdown arrow-top">
 											@foreach ($v["sub"] as $s)
 												<li>
-													<a href="{{url($s["url"])}}" class="menuicon">{{$s["text"]}}</a>
+													<a href="{{url("services/".$s["url"])}}" class="menuicon">{{$s["name"]}}</a>
 												</li>
 											@endforeach
 											</ul>

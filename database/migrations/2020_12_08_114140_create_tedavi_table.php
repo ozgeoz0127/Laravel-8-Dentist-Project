@@ -17,13 +17,13 @@ class CreateTedaviTable extends Migration
 			$table->increments('id');
 			$table->string('title',255)->nullable();
 			$table->string('keywords',255)->nullable();
-			$table->text('description')->nullable();
-			$table->string('image')->nullable();
-			$table->string('categoryid')->nullable();
+			$table->text('description',255)->nullable();
+			$table->string('image',255)->nullable();
+			$table->string('categoryid',10)->nullable();
 			$table->text('detail')->nullable();
-			$table->text('price')->nullable();
-			$table->integer('userid')->autoIncrement(false);
+			$table->integer('userid')->autoIncrement(false)->nullable();
 			$table->string('status',1);
+			$table->string('url',255);
 			$table->timestamp('created_at')->nullable();
 			$table->timestamp('updated_at')->nullable();
         });

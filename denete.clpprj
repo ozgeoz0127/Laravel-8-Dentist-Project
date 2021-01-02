@@ -11,6 +11,11 @@
  <removed value=";"/>
  <added value=""/>
  <lastopfiles>
+  <file name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminCuresController.php"/>
+  <file name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminSettingsController.php"/>
+  <file name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminUserController.php"/>
+  <file name="F:\wamp\www\dente\resources\views\admin\cures.blade.php"/>
+  <file name="F:\wamp\www\dente\resources\views\admin\user.blade.php"/>
   <lastactivefile name=""/>
  </lastopfiles>
  <errors version="1.10">
@@ -149,6 +154,13 @@
   <errfile name="F:\wamp\www\dente\public\css\admin\perfectscrollbar.css">
    <error val="1;3;20;3;2502;1;"/>
   </errfile>
+  <errfile name="F:\wamp\www\dente\public\css\admin\paper-dashboard.css">
+   <error val="2;143;24;143;2502;1;"/>
+   <error val="2;145;21;145;2502;1;"/>
+   <error val="2;2439;40;2439;2502;1;"/>
+   <error val="2;2440;271;2440;2502;1;"/>
+   <error val="2;2451;14;2451;2502;1;"/>
+  </errfile>
   <errfile name="F:\wamp\www\dente\public\css\magnific-popup.css">
    <error val="2;118;29;118;2502;1;"/>
   </errfile>
@@ -156,78 +168,78 @@
  <cakedata/>
  <dplmenupath/>
  <laravael>
-  <facade class="App" name="app"/>
-  <facade class="Auth" name="auth"/>
-  <facade class="Blade" name="blade.compiler"/>
-  <facade class="Cache" name="cache"/>
-  <facade class="Config" name="config"/>
-  <facade class="Cookie" name="cookie"/>
-  <facade class="Crypt" name="encrypter"/>
-  <facade class="DB" name="db"/>
-  <facade class="Date" name="date"/>
-  <facade class="Event" name="events"/>
-  <facade class="Facade" name="Facade does not implement getFacadeAccessor method."/>
-  <facade class="File" name="files"/>
-  <facade class="Hash" name="hash"/>
-  <facade class="Lang" name="translator"/>
-  <facade class="Log" name="log"/>
-  <facade class="Mail" name="mail.manager"/>
-  <facade class="Password" name="auth.password"/>
-  <facade class="Queue" name="queue"/>
-  <facade class="RateLimiter" name="Illuminate\Cache\RateLimiter"/>
-  <facade class="Redirect" name="redirect"/>
-  <facade class="Redis" name="redis"/>
-  <facade class="Request" name="request"/>
-  <facade class="Route" name="router"/>
-  <facade class="Schema" name="db"/>
-  <facade class="Session" name="session"/>
-  <facade class="Storage" name="filesystem"/>
-  <facade class="URL" name="url"/>
-  <facade class="Validator" name="validator"/>
-  <facade class="View" name="view"/>
+  <facade name="app" class="App"/>
+  <facade name="auth" class="Auth"/>
+  <facade name="blade.compiler" class="Blade"/>
+  <facade name="cache" class="Cache"/>
+  <facade name="config" class="Config"/>
+  <facade name="cookie" class="Cookie"/>
+  <facade name="encrypter" class="Crypt"/>
+  <facade name="db" class="DB"/>
+  <facade name="date" class="Date"/>
+  <facade name="events" class="Event"/>
+  <facade name="Facade does not implement getFacadeAccessor method." class="Facade"/>
+  <facade name="files" class="File"/>
+  <facade name="hash" class="Hash"/>
+  <facade name="translator" class="Lang"/>
+  <facade name="log" class="Log"/>
+  <facade name="mail.manager" class="Mail"/>
+  <facade name="auth.password" class="Password"/>
+  <facade name="queue" class="Queue"/>
+  <facade name="Illuminate\Cache\RateLimiter" class="RateLimiter"/>
+  <facade name="redirect" class="Redirect"/>
+  <facade name="redis" class="Redis"/>
+  <facade name="request" class="Request"/>
+  <facade name="router" class="Route"/>
+  <facade name="db" class="Schema"/>
+  <facade name="session" class="Session"/>
+  <facade name="filesystem" class="Storage"/>
+  <facade name="url" class="URL"/>
+  <facade name="validator" class="Validator"/>
+  <facade name="view" class="View"/>
   <file name="F:\wamp\www\dente\vendor\laravel\framework\src\Illuminate\Cache\CacheServiceProvider.php">
-   <type class="MemcachedConnector" name="memcached.connector"/>
+   <type name="memcached.connector" class="MemcachedConnector"/>
   </file>
   <file name="F:\wamp\www\dente\vendor\laravel\framework\src\Illuminate\Database\DatabaseServiceProvider.php">
-   <type class="DatabaseTransactionsManager" name="db.transactions"/>
+   <type name="db.transactions" class="DatabaseTransactionsManager"/>
   </file>
   <file name="F:\wamp\www\dente\vendor\laravel\framework\src\Illuminate\Database\MigrationServiceProvider.php">
-   <type class="FreshCommand" name="command.migrate.fresh"/>
-   <type class="RefreshCommand" name="command.migrate.refresh"/>
+   <type name="command.migrate.fresh" class="FreshCommand"/>
+   <type name="command.migrate.refresh" class="RefreshCommand"/>
   </file>
   <file name="F:\wamp\www\dente\vendor\laravel\framework\src\Illuminate\Filesystem\FilesystemServiceProvider.php">
-   <type class="Filesystem" name="files"/>
+   <type name="files" class="Filesystem"/>
   </file>
   <file name="F:\wamp\www\dente\vendor\laravel\framework\src\Illuminate\Foundation\Providers\ArtisanServiceProvider.php">
-   <type class="ClearResetsCommand" name="command.auth.resets.clear"/>
-   <type class="ClearCompiledCommand" name="command.clear-compiled"/>
-   <type class="WipeCommand" name="command.db.wipe"/>
-   <type class="DownCommand" name="command.down"/>
-   <type class="EnvironmentCommand" name="command.environment"/>
-   <type class="EventCacheCommand" name="command.event.cache"/>
-   <type class="EventGenerateCommand" name="command.event.generate"/>
-   <type class="KeyGenerateCommand" name="command.key.generate"/>
-   <type class="OptimizeCommand" name="command.optimize"/>
-   <type class="OptimizeClearCommand" name="command.optimize.clear"/>
-   <type class="PackageDiscoverCommand" name="command.package.discover"/>
-   <type class="QueueClearCommand" name="command.queue.clear"/>
-   <type class="ListFailedQueueCommand" name="command.queue.failed"/>
-   <type class="FlushFailedQueueCommand" name="command.queue.flush"/>
-   <type class="ForgetFailedQueueCommand" name="command.queue.forget"/>
-   <type class="QueueRetryCommand" name="command.queue.retry"/>
-   <type class="QueueRetryBatchCommand" name="command.queue.retry-batch"/>
-   <type class="DumpCommand" name="command.schema.dump"/>
-   <type class="ServeCommand" name="command.serve"/>
-   <type class="StorageLinkCommand" name="command.storage.link"/>
-   <type class="StubPublishCommand" name="command.stub.publish"/>
-   <type class="UpCommand" name="command.up"/>
-   <type class="ViewCacheCommand" name="command.view.cache"/>
+   <type name="command.auth.resets.clear" class="ClearResetsCommand"/>
+   <type name="command.clear-compiled" class="ClearCompiledCommand"/>
+   <type name="command.db.wipe" class="WipeCommand"/>
+   <type name="command.down" class="DownCommand"/>
+   <type name="command.environment" class="EnvironmentCommand"/>
+   <type name="command.event.cache" class="EventCacheCommand"/>
+   <type name="command.event.generate" class="EventGenerateCommand"/>
+   <type name="command.key.generate" class="KeyGenerateCommand"/>
+   <type name="command.optimize" class="OptimizeCommand"/>
+   <type name="command.optimize.clear" class="OptimizeClearCommand"/>
+   <type name="command.package.discover" class="PackageDiscoverCommand"/>
+   <type name="command.queue.clear" class="QueueClearCommand"/>
+   <type name="command.queue.failed" class="ListFailedQueueCommand"/>
+   <type name="command.queue.flush" class="FlushFailedQueueCommand"/>
+   <type name="command.queue.forget" class="ForgetFailedQueueCommand"/>
+   <type name="command.queue.retry" class="QueueRetryCommand"/>
+   <type name="command.queue.retry-batch" class="QueueRetryBatchCommand"/>
+   <type name="command.schema.dump" class="DumpCommand"/>
+   <type name="command.serve" class="ServeCommand"/>
+   <type name="command.storage.link" class="StorageLinkCommand"/>
+   <type name="command.stub.publish" class="StubPublishCommand"/>
+   <type name="command.up" class="UpCommand"/>
+   <type name="command.view.cache" class="ViewCacheCommand"/>
   </file>
   <file name="F:\wamp\www\dente\vendor\laravel\framework\src\Illuminate\View\ViewServiceProvider.php">
-   <type class="EngineResolver" name="view.engine.resolver"/>
+   <type name="view.engine.resolver" class="EngineResolver"/>
   </file>
   <file name="F:\wamp\www\dente\vendor\laravel\tinker\src\TinkerServiceProvider.php">
-   <type class="TinkerCommand" name="command.tinker"/>
+   <type name="command.tinker" class="TinkerCommand"/>
   </file>
  </laravael>
  <smartyassings/>
@@ -6859,8 +6871,8 @@
   <file crc="1607426490537" name="F:\wamp\www\dente\tests\Feature\ExampleTest.php"/>
   <file crc="1607426490554" name="F:\wamp\www\dente\tests\TestCase.php"/>
   <file crc="1607426490514" name="F:\wamp\www\dente\tests\CreatesApplication.php"/>
-  <file crc="1608506634664" name="F:\wamp\www\dente\storage\framework\views\ffcd7d51aa40af2f130c50492309bb825ad6da04.php"/>
-  <file crc="1608988908915" name="F:\wamp\www\dente\storage\framework\views\f4b6392a098ef2c299767ec1a7f814ed48d2656d.php"/>
+  <file crc="1609597072382" name="F:\wamp\www\dente\storage\framework\views\ffcd7d51aa40af2f130c50492309bb825ad6da04.php"/>
+  <file crc="1609539535776" name="F:\wamp\www\dente\storage\framework\views\f4b6392a098ef2c299767ec1a7f814ed48d2656d.php"/>
   <file crc="1608764412974" name="F:\wamp\www\dente\storage\framework\views\e826a6ae1200ed32f98be453476d9ed4bcffda1f.php"/>
   <file crc="1607463012472" name="F:\wamp\www\dente\storage\framework\views\e2d39246982cbee3d89769831f6f394156f1cebc.php"/>
   <file crc="1608387412913" name="F:\wamp\www\dente\storage\framework\views\d5130f6114cd60b6311ec7a629705a5bd05cdb2c.php"/>
@@ -6870,13 +6882,14 @@
   <file crc="1608155191996" name="F:\wamp\www\dente\storage\framework\views\c245ce5a5cd3ab0d2a1dc63ced23cde8e2f60cce.php"/>
   <file crc="1608587119149" name="F:\wamp\www\dente\storage\framework\views\bccf6652c3826e232be72ce39ff4bde41451b636.php"/>
   <file crc="1608986016268" name="F:\wamp\www\dente\storage\framework\views\aa99c5b76a3e1142531e58756cbc26dcd5f7014d.php"/>
-  <file crc="1608383266750" name="F:\wamp\www\dente\storage\framework\views\a99fd9138272011ac1ee9d424af3c11be16eac65.php"/>
+  <file crc="1609540266553" name="F:\wamp\www\dente\storage\framework\views\a99fd9138272011ac1ee9d424af3c11be16eac65.php"/>
   <file crc="1608471308409" name="F:\wamp\www\dente\storage\framework\views\a8900582f1cd971f1e1cd9e7f21483d75daf0d8a.php"/>
   <file crc="1608161011090" name="F:\wamp\www\dente\storage\framework\views\a1b54a1e817e877aef44ea9b46fbe344fc0ee649.php"/>
   <file crc="1608473538018" name="F:\wamp\www\dente\storage\framework\views\a12bd815807c4c6c16f5699c326372e647c5c10d.php"/>
-  <file crc="1608473099795" name="F:\wamp\www\dente\storage\framework\views\915142a497942b54c90d9618c6bc5da5cd9dcda5.php"/>
-  <file crc="1608993222627" name="F:\wamp\www\dente\storage\framework\views\8b8e72d4343c76d577bcb9ef19a902af8167c8bc.php"/>
+  <file crc="1609509440967" name="F:\wamp\www\dente\storage\framework\views\915142a497942b54c90d9618c6bc5da5cd9dcda5.php"/>
+  <file crc="1609596892324" name="F:\wamp\www\dente\storage\framework\views\8b8e72d4343c76d577bcb9ef19a902af8167c8bc.php"/>
   <file crc="1609019848853" name="F:\wamp\www\dente\storage\framework\views\84a0329d2b3abe495ebae2a8c7c7fd5b3b625a69.php"/>
+  <file crc="1609597766491" name="F:\wamp\www\dente\storage\framework\views\808d16572feda635a42d5c1be2fcd09a03d5f33d.php"/>
   <file crc="1608415346173" name="F:\wamp\www\dente\storage\framework\views\7f70766a77db1315263ab4e50256db0a29042b6c.php"/>
   <file crc="1608676206673" name="F:\wamp\www\dente\storage\framework\views\7865ae83898389e963b7c4bbbce3aeb382c0f238.php"/>
   <file crc="1608124046155" name="F:\wamp\www\dente\storage\framework\views\6c3454fa2d9925e8bd6851a77bfbf5a8c8b7d886.php"/>
@@ -6886,14 +6899,14 @@
   <file crc="1608764603324" name="F:\wamp\www\dente\storage\framework\views\5b395c6a4a840d0d2d253a6de78656eda1714f6c.php"/>
   <file crc="1608506819231" name="F:\wamp\www\dente\storage\framework\views\3b02456dccb5a435348b0e33abc77ac97d953bcf.php"/>
   <file crc="1608416281047" name="F:\wamp\www\dente\storage\framework\views\3adc7f59ad0f2195fa0879d2bd1b935fdd353f2f.php"/>
-  <file crc="1609017716872" name="F:\wamp\www\dente\storage\framework\views\33949163d7780c8a47375538dc96782be5d1b100.php"/>
+  <file crc="1609071501094" name="F:\wamp\www\dente\storage\framework\views\33949163d7780c8a47375538dc96782be5d1b100.php"/>
   <file crc="1608123310093" name="F:\wamp\www\dente\storage\framework\views\2f11eb2b5f687ae4105ddf5e0990a59a8670977b.php"/>
   <file crc="1608417381691" name="F:\wamp\www\dente\storage\framework\views\2ea0f1910fe87432080e8d6882029130e96abf8b.php"/>
   <file crc="1607427998605" name="F:\wamp\www\dente\storage\framework\views\25fdcd51297a3270887dd84c0718b354dacf0416.php"/>
   <file crc="1608155426999" name="F:\wamp\www\dente\storage\framework\views\1cec88e6d4836a147068e47984d1f5bee230d761.php"/>
   <file crc="1609019455989" name="F:\wamp\www\dente\storage\framework\views\19e5a0a5d69c70a0bb68130f13546979d937b4ca.php"/>
   <file crc="1607463012848" name="F:\wamp\www\dente\storage\framework\views\0d169e4bbbfa34f88262271db9da77d1860c36c1.php"/>
-  <file crc="1609019419217" name="F:\wamp\www\dente\routes\web.php"/>
+  <file crc="1609535078569" name="F:\wamp\www\dente\routes\web.php"/>
   <file crc="1607426490392" name="F:\wamp\www\dente\routes\console.php"/>
   <file crc="1607426490371" name="F:\wamp\www\dente\routes\channels.php"/>
   <file crc="1607426490350" name="F:\wamp\www\dente\routes\api.php"/>
@@ -6903,21 +6916,22 @@
   <file crc="1608417359679" name="F:\wamp\www\dente\resources\views\modal\appointment.blade.php"/>
   <file crc="1608160907600" name="F:\wamp\www\dente\resources\views\layouts\default.blade.php"/>
   <file crc="1608986014215" name="F:\wamp\www\dente\resources\views\includes\usercomment.blade.php"/>
-  <file crc="1608988907798" name="F:\wamp\www\dente\resources\views\includes\menu.blade.php"/>
+  <file crc="1609539534023" name="F:\wamp\www\dente\resources\views\includes\menu.blade.php"/>
   <file crc="1608586975813" name="F:\wamp\www\dente\resources\views\includes\header.blade.php"/>
   <file crc="1608988920021" name="F:\wamp\www\dente\resources\views\includes\footer.blade.php"/>
-  <file crc="1608506632183" name="F:\wamp\www\dente\resources\views\admin\layouts\default.blade.php"/>
-  <file crc="1608473096741" name="F:\wamp\www\dente\resources\views\admin\includes\sidebar.blade.php"/>
+  <file crc="1609597067443" name="F:\wamp\www\dente\resources\views\admin\layouts\default.blade.php"/>
+  <file crc="1609509417614" name="F:\wamp\www\dente\resources\views\admin\includes\sidebar.blade.php"/>
   <file crc="1609019448215" name="F:\wamp\www\dente\resources\views\admin\includes\navbar.blade.php"/>
   <file crc="1608471305900" name="F:\wamp\www\dente\resources\views\admin\includes\footer.blade.php"/>
   <file crc="1608503546994" name="F:\wamp\www\dente\resources\views\admin\user.blade.php"/>
-  <file crc="1608993123514" name="F:\wamp\www\dente\resources\views\admin\settings.blade.php"/>
-  <file crc="1609017712241" name="F:\wamp\www\dente\resources\views\admin\login.blade.php"/>
+  <file crc="1609595372296" name="F:\wamp\www\dente\resources\views\admin\settings.blade.php"/>
+  <file crc="1609071499263" name="F:\wamp\www\dente\resources\views\admin\login.blade.php"/>
   <file crc="1608506817110" name="F:\wamp\www\dente\resources\views\admin\dashboard.blade.php"/>
+  <file crc="1609597764803" name="F:\wamp\www\dente\resources\views\admin\cures.blade.php"/>
   <file crc="1608505083151" name="F:\wamp\www\dente\resources\views\admin\appointment.blade.php"/>
   <file crc="1608414271705" name="F:\wamp\www\dente\resources\views\profile.blade.php"/>
   <file crc="1608676271857" name="F:\wamp\www\dente\resources\views\pages.blade.php"/>
-  <file crc="1608383265353" name="F:\wamp\www\dente\resources\views\home.blade.php"/>
+  <file crc="1609540264953" name="F:\wamp\www\dente\resources\views\home.blade.php"/>
   <file crc="1608762639900" name="F:\wamp\www\dente\resources\views\gallery.blade.php"/>
   <file crc="1608764408835" name="F:\wamp\www\dente\resources\views\faq.blade.php"/>
   <file crc="1609019843290" name="F:\wamp\www\dente\resources\views\contact.blade.php"/>
@@ -6970,7 +6984,7 @@
   <file crc="1607335907000" name="F:\wamp\www\dente\public\css\admin\paper-dashboard.min.css"/>
   <file crc="1607335907000" name="F:\wamp\www\dente\public\css\admin\paper-dashboard.css"/>
   <file crc="1607335907000" name="F:\wamp\www\dente\public\css\admin\demo.js"/>
-  <file crc="1607335907000" name="F:\wamp\www\dente\public\css\admin\demo.css"/>
+  <file crc="1609507231644" name="F:\wamp\www\dente\public\css\admin\demo.css"/>
   <file crc="1607335907000" name="F:\wamp\www\dente\public\css\admin\bootstrap.min.css"/>
   <file crc="1608383595516" name="F:\wamp\www\dente\public\css\style.css"/>
   <file crc="1541229140000" name="F:\wamp\www\dente\public\css\owl.theme.default.min.css"/>
@@ -6985,15 +6999,16 @@
   <file crc="1607900369360" name="F:\wamp\www\dente\public\index.php"/>
   <file crc="1607426490173" name="F:\wamp\www\dente\public\.htaccess"/>
   <file crc="1608385628747" name="F:\wamp\www\dente\database\seeders\UserTableSeeder.php"/>
+  <file crc="1609538846392" name="F:\wamp\www\dente\database\seeders\TedaviTableSeeder.php"/>
   <file crc="1608988055513" name="F:\wamp\www\dente\database\seeders\SettingTableSeeder.php"/>
-  <file crc="1608988050764" name="F:\wamp\www\dente\database\seeders\DatabaseSeeder.php"/>
+  <file crc="1609535811781" name="F:\wamp\www\dente\database\seeders\DatabaseSeeder.php"/>
   <file crc="1607432278076" name="F:\wamp\www\dente\database\migrations\2020_12_08_114233_create_process_table.php"/>
   <file crc="1607432118036" name="F:\wamp\www\dente\database\migrations\2020_12_08_114222_create_message_table.php"/>
   <file crc="1607431845189" name="F:\wamp\www\dente\database\migrations\2020_12_08_114212_create_faq_table.php"/>
   <file crc="1608387807731" name="F:\wamp\www\dente\database\migrations\2020_12_08_114202_create_randevu_table.php"/>
   <file crc="1607431592812" name="F:\wamp\www\dente\database\migrations\2020_12_08_114151_create_image_table.php"/>
-  <file crc="1607432242912" name="F:\wamp\www\dente\database\migrations\2020_12_08_114140_create_tedavi_table.php"/>
-  <file crc="1607431180087" name="F:\wamp\www\dente\database\migrations\2020_12_08_114129_create_setting_table.php"/>
+  <file crc="1609537913397" name="F:\wamp\www\dente\database\migrations\2020_12_08_114140_create_tedavi_table.php"/>
+  <file crc="1609597217880" name="F:\wamp\www\dente\database\migrations\2020_12_08_114129_create_setting_table.php"/>
   <file crc="1607431387132" name="F:\wamp\www\dente\database\migrations\2020_12_08_114118_create_comment_table.php"/>
   <file crc="1607430567623" name="F:\wamp\www\dente\database\migrations\2020_12_08_114107_create_category_table.php"/>
   <file crc="1607430073376" name="F:\wamp\www\dente\database\migrations\2020_12_08_114057_create_user_table.php"/>
@@ -7014,15 +7029,16 @@
   <file crc="1607426489581" name="F:\wamp\www\dente\config\app.php"/>
   <file crc="1607427762728" name="F:\wamp\www\dente\bootstrap\cache\services.php"/>
   <file crc="1607427763072" name="F:\wamp\www\dente\bootstrap\cache\packages.php"/>
+  <file crc="1609019157535" name="F:\wamp\www\dente\bootstrap\cache\config.php"/>
   <file crc="1607426489538" name="F:\wamp\www\dente\bootstrap\app.php"/>
-  <file crc="1608988873775" name="F:\wamp\www\dente\app\Repositories\PageRepository.php"/>
+  <file crc="1609540240247" name="F:\wamp\www\dente\app\Repositories\PageRepository.php"/>
   <file crc="1607426489491" name="F:\wamp\www\dente\app\Providers\RouteServiceProvider.php"/>
   <file crc="1607426489470" name="F:\wamp\www\dente\app\Providers\EventServiceProvider.php"/>
   <file crc="1607426489453" name="F:\wamp\www\dente\app\Providers\BroadcastServiceProvider.php"/>
   <file crc="1607426489428" name="F:\wamp\www\dente\app\Providers\AuthServiceProvider.php"/>
   <file crc="1607426489407" name="F:\wamp\www\dente\app\Providers\AppServiceProvider.php"/>
   <file crc="1608244967993" name="F:\wamp\www\dente\app\Models\User.php"/>
-  <file crc="1608388657744" name="F:\wamp\www\dente\app\Models\Randevu.php"/>
+  <file crc="1609537855074" name="F:\wamp\www\dente\app\Models\Tedavi.php"/>
   <file crc="1608500475777" name="F:\wamp\www\dente\app\Http\Requests\LoginRequest.php"/>
   <file crc="1607426489338" name="F:\wamp\www\dente\app\Http\Middleware\VerifyCsrfToken.php"/>
   <file crc="1607426489321" name="F:\wamp\www\dente\app\Http\Middleware\TrustProxies.php"/>
@@ -7032,19 +7048,21 @@
   <file crc="1607426489245" name="F:\wamp\www\dente\app\Http\Middleware\PreventRequestsDuringMaintenance.php"/>
   <file crc="1607426489225" name="F:\wamp\www\dente\app\Http\Middleware\EncryptCookies.php"/>
   <file crc="1609019391424" name="F:\wamp\www\dente\app\Http\Middleware\Authenticate.php"/>
-  <file crc="1608502630761" name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminUserController.php"/>
-  <file crc="1608993568771" name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminSettingsController.php"/>
+  <file crc="1609509241431" name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminUserController.php"/>
+  <file crc="1609597313633" name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminSettingsController.php"/>
   <file crc="1609017315714" name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminHomeController.php"/>
+  <file crc="1609509484463" name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminGallerysController.php"/>
+  <file crc="1609597586714" name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminCuresController.php"/>
   <file crc="1609018654326" name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminAuthController.php"/>
   <file crc="1608504864974" name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminAppointmentController.php"/>
-  <file crc="1608418849610" name="F:\wamp\www\dente\app\Http\Controllers\ServiceController.php"/>
+  <file crc="1609539935571" name="F:\wamp\www\dente\app\Http\Controllers\ServiceController.php"/>
   <file crc="1608418061773" name="F:\wamp\www\dente\app\Http\Controllers\ProfileController.php"/>
   <file crc="1607871002477" name="F:\wamp\www\dente\app\Http\Controllers\HomeController.php"/>
   <file crc="1608585737625" name="F:\wamp\www\dente\app\Http\Controllers\GalleryController.php"/>
   <file crc="1608762586667" name="F:\wamp\www\dente\app\Http\Controllers\FaqController.php"/>
   <file crc="1607426489164" name="F:\wamp\www\dente\app\Http\Controllers\Controller.php"/>
   <file crc="1608073175906" name="F:\wamp\www\dente\app\Http\Controllers\ContactController.php"/>
-  <file crc="1608500702950" name="F:\wamp\www\dente\app\Http\Controllers\AuthController.php"/>
+  <file crc="1609071186572" name="F:\wamp\www\dente\app\Http\Controllers\AuthController.php"/>
   <file crc="1608468682630" name="F:\wamp\www\dente\app\Http\Controllers\AppointmentController.php"/>
   <file crc="1607901171505" name="F:\wamp\www\dente\app\Http\Controllers\AboutController.php"/>
   <file crc="1607426489182" name="F:\wamp\www\dente\app\Http\Kernel.php"/>

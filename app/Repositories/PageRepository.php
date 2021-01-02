@@ -12,14 +12,7 @@ class PageRepository
 		$arr["settings"]["menu"]		= [
 			["url" => "home","text" => "#"],
 			["url" => "about","text" => "Hakkımızda"],
-			["url" => "services","text" => "Hizmetler","sub"=> [
-				["icon"=> "flaticon-dentist-chair", "url" => "services/agiz-ve-dis-bakimi","text" => "Ağız Ve Diş Bakımı"],
-				["icon"=> "flaticon-tooth", "url" => "services/genel-kontrol","text" => "Genel Kontrol"],
-				["icon"=> "flaticon-dentist-tools", "url" => "services/dolgu-kanal-tedavisi","text" => "Dolgu Kanal Tedavisi"],
-				["icon"=> "flaticon-tooth-pliers", "url" => "services/dis-cekimi","text" => "Diş Çekimi"],
-				["icon"=> "flaticon-tooth-whitening", "url" => "services/dis-beyazlatma","text" => "Diş Beyazlatma"],
-				["icon"=> "flaticon-first-aid", "url" => "services/onleyici-bakim","text" => "Önleyici Bakım"],
-				] ],
+			["url" => "services","text" => "Hizmetler","sub"=> self::getcure()],
 			["url" => "faq","text" => "S.S.S" ],
 			["url" => "gallery","text" => "Galeri" ],
 			["url" => "contact","text" => "İletişim" ],
@@ -83,11 +76,14 @@ class PageRepository
 	public static function getcure()
 	{
 		$r=[];
-		$r[1]= ["name" => "Diş Çekimi","id" => 1];
-		$r[2]= ["name" => "Diş Beyazlatma","id" => 2];
-		$r[3]= ["name" => "Genel Bakım","id" => 3];
-		
-		return $r;
+		$td = \DB::table('tedavi')->get()->toArray();
+		if (count($td) > 0) {
+			foreach ($td as $k=>$v) {
+				$r[$v->id] = ["name" => $v->title,"image"=> $v->image,"url"=>$v->url,"id" => $v->id];
+			}
+
+			return $r;
+		}
 	}
 }
 

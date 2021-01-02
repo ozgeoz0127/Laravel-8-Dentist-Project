@@ -17,15 +17,11 @@ class ServiceController extends Controller
     
 	public function findurltitle($url, $s)	{
 		$menu = $s["settings"]["menu"];
-		
 		foreach ($menu as $k => $v) {
-			if ($v["url"] == "services/".$url) {
-				return $v["text"];
-			}
 			if (isset($v["sub"])) {
 				foreach ($v["sub"] as $a=>$b) {
-					if ($b["url"] == "services/".$url) {
-						return $b["text"];
+					if ($b["url"] == $url) {
+						return $b["name"];
 					}				
 				}
 			}

@@ -187,3 +187,7 @@
   outline: none;
   display: none;
 }
+li.active {
+	background: #eaeaea;
+	font-weight: bold;	
+}

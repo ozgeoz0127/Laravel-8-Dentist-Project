@@ -19,7 +19,7 @@ class CreateSettingTable extends Migration
 			$table->string('keywords',255)->nullable();
 			$table->text('description')->nullable();
 			$table->string('company',255)->nullable();
-			$table->string('address',255)->nullable();
+			$table->text('address')->nullable();
 			$table->string('phone',255)->nullable();
 			$table->string('fax',255)->nullable();
 			$table->string('email',255)->nullable();

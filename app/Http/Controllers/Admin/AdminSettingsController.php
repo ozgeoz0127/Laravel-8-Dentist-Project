@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -45,6 +45,8 @@ class AdminSettingsController extends Controller
     public function save($post){
 		$data = array_merge($this->settings,$post);
 		unset($data["_token"]);
+		unset($data["files"]);
+
 		\DB::table('setting')->update($data);
     	
     }

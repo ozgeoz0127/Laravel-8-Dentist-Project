@@ -84,68 +84,18 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="row row-items">
+					@foreach ($settings["cures"] as $k=>$v)
 					<div class="col-md-4">
-						<a href="#" class="d-flex text-center feature p-4 mb-4">
+						<a href="{{url("services/".$v["url"])}}" class="d-flex text-center feature p-4 mb-4">
 							<span class="align-self-center w-100">
 								<span class="d-block mb-3">
-									<span class="flaticon-dentist-chair display-3"></span>
+									<span class="{{$v["image"]}} display-3"></span>
 								</span>
-								<h3>Genel Kontrol</h3>
+								<h3>{{$v["name"]}}</h3>
 							</span>
 						</a>
 					</div>
-					<div class="col-md-4">
-						<a href="#" class="d-flex text-center feature p-4 mb-4">
-							<span class="align-self-center w-100">
-								<span class="d-block mb-3">
-									<span class="flaticon-dentist-tools display-3"></span>
-								</span>
-								<h3>Dolgu Kanal Tedavisi</h3>
-							</span>
-						</a>
-					</div>
-					<div class="col-md-4">
-						<a href="#" class="d-flex text-center feature p-4 mb-4">
-							<span class="align-self-center w-100">
-								<span class="d-block mb-3">
-									<span class="flaticon-tooth-pliers display-3"></span>
-								</span>
-								<h3>Diş Çekimi</h3>
-							</span>
-						</a>
-					</div>
-				</div>
-				<div class="row row-items ">
-					<div class="col-md-4">
-						<a href="#" class="d-flex text-center feature p-4 mb-4">
-							<span class="align-self-center w-100">
-								<span class="d-block mb-3">
-									<span class="flaticon-first-aid-kit display-3"></span>
-								</span>
-								<h3>Önleyici Bakım</h3>
-							</span>
-						</a>
-					</div>
-					<div class="col-md-4">
-						<a href="#" class="d-flex text-center feature p-4 mb-4">
-							<span class="align-self-center w-100">
-								<span class="d-block mb-3">
-									<span class="flaticon-tooth-whitening display-3"></span>
-								</span>
-								<h3>Diş Beyazlatma</h3>
-							</span>
-						</a>
-					</div>
-					<div class="col-md-4">
-						<a href="#" class="d-flex text-center feature p-4 mb-4">
-							<span class="align-self-center w-100">
-								<span class="d-block mb-3">
-									<span class="flaticon-tooth display-3"></span>
-								</span>
-								<h3>Ağız ve Diş Bakımı</h3>
-							</span>
-						</a>
-					</div>
+					@endforeach
 				</div>
 			</div>
 		</div>
