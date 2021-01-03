@@ -27,14 +27,15 @@ class PageRepository
 	}
 	
 	public static function gallery() {
-		$list = [];
-		$list[] = "hero_bg_1.jpg";
-		$list[] = "hero_bg_2.jpg";
-		$list[] = "hero_bg_1.jpg";
-		$list[] = "hero_bg_2.jpg";
-		$list[] = "hero_bg_1.jpg";
-		$list[] = "hero_bg_2.jpg";
-		return $list;		
+		$r=[];
+		$doc = \DB::table('image')->get()->toArray();
+		if (count($doc) > 0) {
+			foreach ($doc as $k=>$v) {
+				$r[] = ["title" => $v->title,"image" => $v->image,"id" => $v->id];
+			}
+
+			return $r;
+		}	
 		
 	}
 	
@@ -79,7 +80,7 @@ class PageRepository
 		$td = \DB::table('tedavi')->get()->toArray();
 		if (count($td) > 0) {
 			foreach ($td as $k=>$v) {
-				$r[$v->id] = ["name" => $v->title,"image"=> $v->image,"url"=>$v->url,"id" => $v->id];
+				$r[$v->id] = ["name" => $v->title,"image"=> $v->image,"url"=>$v->url,"id" => $v->id,"keywords" => $v->keywords,"description" => $v->description,"detail" => $v->detail];
 			}
 
 			return $r;

@@ -74,7 +74,7 @@
 			$('#detail').summernote('code', "");	
 			modal.modal();	
 		});
-		$('#detail').summernote();
+		$('#detail').summernote({  height: 150});
 		$(".btnedit").click(function(){
 			modal = $("#editmodal");
 			modal.find(".load").html("<span class='text-success'><b>Bekleyiniz...</b></span>");
@@ -167,17 +167,24 @@
 						<input type="hidden" name="id" value="0">
 						<input type="text" name="title" placeholder="title" class="form-control">
 					</div>
-					<div class="form-group">
-						<label>Keywords</label>
-						<input type="text" name="keywords" placeholder="keywords" class="form-control">
-					</div>
-					<div class="form-group">
-						<label>Description</label>
-						<input type="text" name="description" placeholder="description" class="form-control">
-					</div>
-					<div class="form-group">
-						<label>İcon</label>
-						<input type="text" name="image" placeholder="icon" class="form-control">
+					
+					<div clasS="row">
+						<div clasS="col-md-6">
+							<div class="form-group">
+								<label>Keywords</label>
+								<input type="text" name="keywords" placeholder="keywords" class="form-control">
+							</div>
+							<div class="form-group">
+								<label>İcon</label>
+								<input type="text" name="image" placeholder="icon" class="form-control">
+							</div>
+						</div>
+						<div clasS="col-md-6">
+							<div class="form-group">
+								<label>Description</label>
+								<textarea style="height:115px;max-height:inherit" name="description" placeholder="description" class="form-control"></textarea>
+							</div>
+						</div>
 					</div>
 					<div class="form-group">
 						<label>Detail</label>

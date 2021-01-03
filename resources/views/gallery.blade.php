@@ -17,8 +17,8 @@
 			<div class="col-md-12 pr-md-12 text-left mb-5">
 
 					@foreach ($settings["gallery"] as $k=>$v)
-					<a href="{{url("images/".$v)}}"  data-toggle="lightbox" data-gallery="gallery" >
-						<img src="{{url("images/".$v)}}" class="img-fluid img-thumbnail col-md-3 col-xs-6">
+					<a href="{{url("images/uploads/".$v["image"])}}"  data-toggle="lightbox" data-gallery="gallery" >
+					<img src="{{url("images/uploads/".$v["image"])}}" class="img-fluid img-thumbnail col-md-3 col-xs-6">
 					</a>
 					@endforeach
 

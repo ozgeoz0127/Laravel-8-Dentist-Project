@@ -1,4 +1,13 @@
 @extends('layouts.default')
+@section('title')
+	Sık Sorulan Sorular
+@stop
+@section('keyword')
+	keyword
+@stop
+@section('description')
+	description
+@stop
 @section('content')
 <div class="site-blocks-cover aos-init aos-animate inner-page" style="height:200px;min-height:150px;background-image: url({{asset("images/hero_bg_2.jpg")}});" data-aos="fade" data-stellar-background-ratio="0.5">
 	<div class="container">

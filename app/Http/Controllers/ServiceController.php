@@ -9,7 +9,7 @@ class ServiceController extends Controller
 {
     public function show(Request  $request, $url){
 		$s = PageRepository::settings();
-		$s["settings"]["subpagetitle"]	= $this->findurltitle($url,$s);
+		$s["settings"]["subpage"]	= $this->findurltitle($url,$s);
 
 		return view('pages',$s);
     }
@@ -21,7 +21,7 @@ class ServiceController extends Controller
 			if (isset($v["sub"])) {
 				foreach ($v["sub"] as $a=>$b) {
 					if ($b["url"] == $url) {
-						return $b["name"];
+						return $b;
 					}				
 				}
 			}

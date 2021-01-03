@@ -46,6 +46,7 @@ Route::group( ['prefix' => 'admin',"middleware" => "auth"], function() {
 			Route::any('cures/save', [AdminCuresController::class,'save']);
 			Route::any('cures/delete/{id}', [AdminCuresController::class,'delete']);
 		Route::any('gallerys', [AdminGallerysController::class,'show']);
+		Route::any('gallerys/delete/{id}', [AdminGallerysController::class,'delete']);
 });
 
 
