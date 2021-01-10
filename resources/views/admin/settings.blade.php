@@ -11,8 +11,10 @@
 				
 				
 					<div class="row">
+
 						<div class="col-md-12 col-xs-12 ">
-						<form action="{{url("admin/settings")}}" id="settingsform" method="POST">
+						@include('includes.message')
+						<form action="{{Route("admin_setting_save")}}" id="settingsform" method="POST">
 						@csrf
 							<nav>
 								<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
@@ -20,6 +22,7 @@
 									<a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Sosyal Medya</a>
 									<a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">SMTP Mail</a>
 									<a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" href="#nav-about" role="tab" aria-controls="nav-about" aria-selected="false">Hakkında Sayfası</a>
+										<a class="nav-item nav-link" id="nav-references-tab" data-toggle="tab" href="#nav-references" role="tab" aria-controls="nav-about" aria-selected="false">Referanslar Sayfası</a>
 								</div>
 							</nav>
 							<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
@@ -63,7 +66,35 @@
 										<div class="form-group">
 											<label class="control-label" style="widtH:100%">Adres</label>
 											<textarea class="form-control" name="address" id="address">{{$settings["address"]}}</textarea>
-										</div>									
+										</div>	
+										<div class="input-group ">
+											<label class="control-label" style="widtH:100%">Telefon</label>
+											<div class="input-group-prepend">
+												<span class="input-group-text" id="basic-addon1">
+													<i class="fa fa-envelope"></i></span>
+											</div>
+												<input type="text" name="email" value="{{$settings["email"]}}" class="form-control" placeholder="Email">
+										</div>
+										
+											
+										<div class="input-group ">
+											<label class="control-label" style="widtH:100%">Telefon</label>
+											<div class="input-group-prepend">
+												<span class="input-group-text" id="basic-addon1">
+													<i class="fa fa-phone"></i></span>
+											</div>
+											<input type="text" name="phone" value="{{$settings["phone"]}}" class="form-control" placeholder="Phone">
+										</div>
+										<div class="input-group ">
+											<label class="control-label" style="widtH:100%">Telefon</label>
+											<div class="input-group-prepend">
+												<span class="input-group-text" id="basic-addon1">
+													<i class="fa fa-phone"></i></span>
+											</div>
+												<input type="text" name="fax" value="{{$settings["fax"]}}" class="form-control" placeholder="Fax">
+										</div>
+										
+																	
 								</div>
 								</div>
 								<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
@@ -128,14 +159,24 @@
 								</div>
 								</div>
 								<div class="tab-pane fade" id="nav-about" role="tabpanel" aria-labelledby="nav-about-tab">
-								<div class="col-md-12 col-xs-12">
+									<div class="col-md-12 col-xs-12">
 										<div class="form-group">
 											<label class="control-label" style="widtH:100%">Hakkımızda Sayfası</label>
 												<textarea name="aboutus" id="aboutus" class="form-control">{{$settings["aboutus"]}}</textarea>
 
 										</div>	
+									</div>
 								</div>
+									<div class="tab-pane fade" id="nav-references" role="tabpanel" aria-labelledby="nav-about-references">
+									<div class="col-md-12 col-xs-12">
+										<div class="form-group">
+											<label class="control-label" style="widtH:100%">Referanslar Sayfası</label>
+												<textarea name="references" id="references" class="form-control">{{$settings["references"]}}</textarea>
+
+										</div>
+									</div>
 								</div>
+								
 							</div>
 							<div class="form-group">
 								<input type="submit" class="btn btn-info" value="Ayarları Kaydet">
@@ -150,6 +191,7 @@
 <script>
 $(function(){
 		$('#aboutus').summernote({  height: 250});
+		$('#references').summernote({  height: 250});
 	
 });
 </script>

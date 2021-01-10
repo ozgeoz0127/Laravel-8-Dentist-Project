@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Repositories\PageRepository;
+use App\Http\Controllers\SystemController;
+
 
 class AdminSettingsController extends Controller
 {
@@ -32,22 +33,40 @@ class AdminSettingsController extends Controller
 	]; 
 	
     public function show(Request $request){
-		$post = $request->post();
-		
-			if (count($post) > 0) {
-				$this->save($post);
-			}
     	
-    	$s = PageRepository::settings();
+		$s = SystemController::settings();
 		return view('admin.settings',$s);
     }
     
-    public function save($post){
-		$data = array_merge($this->settings,$post);
-		unset($data["_token"]);
-		unset($data["files"]);
+	public function save(Request $request)
+	{
+		$post = $request->post();
 
-		\DB::table('setting')->update($data);
+		/*$new = new \App\Models\Setting();
+		$new->title 		= $post['title'];
+		$new->keywords 		= $post['keywords'];
+		$new->description 	= $post['description'];
+		$new->company 		= $post['company'];
+		$new->address 		= $post['address'];
+		$new->phone 		= $post['phone'];
+		$new->fax 			= $post['fax'];
+		$new->email 		= $post['email'];
+		$new->smtpserver 	= $post['smtpserver'];
+		$new->smtpemail 	= $post['smtpemail'];
+		$new->smtppassword 	= $post['smtppassword'];
+		$new->smtpport 		= $post['smtpport'];
+		$new->facebook 		= $post['facebook'];
+		$new->instagram 	= $post['instagram'];
+		$new->twitter 		= $post['twitter'];
+		$new->aboutus 		= $post['aboutus'];
+		$new->contact 		= "";
+		$new->references 	= $post['references'];
+		$new->status 		= 1;
+		$new->whereId(1)->update();*/
+		unset($post["_token"]);
+		unset($post["files"]);
+		\DB::table('settings')->update($post);
+		return back()->with('info','Bilgiler güncellendi.');
     	
     }
 }

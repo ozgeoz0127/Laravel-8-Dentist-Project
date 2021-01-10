@@ -8,7 +8,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<form method="post" action='{{asset("appointment")}}' name="appointment" id="appointment">
+				<form method="post" action='{{Route("appointment")}}' name="appointment" id="appointment">
 					
 					<p>Üyemiz değilseniz bilgilerinizle otomatik üyelik açılacaktır. </p>
 					<p><input @if (Auth::check()) readonly @endif value="{{Auth::user()->name ?? ""}}" type="text" class="form-control" name="name" id="name" placeholder="Adınız" required></p>
@@ -31,10 +31,11 @@
 					</p>
 					
 					<p >
+
 						<select id="cure" name="cure" required class="form-control">
 							<option value="0" disabled selected hidden>Tedavi seçiniz</option>
 							@foreach ($settings["cures"] as $k=>$v)
-							<option value="{{$v["id"]}}">{{$v["name"]}} </option>
+							<option value="{{$v->id}}">{{$v->name}} </option>
 							@endforeach
 						</select>
 

@@ -3,31 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Repositories\PageRepository;
-
+use App\Http\Controllers\SystemController;
+use App\Models\Tedavi;
 class ServiceController extends Controller
 {
     public function show(Request  $request, $url){
-		$s = PageRepository::settings();
-		$s["settings"]["subpage"]	= $this->findurltitle($url,$s);
+		$s = SystemController::settings();
+		$s["settings"]["subpage"]	= $this->findservice($url);
 
-		return view('pages',$s);
+		return view('service',$s);
     }
     
     
-	public function findurltitle($url, $s)	{
-		$menu = $s["settings"]["menu"];
-		foreach ($menu as $k => $v) {
-			if (isset($v["sub"])) {
-				foreach ($v["sub"] as $a=>$b) {
-					if ($b["url"] == $url) {
-						return $b;
-					}				
-				}
-			}
-		}
-		
-		return "test";
+	public function findservice($url)
+	{
+		$service = Tedavi::where('url', '=', $url)->first()->toArray();
+		return ((object)$service);
+
 							
 	}
             

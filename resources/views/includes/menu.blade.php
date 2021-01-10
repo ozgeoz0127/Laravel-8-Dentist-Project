@@ -40,7 +40,7 @@
 			<div class="row align-items-center">
 				<div class="col-2">
 					<h2 class="mb-0 site-logo">
-						<a href="{{asset('')}}">Dente</a></h2>
+						<a href="{{route("home")}}">Dente</a></h2>
 				</div>
 				<div class="col-10">
 					<nav class="site-navigation text-right" role="navigation">
@@ -50,36 +50,57 @@
 									<span class="icon-menu h3"></span></a></div>
 
 							<ul class="site-menu js-clone-nav d-none d-lg-block">
-								@foreach ($settings["menu"] as $k=>$v)
-								<li class="@if ($k==0) active @endif @if (isset($v["sub"])) has-children @endif">
-									<a href="{{url($v["url"])}}">{{$v["text"]}}</a>
-										@if (isset($v["sub"]))
-											<ul class="dropdown arrow-top">
-											@foreach ($v["sub"] as $s)
-												<li>
-													<a href="{{url("services/".$s["url"])}}" class="menuicon">{{$s["name"]}}</a>
-												</li>
-											@endforeach
-											</ul>
-										@endif
-																				
-									</li>
-								@endforeach
+								<li >
+									<a href="{{route("home")}}">Home</a>
+								</li>
+								<li class="  has-children ">
+									<a href="{{route("about")}}">Hakkımızda</a>
+									<ul class="dropdown arrow-top">
+										<li>
+											<a href="{{route("about")}}" >Hakkımızda</a>
+											<a href="{{route("references")}}" >Referanslar</a>
+										</li>
+
+									</ul>
+
+								</li>
 								
-		@if(Auth::check())
-		<li class="  has-children ">
-			<a href="#">Bilgilerim</a>
-			<ul class="dropdown arrow-top">
-				<li>
-					<a href="{{url("/profile/userinfo")}}" >Bilgilerim</a>
-					<a href="{{url("/profile/appointment")}}" >Randevularım</a>
-					<a href="{{url("/logout")}}" >Çıkış</a>
-				</li>
+								<li class="  has-children ">
+									<a href="#">Servisler</a>
+									<ul class="dropdown arrow-top">
+										<li>
+											@foreach ($settings["cures"] as $cure)
+											<a href="{{route("services",$cure->url)}}" >{{$cure->name}}</a>
+											@endforeach
+										</li>
 
-			</ul>
+									</ul>
 
-		</li>
-		@else
+								</li>
+								
+								<li >
+									<a href="{{route("faq")}}">S.S.S</a>
+								</li>
+								<li >
+									<a href="{{route("gallery")}}">Galeri</a>
+								</li>
+								<li >
+									<a href="{{route("contact")}}">İletişim</a>
+								</li>
+								@if(Auth::check())
+								<li class="  has-children ">
+									<a href="#">Bilgilerim</a>
+									<ul class="dropdown arrow-top">
+										<li>
+											<a href="{{route("profile","userinfo")}}" >Bilgilerim</a>
+											<a href="{{route("profile","appointment")}}" >Randevularım</a>
+											<a href="{{route("logout")}}" >Çıkış</a>
+										</li>
+
+									</ul>
+
+								</li>
+								@else
 								<li>
 									<a  data-toggle="modal" href="#loginmodal" class="btn btn-primary" style="font-weight: bold;font-size: 12px; padding: 5px 10px;">ÜYELik</a>
 								</li>

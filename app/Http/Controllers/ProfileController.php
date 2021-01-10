@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Repositories\PageRepository;
+use App\Http\Controllers\SystemController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -15,7 +15,7 @@ class ProfileController extends Controller
 		}
 		
 	
-		$s = PageRepository::settings();
+		$s = SystemController::settings();
 		
 		if ($url == "appointment") {
 			$s["appointment"]	= $this->appointmentlist();
@@ -31,7 +31,7 @@ class ProfileController extends Controller
 		
 		$user = Auth::user()->id;
 		
-		$appointment = \DB::table('randevu')->where('user_id', $user)->get()->toArray();
+		$appointment = \DB::table('randevus')->where('user_id', $user)->get()->toArray();
 		return $appointment;
 		
 	}

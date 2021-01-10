@@ -10,14 +10,14 @@
 				<div class="card-body ">
 					<div class="col-md-12 col-xs-12 bg-light">
 					<div class="row ">
-							<form action="{{url("admin/gallerys")}}" class="row col-md-12 col-xs-12" method="POST" enctype="multipart/form-data">
+							<form action="{{Route("admin_gallery_save")}}" class="row col-md-12 col-xs-12" method="POST" enctype="multipart/form-data">
 							@csrf
 							<h5 class="col-md-12 col-xs-12">Yeni Resim Yükle</h5>
 								<div class="form-group col-md-3 col-xs-6">
 									<label class="control-label">İlgili Tedavi</label>
 									<select name="tedavi_id" class="form-control">
-										@foreach ($cures as $k=>$v)
-											<option value="{{$v["id"]}}">{{$v["name"]}}</option>
+										@foreach ($cures as $v)
+											<option value="{{$v->id}}">{{$v->name}}</option>
 										@endforeach
 									</select>
 								</div>
@@ -39,14 +39,15 @@
 					</div>
 					<div clasS="row">
 						<div clasS="row col-md-12 col-xs-12">
-							@foreach ($gallery as $k=>$v)
+							@foreach ($gallery as $v)
+
 							<div class="card col-md-3 col-xs-6" >
 								<div class="removediv">
-									<a href="{{url("admin/gallerys/delete/".$v["id"])}}" data-toggle="tooltip" data-placement="top" title="Kaldır">
+									<a href="{{Route("admin_gallery_delete",$v->id)}}" data-toggle="tooltip" data-placement="top" title="Kaldır">
 										<i class="fa fa-times text-danger"></i>
 									</a>
 								</div>
-								<img class="card-img-top" src="{{asset("images/uploads/".$v["image"])}}" style="width:100%">
+								<img class="card-img-top" src="{{asset("storage/".($v->image))}}" style="width:100%">
 							</div>
 							@endforeach
 						</div>

@@ -16,23 +16,34 @@
 <div class="site-block-half d-block d-lg-flex ">
 	<div class="image order-2 bg-light">
 		<h2 class="site-heading text-black mb-3">&nbsp;</h2>
-		<form action="#" class="p-5 ">
-
+		
+		<form action="{{route("contact_sendmessage")}}" method="POST" class="p-5 ">
+			@include('includes.message')
+			@csrf
 			<div class="row form-group">
 				<div class="col-md-12 mb-3 mb-md-0">
 					<label class="font-weight-bold" for="fullname">İsim Soyisim</label>
-					<input type="text" id="fullname" class="form-control" placeholder="İsim">
+					<input type="text" id="fullname" name="name" class="form-control" placeholder="İsim">
 				</div>
 			</div>
 			<div class="row form-group">
 				<div class="col-md-12">
 					<label class="font-weight-bold" for="email">Email</label>
-					<input type="email" id="email" class="form-control" placeholder="Email">
+					<input type="email" id="email" name="email" class="form-control" placeholder="Email">
 				</div>
 			</div>
-
-
-
+			<div class="row form-group">
+				<div class="col-md-12">
+					<label class="font-weight-bold" for="email">Telefon</label>
+					<input type="text" id="phone" name="phone" class="form-control" placeholder="Telefon">
+				</div>
+			</div>
+			<div class="row form-group">
+				<div class="col-md-12">
+					<label class="font-weight-bold" for="email">Konu</label>
+					<input type="text" id="subject" name="subject" class="form-control" placeholder="Konu">
+				</div>
+			</div>
 			<div class="row form-group">
 				<div class="col-md-12">
 					<label class="font-weight-bold" for="message">Mesaj</label>

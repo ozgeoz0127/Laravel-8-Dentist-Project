@@ -4,13 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Repositories\PageRepository;
+use App\Http\Controllers\SystemController;
 
 class GalleryController extends Controller
 {
 	public function show()
 	{
-		$s = PageRepository::settings();
+		$s = SystemController::settings();
 		return view('gallery',$s);
 	}
 }

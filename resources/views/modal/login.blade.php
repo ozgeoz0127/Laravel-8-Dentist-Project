@@ -13,7 +13,7 @@
 					<a href="javascript:;" id="registerbuttonbutton"  class="col-md-6 col-xs-6 ">Üyelik Formu</a>
 				</div>
 				<div class="col-md-12 col-xs-12 loginform" style="padding-left:0px;padding-right:0px">
-					<form method="post" action='{{url("login")}}' id="loginform">
+					<form method="post" action='{{Route("login")}}' id="loginform">
 						<p><input type="text" class="form-control" name="email" placeholder="Email"></p>
 						<p><input type="password" class="form-control" name="password" placeholder="Şifre"></p>
 						<div class="row">
@@ -25,7 +25,7 @@
 					</form>
 				</div>
 				<div class="col-md-12 col-xs-12 registerform" style="display:none;padding-left:0px;padding-right:0px">
-					<form method="post" action='{{url("register")}}' id="registerform">
+					<form method="post" action='{{Route("register")}}' id="registerform">
 						<p><input type="text" class="form-control" name="name" placeholder="Ad"></p>
 						<p><input type="text" class="form-control" name="surname" placeholder="Soyad"></p>
 						<p><input type="text" class="form-control" name="email" placeholder="Email"></p>

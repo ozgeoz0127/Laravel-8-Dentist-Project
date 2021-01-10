@@ -8,49 +8,49 @@
 	<div class="sidebar-wrapper">
 		<ul class="nav">
 			<li >
-				<a href="{{url("admin")}}">
+				<a href="{{Route("admin_home")}}">
 					<i class="nc-icon nc-bank"></i>
 					<p>Dashboard</p>
 				</a>
 			</li>
 			<li>
-				<a href="{{url("admin/cures")}}">
+				<a href="{{Route("admin_cure")}}">
 					<i class="nc-icon nc-sound-wave"></i>
 					<p>Tedaviler</p>
 				</a>
 			</li>
 			<li>
-				<a href="{{url("admin/users")}}">
+				<a href="{{Route("admin_user")}}">
 					<i class="nc-icon nc-single-02"></i>
 					<p>Kullanıcılar</p>
 				</a>
 			</li>
 			<li>
-				<a href="{{url("admin/appointments")}}">
+				<a href="{{Route("admin_appointment")}}">
 					<i class="nc-icon nc-bell-55"></i>
 					<p>Randevular</p>
 				</a>
 			</li>
 			<li>
-				<a href="{{url("admin/gallerys")}}">
+				<a href="{{Route("admin_gallery")}}">
 					<i class="nc-icon nc-album-2"></i>
 					<p>Galeri</p>
 				</a>
 			</li>
 			<li>
-				<a href="{{url("admin/faq")}}">
+				<a href="{{Route("admin_faq")}}">
 					<i class="nc-icon nc-support-17"></i>
 					<p>S.S.S</p>
 				</a>
 			</li>
 			<li>
-				<a href="{{url("admin/settings")}}">
+				<a href="{{Route("admin_setting")}}">
 					<i class="nc-icon nc-tile-56"></i>
 					<p>Ayarlar</p>
 				</a>
 			</li>
 			<li>
-				<a href="{{url("logout")}}">
+				<a href="{{Route("logout")}}">
 					<i class="nc-icon nc-user-run"></i>
 					<p>Çıkış</p>
 				</a>

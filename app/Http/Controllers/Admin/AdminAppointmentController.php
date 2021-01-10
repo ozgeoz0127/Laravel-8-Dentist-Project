@@ -4,12 +4,12 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Repositories\PageRepository;
+use App\Http\Controllers\SystemController;
 
 class AdminAppointmentController extends Controller
 {
     public function show(Request $request){
-		$s = PageRepository::settings();
+		$s = SystemController::settings();
 		$s["appointment"] = $this->Appointmentlist();
 		return view("admin.appointment",$s) ;
     }

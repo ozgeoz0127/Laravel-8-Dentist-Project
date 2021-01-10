@@ -86,12 +86,12 @@
 				<div class="row row-items">
 					@foreach ($settings["cures"] as $k=>$v)
 					<div class="col-md-4">
-						<a href="{{url("services/".$v["url"])}}" class="d-flex text-center feature p-4 mb-4">
+						<a href="{{url("services/".$v->url)}}" class="d-flex text-center feature p-4 mb-4">
 							<span class="align-self-center w-100">
 								<span class="d-block mb-3">
-									<span class="{{$v["image"]}} display-3"></span>
+									<span class="{{$v->image}} display-3"></span>
 								</span>
-								<h3>{{$v["name"]}}</h3>
+								<h3>{{$v->name}}</h3>
 							</span>
 						</a>
 					</div>

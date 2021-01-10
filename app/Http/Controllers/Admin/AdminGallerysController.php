@@ -4,40 +4,32 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Repositories\PageRepository;
+use App\Http\Controllers\SystemController;
+use Illuminate\Support\Facades\Storage;
+use App\Models\Image;
+
 
 class AdminGallerysController extends Controller
 {
 	public function show(Request $request)
 	{
-		
-		if (count($request->file()) > 0) {
-			$img = $this->imageupload($request);	
-		}
-		return  view('admin/gallery',["cures" => PageRepository::getcure(),"gallery" => PageRepository::gallery()]);
+
+		return  view('admin/gallery',["cures" => SystemController::getcure(),"gallery" => SystemController::gallery()]);
 	}
 	
-	public function imageupload($request)
+	public function save(Request $request)
 	{
-		$request->validate([
-			'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-		]);
-
-		$imageName = time().'.'.$request->image->extension();
-
-		$request->image->move(public_path('images/uploads'), $imageName);
-		
-		
-		$post = $request->post();
-		unset($post["_token"]);
-		$post["image"] = $imageName;
-		\DB::table('image')->insert($post);
-
+        $im =new Image;
+        $im->tedavi_id = $request->input("tedavi_id");
+        $im->title     = $request->input("title");
+        $im->image     = Storage::disk('public')->putFile('images', $request->file("image"));
+		$im->save();
+        return redirect()->back();
 	}
 	
 	public function delete($id)
 	{
-		\DB::table('image')->where('id', $id)->delete();
+        Image::find($id)->delete();
 		return redirect()->back();
 	}
 	

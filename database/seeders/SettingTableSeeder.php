@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 class SettingTableSeeder extends Seeder
 {
 	private $settings = [
-		"title"			=> "title",
+		"title"			=> "Dente",
 		"keywords"		=> "keywords",
 		"description"	=> "desc",
 		"company"		=> "comp",
@@ -22,9 +22,9 @@ class SettingTableSeeder extends Seeder
 		"facebook"		=> "port",
 		"instagram"		=> "port",
 		"twitter"		=> "port",
-		"aboutus"		=> "portport",
-		"contact"		=> "portport",
-		"references"	=> "portport",
+		"aboutus"		=> "aboutus",
+		"contact"		=> "contact",
+		"references"	=> "references",
 		"status"		=> 1,
 
 	]; 
@@ -35,7 +35,7 @@ class SettingTableSeeder extends Seeder
      */
     public function run()
     {
-		\DB::table('setting')->insert($this->settings);
+		\DB::table('settings')->insert($this->settings);
 		
     }
 }

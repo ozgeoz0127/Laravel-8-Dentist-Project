@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Repositories\PageRepository;
+use App\Http\Controllers\SystemController;
 
 class HomeController extends Controller
 {
     public function show(){
     	
-		$s = PageRepository::settings();
+		$s = SystemController::settings();
 		return view('home',$s);
     }
     

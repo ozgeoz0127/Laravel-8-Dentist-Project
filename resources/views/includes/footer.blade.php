@@ -8,11 +8,12 @@
 					</div>
 					<div class="col-md-12 col-lg-12">
 						<ul class="list-unstyled">
-							@foreach ($settings["menu"] as $k=>$v)
-							<li>
-								<a href="{{url($v["url"])}}">{{$v["text"]}}</a>
-							</li>
-							@endforeach
+							<li><a href="{{route("home")}}">Home</a></li>
+							<li><a href="{{route("about")}}">Hakkımızda</a></li>
+							<li><a href="{{route("services","")}}">Servisler</a></li>
+							<li><a href="{{route("gallery")}}">Galeri</a></li>
+							<li><a href="{{route("contact")}}">İletişim</a></li>
+
 						</ul>
 					</div>
 				</div>
