@@ -41,7 +41,7 @@
 										{{$v->username}}
 									</td>
 									<td>
-										{{$settings["cures"][$v->tedavi_id]["name"]}}
+										{{$settings["cures"][$v->tedavi_id]->name}}
 									</td>
 									<td>
 										{{$v->date." ".$v->time}}

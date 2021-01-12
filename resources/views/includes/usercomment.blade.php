@@ -13,14 +13,6 @@
 						<h3 ><strong>Yorumunuz</strong> Bizim için değerli</h3>
 					</div>
 					<div class="row form-group">
-						<label class="btn btn-warning">
-							<input type="radio" name="type" @if(!Auth::check()) disabled @endif autocomplete="off"> Sık Sorulan Sorular
-						</label>
-						<label class="btn btn-warning">
-							<input type="radio" name="type" @if(!Auth::check()) disabled @endif autocomplete="off"> Hizmetler Hakkında
-						</label>
-					</div>
-					<div class="row form-group">
 						<div class="col-md-12">
 							<input type="hidden" name="user" @if(!Auth::check()) disabled @endif id="user" value="@if(!Auth::check()) 0 @else {{Auth::user()->id}} @endif">
 							<textarea name="message" @if(!Auth::check()) disabled @endif id="message" cols="30" rows="5" class="form-control" placeholder="Yorumunuz"></textarea>

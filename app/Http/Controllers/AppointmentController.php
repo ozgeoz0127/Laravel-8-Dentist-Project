@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AuthController;
-
+use App\Models\Randevu;
 class AppointmentController extends Controller
 {
 	public function show(Request $post)
@@ -12,8 +12,8 @@ class AppointmentController extends Controller
 		
 		// kullanıcı email kayıtlımı ? 
 		// kayıtlı değilse kayıt açıp IDsini alacaz
-		// kayıtlı ise  IDsini alacaz
-		$user = \DB::table('user')->where('email', $post["email"])->get()->toArray();
+		// kayıtlı ise  IDsini alacağız
+		$user = \DB::table('users')->where('email', $post["email"])->get()->toArray();
 		if (count($user) == 0) {
 			$user = AuthController::adduser($post);
 		}else {
@@ -22,6 +22,18 @@ class AppointmentController extends Controller
 		
 		//rezervasyon oluşturacağız
 		
+		$t = new Randevu;
+		$t->user_id 	= $user;
+		$t->tedavi_id 	= $post["cure"];
+		$t->date 		= date("Y-m-d",strtotime($post["date"]));
+		$t->time 		= ($post["hour"].":".$post["minute"]);
+		$t->hekim_id	= $post["doctor"];
+		$t->ip			= \Request::ip();
+		$t->note		= "";
+		$t->status		= 0;
+		
+		$t->save();		
+		return $t->id;
 		\DB::table('randevu')->insert([
 			'user_id' => $user,
 			'tedavi_id' => $post["cure"],
@@ -34,7 +46,7 @@ class AppointmentController extends Controller
 			"created_at"	=> date("Y-m-d h:i:s"),
 			"updated_at"	=> date("Y-m-d h:i:s")
 		]);
-		return \DB::getPdo()->lastInsertId();
+		return $t->id;
 		
 	}
 	

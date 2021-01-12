@@ -21,8 +21,8 @@ class CreateProcessesTable extends Migration
 			$table->string('price')->nullable();
 			$table->text('note')->nullable();
 			$table->string('status',1);
-			$table->timestamp('created_at')->nullable();
-			$table->timestamp('updated_at')->nullable();
+			$table->timestamp('created_at');
+			$table->timestamp('updated_at');
         });
     }
 

@@ -26,6 +26,19 @@
 				</a>
 			</li>
 			<li>
+				<a href="{{Route("admin_comment")}}">
+					<i class="nc-icon nc-chat-33"></i>
+					<p>Kullanıcı Yorumları</p>
+				</a>
+			</li>
+			<li>
+				<a href="{{Route("admin_contact")}}">
+					<i class="nc-icon nc-email-85"></i>
+					<p>İletişim Mesajları</p>
+				</a>
+			</li>
+			
+			<li>
 				<a href="{{Route("admin_appointment")}}">
 					<i class="nc-icon nc-bell-55"></i>
 					<p>Randevular</p>

@@ -24,8 +24,8 @@ class CreateTedavisTable extends Migration
 			$table->integer('userid')->autoIncrement(false)->nullable();
 			$table->string('status',1);
 			$table->string('url',255);
-			$table->timestamp('created_at')->nullable();
-			$table->timestamp('updated_at')->nullable();
+			$table->timestamp('created_at');
+			$table->timestamp('updated_at');
         });
     }
 

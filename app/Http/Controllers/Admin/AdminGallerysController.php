@@ -14,7 +14,7 @@ class AdminGallerysController extends Controller
 	public function show(Request $request)
 	{
 
-		return  view('admin/gallery',["cures" => SystemController::getcure(),"gallery" => SystemController::gallery()]);
+		return  view('admin/gallery',["cures" => SystemController::getcure(),"gallery" => Image::all()]);
 	}
 	
 	public function save(Request $request)

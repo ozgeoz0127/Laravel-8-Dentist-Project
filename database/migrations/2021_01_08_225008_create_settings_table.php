@@ -34,6 +34,8 @@ class CreateSettingsTable extends Migration
 			$table->text('contact')->nullable();
 			$table->text('references')->nullable();
 			$table->string('status',1);
+			$table->timestamp('created_at')->nullable();
+			$table->timestamp('updated_at')->nullable();
         });
     }
 

@@ -22,8 +22,8 @@ class CreateMessagesTable extends Migration
 			$table->text('message')->nullable();
 			$table->string('ip',50);
 			$table->string('status',1);
-			$table->timestamp('created_at')->nullable();
-			$table->timestamp('updated_at')->nullable();
+			$table->timestamp('created_at');
+			$table->timestamp('updated_at');
         });
     }
 

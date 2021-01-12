@@ -5,33 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Controllers\SystemController;
-
+use App\Models\Setting;
 
 class AdminSettingsController extends Controller
 {
-	private $settings = [
-		"title"			=> "title",
-		"keywords"		=> "keywords",
-		"description"	=> "desc",
-		"company"		=> "comp",
-		"address"		=> "add",
-		"phone"			=> "ph",
-		"fax"			=> "fax",
-		"email"			=> "email",
-		"smtpserver"	=> "server",
-		"smtpemail"		=> "email",
-		"smtppassword"	=> "pass",
-		"smtpport"		=> "port",
-		"facebook"		=> "port",
-		"instagram"		=> "port",
-		"twitter"		=> "port",
-		"aboutus"		=> "portport",
-		"contact"		=> "portport",
-		"references"	=> "portport",
-		"status"		=> 1,
-
-	]; 
-	
     public function show(Request $request){
     	
 		$s = SystemController::settings();
@@ -40,33 +17,31 @@ class AdminSettingsController extends Controller
     
 	public function save(Request $request)
 	{
-		$post = $request->post();
 
-		/*$new = new \App\Models\Setting();
-		$new->title 		= $post['title'];
-		$new->keywords 		= $post['keywords'];
-		$new->description 	= $post['description'];
-		$new->company 		= $post['company'];
-		$new->address 		= $post['address'];
-		$new->phone 		= $post['phone'];
-		$new->fax 			= $post['fax'];
-		$new->email 		= $post['email'];
-		$new->smtpserver 	= $post['smtpserver'];
-		$new->smtpemail 	= $post['smtpemail'];
-		$new->smtppassword 	= $post['smtppassword'];
-		$new->smtpport 		= $post['smtpport'];
-		$new->facebook 		= $post['facebook'];
-		$new->instagram 	= $post['instagram'];
-		$new->twitter 		= $post['twitter'];
-		$new->aboutus 		= $post['aboutus'];
+		$new =Setting::find(1);
+		$new->title 		= $request->input("title");
+		$new->keywords 		= $request->input("keywords");
+		$new->description 	= $request->input("description");
+		$new->company 		= $request->input("company");
+		$new->address 		= $request->input("address");
+		$new->phone 		= $request->input("phone");
+		$new->fax 			= $request->input("fax");
+		$new->email 		= $request->input("email");
+		$new->smtpserver 	= $request->input("smtpserver");
+		$new->smtpemail 	= $request->input("smtpemail");
+		$new->smtppassword 	= $request->input("smtppassword");
+		$new->smtpport 		= $request->input("smtpport");
+		$new->facebook 		= $request->input("facebook");
+		$new->instagram 	= $request->input("instagram");
+		$new->twitter 		= $request->input("twitter");
+		$new->aboutus 		= $request->input("aboutus");
+		$new->references 	= $request->input("references");
 		$new->contact 		= "";
-		$new->references 	= $post['references'];
 		$new->status 		= 1;
-		$new->whereId(1)->update();*/
-		unset($post["_token"]);
-		unset($post["files"]);
-		\DB::table('settings')->update($post);
+		$new->save();
+
 		return back()->with('info','Bilgiler güncellendi.');
+
     	
     }
 }

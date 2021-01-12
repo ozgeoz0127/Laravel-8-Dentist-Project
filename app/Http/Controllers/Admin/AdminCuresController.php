@@ -4,14 +4,12 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
+use App\Models\Tedavi;
 class AdminCuresController extends Controller
 {
 	public function show(Request $request)
 	{
-				
-		$cures= \DB::table('tedavi')->orderBy('title', 'asc')->get();
-		return view('admin/cures',["cures" => $cures]);
+		return view('admin/cures',["cures" => Tedavi::all()]);
     }
     
 	public function getdata(Request $request)

@@ -21,8 +21,8 @@ class CreateCommentsTable extends Migration
 			$table->integer('userid',5)->autoIncrement(false);
 			$table->string('ip',255);
 			$table->string('status',1);
-			$table->timestamp('created_at')->nullable();
-			$table->timestamp('updated_at')->nullable();
+			$table->timestamp('created_at');
+			$table->timestamp('updated_at');
         });
     }
 

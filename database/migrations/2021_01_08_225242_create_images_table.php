@@ -18,8 +18,8 @@ class CreateImagesTable extends Migration
 			$table->integer('tedavi_id')->autoIncrement(false);
 			$table->string('title',255);
 			$table->string('image',255);
-			$table->timestamp('created_at')->nullable();
-			$table->timestamp('updated_at')->nullable();
+			$table->timestamp('created_at');
+			$table->timestamp('updated_at');
         });
     }
 

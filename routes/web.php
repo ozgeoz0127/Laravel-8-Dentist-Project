@@ -19,6 +19,8 @@ use App\Http\Controllers\Admin\AdminAppointmentController;
 use App\Http\Controllers\Admin\AdminSettingsController;
 use App\Http\Controllers\Admin\AdminCuresController;
 use App\Http\Controllers\Admin\AdminGallerysController;
+use App\Http\Controllers\Admin\AdminCommentController;
+use App\Http\Controllers\Admin\AdminContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,6 +53,8 @@ Route::group( ['prefix' => 'admin',"middleware" => "auth"], function() {
 		Route::any('gallerys/save', [AdminGallerysController::class,'save'])->name("admin_gallery_save");
 		Route::any('gallerys/delete/{id}', [AdminGallerysController::class,'delete'])->name("admin_gallery_delete");
 		Route::any('faq', [AdminGallerysController::class,'show'])->name("admin_faq");
+		Route::any('comment', [AdminCommentController::class,'show'])->name("admin_comment");
+		Route::any('contact', [AdminContactController::class,'show'])->name("admin_contact");
 });
 
 
