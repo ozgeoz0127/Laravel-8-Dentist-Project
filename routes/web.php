@@ -38,8 +38,8 @@ Route::any('admin/login', function() {
 })->name('admin.login');
 
 // admin roots
-//Route::group( ['prefix' => 'admin',  'middleware' => 'auth'], function() {
-Route::group( ['prefix' => 'admin',"middleware" => "auth"], function() {
+
+Route::group( ['prefix' => 'admin',"middleware" => "auth:admin"], function() {
 		Route::get('/', [AdminHomeController::class,'show'])->name("admin_home");
 		Route::get('users', [AdminUserController::class,'show'])->name("admin_user");
 		Route::any('appointments', [AdminAppointmentController::class,'show'])->name("admin_appointment");

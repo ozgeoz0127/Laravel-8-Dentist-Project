@@ -11,8 +11,9 @@ use Illuminate\Auth\Middleware\Authenticate as Middleware;
 class Authenticate extends Middleware
 {
 
-	public function handle(Request $request, Closure $next)
+	public function handle($request, Closure $next)
 	{
+
 		if (is_null(Auth::user()) || Auth::user()->role != 'admin') {
 			return redirect(route('admin.login'));
 		}
