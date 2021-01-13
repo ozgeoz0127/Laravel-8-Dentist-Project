@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Tedavi;
+use App\Models\Faq;
 
 class SystemController extends Controller
 {
@@ -36,16 +37,7 @@ class SystemController extends Controller
 
 	public static function faq()
 	{
-		$list = [];
-		$list[]= [
-			"query"		=> "test soru",
-			"answer"	=> "cevap test"
-		];
-		$list[]= [
-			"query"		=> "test soru",
-			"answer"	=> "cevap test"
-		];
-		return $list;
+		return Faq::where("status",1)->get();
 	}
 
 	public static function getdoctors()

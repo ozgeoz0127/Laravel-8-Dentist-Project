@@ -117,7 +117,9 @@
   content: "";
   display: table;
 }
-
+button i {
+	font-size:16px !important
+}
 .demo-icons ul li {
   width: 20%;
   float: left;

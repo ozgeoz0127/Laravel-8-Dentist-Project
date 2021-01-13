@@ -11,16 +11,6 @@
  <removed value=";"/>
  <added value=""/>
  <lastopfiles>
-  <file name="F:\wamp\www\dente\resources\views\includes\usercomment.blade.php"/>
-  <file name="F:\wamp\www\dente\resources\views\admin\appointment.blade.php"/>
-  <file name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminAppointmentController.php"/>
-  <file name="F:\wamp\www\dente\routes\web.php"/>
-  <file name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminCommentController.php"/>
-  <file name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminGallerysController.php"/>
-  <file name="F:\wamp\www\dente\resources\views\admin\comment.blade.php"/>
-  <file name="F:\wamp\www\dente\resources\views\admin\includes\sidebar.blade.php"/>
-  <file name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminContactController.php"/>
-  <file name="F:\wamp\www\dente\resources\views\admin\contact.blade.php"/>
   <lastactivefile name=""/>
  </lastopfiles>
  <errors version="1.10">
@@ -178,78 +168,78 @@
  <cakedata/>
  <dplmenupath/>
  <laravael>
-  <facade class="App" name="app"/>
-  <facade class="Auth" name="auth"/>
-  <facade class="Blade" name="blade.compiler"/>
-  <facade class="Cache" name="cache"/>
-  <facade class="Config" name="config"/>
-  <facade class="Cookie" name="cookie"/>
-  <facade class="Crypt" name="encrypter"/>
-  <facade class="DB" name="db"/>
-  <facade class="Date" name="date"/>
-  <facade class="Event" name="events"/>
-  <facade class="Facade" name="Facade does not implement getFacadeAccessor method."/>
-  <facade class="File" name="files"/>
-  <facade class="Hash" name="hash"/>
-  <facade class="Lang" name="translator"/>
-  <facade class="Log" name="log"/>
-  <facade class="Mail" name="mail.manager"/>
-  <facade class="Password" name="auth.password"/>
-  <facade class="Queue" name="queue"/>
-  <facade class="RateLimiter" name="Illuminate\Cache\RateLimiter"/>
-  <facade class="Redirect" name="redirect"/>
-  <facade class="Redis" name="redis"/>
-  <facade class="Request" name="request"/>
-  <facade class="Route" name="router"/>
-  <facade class="Schema" name="db"/>
-  <facade class="Session" name="session"/>
-  <facade class="Storage" name="filesystem"/>
-  <facade class="URL" name="url"/>
-  <facade class="Validator" name="validator"/>
-  <facade class="View" name="view"/>
+  <facade name="app" class="App"/>
+  <facade name="auth" class="Auth"/>
+  <facade name="blade.compiler" class="Blade"/>
+  <facade name="cache" class="Cache"/>
+  <facade name="config" class="Config"/>
+  <facade name="cookie" class="Cookie"/>
+  <facade name="encrypter" class="Crypt"/>
+  <facade name="db" class="DB"/>
+  <facade name="date" class="Date"/>
+  <facade name="events" class="Event"/>
+  <facade name="Facade does not implement getFacadeAccessor method." class="Facade"/>
+  <facade name="files" class="File"/>
+  <facade name="hash" class="Hash"/>
+  <facade name="translator" class="Lang"/>
+  <facade name="log" class="Log"/>
+  <facade name="mail.manager" class="Mail"/>
+  <facade name="auth.password" class="Password"/>
+  <facade name="queue" class="Queue"/>
+  <facade name="Illuminate\Cache\RateLimiter" class="RateLimiter"/>
+  <facade name="redirect" class="Redirect"/>
+  <facade name="redis" class="Redis"/>
+  <facade name="request" class="Request"/>
+  <facade name="router" class="Route"/>
+  <facade name="db" class="Schema"/>
+  <facade name="session" class="Session"/>
+  <facade name="filesystem" class="Storage"/>
+  <facade name="url" class="URL"/>
+  <facade name="validator" class="Validator"/>
+  <facade name="view" class="View"/>
   <file name="F:\wamp\www\dente\vendor\laravel\framework\src\Illuminate\Cache\CacheServiceProvider.php">
-   <type class="MemcachedConnector" name="memcached.connector"/>
+   <type name="memcached.connector" class="MemcachedConnector"/>
   </file>
   <file name="F:\wamp\www\dente\vendor\laravel\framework\src\Illuminate\Database\DatabaseServiceProvider.php">
-   <type class="DatabaseTransactionsManager" name="db.transactions"/>
+   <type name="db.transactions" class="DatabaseTransactionsManager"/>
   </file>
   <file name="F:\wamp\www\dente\vendor\laravel\framework\src\Illuminate\Database\MigrationServiceProvider.php">
-   <type class="FreshCommand" name="command.migrate.fresh"/>
-   <type class="RefreshCommand" name="command.migrate.refresh"/>
+   <type name="command.migrate.fresh" class="FreshCommand"/>
+   <type name="command.migrate.refresh" class="RefreshCommand"/>
   </file>
   <file name="F:\wamp\www\dente\vendor\laravel\framework\src\Illuminate\Filesystem\FilesystemServiceProvider.php">
-   <type class="Filesystem" name="files"/>
+   <type name="files" class="Filesystem"/>
   </file>
   <file name="F:\wamp\www\dente\vendor\laravel\framework\src\Illuminate\Foundation\Providers\ArtisanServiceProvider.php">
-   <type class="ClearResetsCommand" name="command.auth.resets.clear"/>
-   <type class="ClearCompiledCommand" name="command.clear-compiled"/>
-   <type class="WipeCommand" name="command.db.wipe"/>
-   <type class="DownCommand" name="command.down"/>
-   <type class="EnvironmentCommand" name="command.environment"/>
-   <type class="EventCacheCommand" name="command.event.cache"/>
-   <type class="EventGenerateCommand" name="command.event.generate"/>
-   <type class="KeyGenerateCommand" name="command.key.generate"/>
-   <type class="OptimizeCommand" name="command.optimize"/>
-   <type class="OptimizeClearCommand" name="command.optimize.clear"/>
-   <type class="PackageDiscoverCommand" name="command.package.discover"/>
-   <type class="QueueClearCommand" name="command.queue.clear"/>
-   <type class="ListFailedQueueCommand" name="command.queue.failed"/>
-   <type class="FlushFailedQueueCommand" name="command.queue.flush"/>
-   <type class="ForgetFailedQueueCommand" name="command.queue.forget"/>
-   <type class="QueueRetryCommand" name="command.queue.retry"/>
-   <type class="QueueRetryBatchCommand" name="command.queue.retry-batch"/>
-   <type class="DumpCommand" name="command.schema.dump"/>
-   <type class="ServeCommand" name="command.serve"/>
-   <type class="StorageLinkCommand" name="command.storage.link"/>
-   <type class="StubPublishCommand" name="command.stub.publish"/>
-   <type class="UpCommand" name="command.up"/>
-   <type class="ViewCacheCommand" name="command.view.cache"/>
+   <type name="command.auth.resets.clear" class="ClearResetsCommand"/>
+   <type name="command.clear-compiled" class="ClearCompiledCommand"/>
+   <type name="command.db.wipe" class="WipeCommand"/>
+   <type name="command.down" class="DownCommand"/>
+   <type name="command.environment" class="EnvironmentCommand"/>
+   <type name="command.event.cache" class="EventCacheCommand"/>
+   <type name="command.event.generate" class="EventGenerateCommand"/>
+   <type name="command.key.generate" class="KeyGenerateCommand"/>
+   <type name="command.optimize" class="OptimizeCommand"/>
+   <type name="command.optimize.clear" class="OptimizeClearCommand"/>
+   <type name="command.package.discover" class="PackageDiscoverCommand"/>
+   <type name="command.queue.clear" class="QueueClearCommand"/>
+   <type name="command.queue.failed" class="ListFailedQueueCommand"/>
+   <type name="command.queue.flush" class="FlushFailedQueueCommand"/>
+   <type name="command.queue.forget" class="ForgetFailedQueueCommand"/>
+   <type name="command.queue.retry" class="QueueRetryCommand"/>
+   <type name="command.queue.retry-batch" class="QueueRetryBatchCommand"/>
+   <type name="command.schema.dump" class="DumpCommand"/>
+   <type name="command.serve" class="ServeCommand"/>
+   <type name="command.storage.link" class="StorageLinkCommand"/>
+   <type name="command.stub.publish" class="StubPublishCommand"/>
+   <type name="command.up" class="UpCommand"/>
+   <type name="command.view.cache" class="ViewCacheCommand"/>
   </file>
   <file name="F:\wamp\www\dente\vendor\laravel\framework\src\Illuminate\View\ViewServiceProvider.php">
-   <type class="EngineResolver" name="view.engine.resolver"/>
+   <type name="view.engine.resolver" class="EngineResolver"/>
   </file>
   <file name="F:\wamp\www\dente\vendor\laravel\tinker\src\TinkerServiceProvider.php">
-   <type class="TinkerCommand" name="command.tinker"/>
+   <type name="command.tinker" class="TinkerCommand"/>
   </file>
  </laravael>
  <smartyassings/>
@@ -257,225 +247,225 @@
  <yiidata/>
  <todoblock>
   <todofile name="F:\wamp\www\dente\public\js\jquery-ui.js">
-   <todo pos="3;154" name="TODO: remove support for widgetEventPrefix"/>
-   <todo pos="2;831" name="TODO: make sure destroying one instance of mouse doesn't mess with"/>
+   <todo name="TODO: remove support for widgetEventPrefix" pos="3;154"/>
+   <todo name="TODO: make sure destroying one instance of mouse doesn't mess with" pos="2;831"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\facade\ignition\src\Support\ComposerClassMap.php">
-   <todo pos="9;50" name="TODO: This is incorrect. Doesnt list all fqcns. Need to parse namespace"/>
+   <todo name="TODO: This is incorrect. Doesnt list all fqcns. Need to parse namespace" pos="9;50"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\fakerphp\faker\src\Faker\ORM\CakePHP\EntityPopulator.php">
-   <todo pos="9;117" name="TODO check if TreeBehavior attached to modify lft/rgt cols"/>
+   <todo name="TODO check if TreeBehavior attached to modify lft/rgt cols" pos="9;117"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\fakerphp\faker\src\Faker\Provider\Base.php">
-   <todo pos="9;545" name="TODO: remove in v2"/>
+   <todo name="TODO: remove in v2" pos="9;545"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\fakerphp\faker\src\Faker\Provider\de_AT\Address.php">
-   <todo pos="76;15" name="todo implement more strict p"/>
-   <todo pos="75;15" name="@todo implement more strict p"/>
+   <todo name="todo implement more strict p" pos="76;15"/>
+   <todo name="@todo implement more strict p" pos="75;15"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\fakerphp\faker\src\Faker\Provider\kk_KZ\Address.php">
-   <todo pos="5;15" name="TODO list all country names in the world"/>
+   <todo name="TODO list all country names in the world" pos="5;15"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\filp\whoops\src\Whoops\Exception\Frame.php">
-   <todo pos="10;54" name="todo: This can be made more reliable by checking if we've entered"/>
-   <todo pos="9;54" name="@todo: This can be made more reliable by checking if we've entered"/>
+   <todo name="todo: This can be made more reliable by checking if we've entered" pos="10;54"/>
+   <todo name="@todo: This can be made more reliable by checking if we've entered" pos="9;54"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\filp\whoops\src\Whoops\Handler\PrettyPageHandler.php">
-   <todo pos="14;182" name="todo: Make this more robust"/>
-   <todo pos="13;182" name="@todo: Make this more robust"/>
-   <todo pos="14;220" name="todo: Asset compiler"/>
-   <todo pos="13;220" name="@todo: Asset compiler"/>
-   <todo pos="10;276" name="todo: Consolidate addDataTable and addDataTableCallback"/>
-   <todo pos="9;276" name="@todo: Consolidate addDataTable and addDataTableCallback"/>
+   <todo name="todo: Make this more robust" pos="14;182"/>
+   <todo name="@todo: Make this more robust" pos="13;182"/>
+   <todo name="todo: Asset compiler" pos="14;220"/>
+   <todo name="@todo: Asset compiler" pos="13;220"/>
+   <todo name="todo: Consolidate addDataTable and addDataTableCallback" pos="10;276"/>
+   <todo name="@todo: Consolidate addDataTable and addDataTableCallback" pos="9;276"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\filp\whoops\src\Whoops\Run.php">
-   <todo pos="14;362" name="todo Might be able to clean this up a bit better"/>
-   <todo pos="13;362" name="@todo Might be able to clean this up a bit better"/>
+   <todo name="todo Might be able to clean this up a bit better" pos="14;362"/>
+   <todo name="@todo Might be able to clean this up a bit better" pos="13;362"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\guzzlehttp\guzzle\src\Client.php">
-   <todo pos="22;405" name="todo: Do not rely on curl"/>
-   <todo pos="21;405" name="@todo: Do not rely on curl"/>
-   <todo pos="13;430" name="TODO: Add more sink validation"/>
+   <todo name="todo: Do not rely on curl" pos="22;405"/>
+   <todo name="@todo: Do not rely on curl" pos="21;405"/>
+   <todo name="TODO: Add more sink validation" pos="13;430"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\guzzlehttp\psr7\src\BufferStream.php">
-   <todo pos="9;123" name="TODO: What should happen here"/>
+   <todo name="TODO: What should happen here" pos="9;123"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\hamcrest\hamcrest-php\hamcrest\Hamcrest\Arrays\IsArray.php">
-   <todo pos="1;10" name="TODO: Allow this to take matchers or values within the array"/>
+   <todo name="TODO: Allow this to take matchers or values within the array" pos="1;10"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\league\commonmark\src\Extension\Attributes\Node\AttributesInline.php">
-   <todo pos="42;34" name="TODO: Re-implement as a delimiter"/>
+   <todo name="TODO: Re-implement as a delimiter" pos="42;34"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\nesbot\carbon\src\Carbon\Carbon.php">
-   <todo pos="5;20" name="todoc generated by `composer phpdoc`>"/>
-   <todo pos="6;507" name="todoc>"/>
+   <todo name="todoc generated by `composer phpdoc`>" pos="5;20"/>
+   <todo name="todoc>" pos="6;507"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\nesbot\carbon\src\Carbon\CarbonImmutable.php">
-   <todo pos="5;20" name="todoc generated by `composer phpdoc`>"/>
-   <todo pos="6;507" name="todoc>"/>
+   <todo name="todoc generated by `composer phpdoc`>" pos="5;20"/>
+   <todo name="todoc>" pos="6;507"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\nesbot\carbon\src\Carbon\CarbonInterface.php">
-   <todo pos="5;33" name="todoc generated by `composer phpdoc`>"/>
-   <todo pos="6;518" name="todoc>"/>
+   <todo name="todoc generated by `composer phpdoc`>" pos="5;33"/>
+   <todo name="todoc>" pos="6;518"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\nesbot\carbon\src\Carbon\Factory.php">
-   <todo pos="5;18" name="todoc generated by `composer phpdoc`>"/>
-   <todo pos="6;222" name="todoc>"/>
+   <todo name="todoc generated by `composer phpdoc`>" pos="5;18"/>
+   <todo name="todoc>" pos="6;222"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\nesbot\carbon\src\Carbon\FactoryImmutable.php">
-   <todo pos="5;17" name="todoc generated by `composer phpdoc`>"/>
-   <todo pos="6;221" name="todoc>"/>
+   <todo name="todoc generated by `composer phpdoc`>" pos="5;17"/>
+   <todo name="todoc>" pos="6;221"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\nesbot\carbon\src\Carbon\Lang\ar_Shakl.php">
-   <todo pos="6;19" name="TODO add shakl to months"/>
-   <todo pos="5;19" name="@TODO add shakl to months"/>
-   <todo pos="6;54" name="TODO add shakl to translations below"/>
-   <todo pos="5;54" name="@TODO add shakl to translations below"/>
+   <todo name="TODO add shakl to months" pos="6;19"/>
+   <todo name="@TODO add shakl to months" pos="5;19"/>
+   <todo name="TODO add shakl to translations below" pos="6;54"/>
+   <todo name="@TODO add shakl to translations below" pos="5;54"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\nesbot\carbon\src\Carbon\Traits\Date.php">
-   <todo pos="5;38" name="todoc generated by `composer phpdoc`>"/>
-   <todo pos="6;523" name="todoc>"/>
+   <todo name="todoc generated by `composer phpdoc`>" pos="5;38"/>
+   <todo name="todoc>" pos="6;523"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\nikic\php-parser\lib\PhpParser\Comment.php">
-   <todo pos="13;229" name="TODO: Rename these to include &quot;start&quot;."/>
+   <todo name="TODO: Rename these to include &quot;start&quot;." pos="13;229"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\nikic\php-parser\lib\PhpParser\Internal\TokenStream.php">
-   <todo pos="21;239" name="TODO Handle non-space indentation"/>
+   <todo name="TODO Handle non-space indentation" pos="21;239"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\nikic\php-parser\lib\PhpParser\Lexer\TokenEmulator\AttributeEmulator.php">
-   <todo pos="9;41" name="TODO"/>
+   <todo name="TODO" pos="9;41"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\nikic\php-parser\lib\PhpParser\PrettyPrinterAbstract.php">
-   <todo pos="13;496" name="TODO Add &lt;"/>
-   <todo pos="17;727" name="TODO: Try to preserve formatting"/>
-   <todo pos="25;778" name="TODO: Preserve formatting."/>
-   <todo pos="25;877" name="TODO: Preserve formatting."/>
-   <todo pos="13;900" name="TODO: Support removing single node."/>
-   <todo pos="52;1162" name="TODO: FIXUP_NEW_VARIABLE"/>
-   <todo pos="69;1173" name="TODO: FIXUP_NEW_VARIABLE"/>
-   <todo pos="9;1293" name="TODO: &quot;yield&quot; where both key and value are inserted doesn't work"/>
-   <todo pos="86;1319" name="TODO"/>
-   <todo pos="47;1335" name="TODO These need to be treated more carefully"/>
-   <todo pos="9;1422" name="TODO Insertion into empty statement lists."/>
-   <todo pos="14;1459" name="TODO"/>
-   <todo pos="67;1480" name="TODO"/>
+   <todo name="TODO Add &lt;" pos="13;496"/>
+   <todo name="TODO: Try to preserve formatting" pos="17;727"/>
+   <todo name="TODO: Preserve formatting." pos="25;778"/>
+   <todo name="TODO: Preserve formatting." pos="25;877"/>
+   <todo name="TODO: Support removing single node." pos="13;900"/>
+   <todo name="TODO: FIXUP_NEW_VARIABLE" pos="52;1162"/>
+   <todo name="TODO: FIXUP_NEW_VARIABLE" pos="69;1173"/>
+   <todo name="TODO: &quot;yield&quot; where both key and value are inserted doesn't work" pos="9;1293"/>
+   <todo name="TODO" pos="86;1319"/>
+   <todo name="TODO These need to be treated more carefully" pos="47;1335"/>
+   <todo name="TODO Insertion into empty statement lists." pos="9;1422"/>
+   <todo name="TODO" pos="14;1459"/>
+   <todo name="TODO" pos="67;1480"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\nikic\php-parser\lib\PhpParser\PrettyPrinter\Standard.php">
-   <todo pos="9;1034" name="TODO: This is not fully accurate."/>
+   <todo name="TODO: This is not fully accurate." pos="9;1034"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\phpdocumentor\reflection-docblock\src\DocBlock\StandardTagFactory.php">
-   <todo pos="13;234" name="TODO: Annotation support is planned for a later stage and as such is disabled for now"/>
+   <todo name="TODO: Annotation support is planned for a later stage and as such is disabled for now" pos="13;234"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\phpunit\php-code-coverage\src\StaticAnalysis\CodeUnitFindingVisitor.php">
-   <todo pos="15;142" name="todo Handle default values"/>
-   <todo pos="14;142" name="@todo Handle default values"/>
+   <todo name="todo Handle default values" pos="15;142"/>
+   <todo name="@todo Handle default values" pos="14;142"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\psy\psysh\src\CodeCleaner\CalledClassPass.php">
-   <todo pos="14;50" name="todo switch this to actually validate args when we get context-aware code cleaner passes."/>
-   <todo pos="13;50" name="@todo switch this to actually validate args when we get context-aware code cleaner passes."/>
+   <todo name="todo switch this to actually validate args when we get context-aware code cleaner passes." pos="14;50"/>
+   <todo name="@todo switch this to actually validate args when we get context-aware code cleaner passes." pos="13;50"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\psy\psysh\src\CodeCleaner\PassableByReferencePass.php">
-   <todo pos="10;38" name="todo support MethodCall and StaticCall as well."/>
-   <todo pos="9;38" name="@todo support MethodCall and StaticCall as well."/>
+   <todo name="todo support MethodCall and StaticCall as well." pos="10;38"/>
+   <todo name="@todo support MethodCall and StaticCall as well." pos="9;38"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\psy\psysh\src\CodeCleaner\RequirePass.php">
-   <todo pos="14;80" name="todo Shell::handleError would be better here, because we could"/>
-   <todo pos="13;80" name="@todo Shell::handleError would be better here, because we could"/>
-   <todo pos="14;86" name="todo trigger an error as fallback"/>
-   <todo pos="13;86" name="@todo trigger an error as fallback"/>
+   <todo name="todo Shell::handleError would be better here, because we could" pos="14;80"/>
+   <todo name="@todo Shell::handleError would be better here, because we could" pos="13;80"/>
+   <todo name="todo trigger an error as fallback" pos="14;86"/>
+   <todo name="@todo trigger an error as fallback" pos="13;86"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\psy\psysh\src\CodeCleaner\ValidFunctionNamePass.php">
-   <todo pos="14;48" name="todo add an &quot;else&quot; here which adds a runtime check for instances where we can't tell"/>
-   <todo pos="13;48" name="@todo add an &quot;else&quot; here which adds a runtime check for instances where we can't tell"/>
+   <todo name="todo add an &quot;else&quot; here which adds a runtime check for instances where we can't tell" pos="14;48"/>
+   <todo name="@todo add an &quot;else&quot; here which adds a runtime check for instances where we can't tell" pos="13;48"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\psy\psysh\src\Command\DocCommand.php">
-   <todo pos="18;143" name="todo this is going to collide with ReflectionMethod ids"/>
-   <todo pos="17;143" name="@todo this is going to collide with ReflectionMethod ids"/>
+   <todo name="todo this is going to collide with ReflectionMethod ids" pos="18;143"/>
+   <todo name="@todo this is going to collide with ReflectionMethod ids" pos="17;143"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\psy\psysh\src\Command\ListCommand.php">
-   <todo pos="10;128" name="todo something cleaner than this :-/"/>
-   <todo pos="9;128" name="@todo something cleaner than this :-/"/>
-   <todo pos="14;266" name="todo ensure that 'functions', 'classes', 'interfaces', 'traits' only accept namespace target"/>
-   <todo pos="13;266" name="@todo ensure that 'functions', 'classes', 'interfaces', 'traits' only accept namespace target"/>
+   <todo name="todo something cleaner than this :-/" pos="10;128"/>
+   <todo name="@todo something cleaner than this :-/" pos="9;128"/>
+   <todo name="todo ensure that 'functions', 'classes', 'interfaces', 'traits' only accept namespace target" pos="14;266"/>
+   <todo name="@todo ensure that 'functions', 'classes', 'interfaces', 'traits' only accept namespace target" pos="13;266"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\psy\psysh\src\Command\ListCommand\ClassConstantEnumerator.php">
-   <todo pos="14;33" name="todo handle ReflectionExtension as well"/>
-   <todo pos="13;33" name="@todo handle ReflectionExtension as well"/>
+   <todo name="todo handle ReflectionExtension as well" pos="14;33"/>
+   <todo name="@todo handle ReflectionExtension as well" pos="13;33"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\psy\psysh\src\Command\ShowCommand.php">
-   <todo pos="18;116" name="todo maybe set $__file to $target"/>
-   <todo pos="17;116" name="@todo maybe set $__file to $target"/>
+   <todo name="todo maybe set $__file to $target" pos="18;116"/>
+   <todo name="@todo maybe set $__file to $target" pos="17;116"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\psy\psysh\src\Configuration.php">
-   <todo pos="10;194" name="todo support raw output with interactive input"/>
-   <todo pos="9;194" name="@todo support raw output with interactive input"/>
-   <todo pos="10;824" name="todo mebbe turn this on by default some day"/>
-   <todo pos="9;824" name="@todo mebbe turn this on by default some day"/>
-   <todo pos="10;937" name="todo detect `chsh` != 65001 on Windows and return false"/>
-   <todo pos="9;937" name="@todo detect `chsh` != 65001 on Windows and return false"/>
-   <todo pos="14;1405" name="todo Fix capitalization for 0.11.0"/>
-   <todo pos="13;1405" name="@todo Fix capitalization for 0.11.0"/>
-   <todo pos="14;1529" name="todo Fix capitalization for 0.11.0"/>
-   <todo pos="13;1529" name="@todo Fix capitalization for 0.11.0"/>
+   <todo name="todo support raw output with interactive input" pos="10;194"/>
+   <todo name="@todo support raw output with interactive input" pos="9;194"/>
+   <todo name="todo mebbe turn this on by default some day" pos="10;824"/>
+   <todo name="@todo mebbe turn this on by default some day" pos="9;824"/>
+   <todo name="todo detect `chsh` != 65001 on Windows and return false" pos="10;937"/>
+   <todo name="@todo detect `chsh` != 65001 on Windows and return false" pos="9;937"/>
+   <todo name="todo Fix capitalization for 0.11.0" pos="14;1405"/>
+   <todo name="@todo Fix capitalization for 0.11.0" pos="13;1405"/>
+   <todo name="todo Fix capitalization for 0.11.0" pos="14;1529"/>
+   <todo name="@todo Fix capitalization for 0.11.0" pos="13;1529"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\psy\psysh\src\ExecutionLoop\ProcessForker.php">
-   <todo pos="18;277" name="todo remove this once we don't support PHP 5.x anymore :)"/>
-   <todo pos="17;277" name="@todo remove this once we don't support PHP 5.x anymore :)"/>
+   <todo name="todo remove this once we don't support PHP 5.x anymore :)" pos="18;277"/>
+   <todo name="@todo remove this once we don't support PHP 5.x anymore :)" pos="17;277"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\psy\psysh\src\Formatter\CodeFormatter.php">
-   <todo pos="10;71" name="todo something better here"/>
-   <todo pos="9;71" name="@todo something better here"/>
+   <todo name="todo something better here" pos="10;71"/>
+   <todo name="@todo something better here" pos="9;71"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\psy\psysh\src\Formatter\SignatureFormatter.php">
-   <todo pos="14;352" name="todo Do we want to include the"/>
-   <todo pos="13;352" name="@todo Do we want to include the"/>
+   <todo name="todo Do we want to include the" pos="14;352"/>
+   <todo name="@todo Do we want to include the" pos="13;352"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\psy\psysh\src\Shell.php">
-   <todo pos="14;339" name="todo should it be possible to have raw output in an interactive run"/>
-   <todo pos="13;339" name="@todo should it be possible to have raw output in an interactive run"/>
-   <todo pos="10;424" name="todo overrides via environment variables (or should these happen in config"/>
-   <todo pos="9;424" name="@todo overrides via environment variables (or should these happen in config"/>
+   <todo name="todo should it be possible to have raw output in an interactive run" pos="14;339"/>
+   <todo name="@todo should it be possible to have raw output in an interactive run" pos="13;339"/>
+   <todo name="todo overrides via environment variables (or should these happen in config" pos="10;424"/>
+   <todo name="@todo overrides via environment variables (or should these happen in config" pos="9;424"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\psy\psysh\src\functions.php">
-   <todo pos="10;87" name="todo come up with a better way of doing this which doesn't involve injecting input :-P"/>
-   <todo pos="9;87" name="@todo come up with a better way of doing this which doesn't involve injecting input :-P"/>
-   <todo pos="10;274" name="todo Show Presenter / custom casters."/>
-   <todo pos="9;274" name="@todo Show Presenter / custom casters."/>
-   <todo pos="18;391" name="todo this triggers the &quot;exited unexpectedly&quot; logic in the"/>
-   <todo pos="17;391" name="@todo this triggers the &quot;exited unexpectedly&quot; logic in the"/>
+   <todo name="todo come up with a better way of doing this which doesn't involve injecting input :-P" pos="10;87"/>
+   <todo name="@todo come up with a better way of doing this which doesn't involve injecting input :-P" pos="9;87"/>
+   <todo name="todo Show Presenter / custom casters." pos="10;274"/>
+   <todo name="@todo Show Presenter / custom casters." pos="9;274"/>
+   <todo name="todo this triggers the &quot;exited unexpectedly&quot; logic in the" pos="18;391"/>
+   <todo name="@todo this triggers the &quot;exited unexpectedly&quot; logic in the" pos="17;391"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Mime\Headers\ParameterizedHeader.php">
-   <todo pos="36;126" name="TODO: Check caching here"/>
-   <todo pos="13;186" name="TODO: text, or something else"/>
+   <todo name="TODO: Check caching here" pos="36;126"/>
+   <todo name="TODO: text, or something else" pos="13;186"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Mime\SimpleMimeEntity.php">
-   <todo pos="9;299" name="TODO: Try to refactor this logic"/>
+   <todo name="TODO: Try to refactor this logic" pos="9;299"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Signers\DKIMSigner.php">
-   <todo pos="5;217" name="TODO fix return"/>
-   <todo pos="25;601" name="todo handle it but should never happen"/>
+   <todo name="TODO fix return" pos="5;217"/>
+   <todo name="todo handle it but should never happen" pos="25;601"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\StreamBuffer.php">
-   <todo pos="10;92" name="TODO make tls arguments configurable"/>
-   <todo pos="9;92" name="@TODO make tls arguments configurable"/>
+   <todo name="TODO make tls arguments configurable" pos="10;92"/>
+   <todo name="@TODO make tls arguments configurable" pos="9;92"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\swiftmailer\swiftmailer\tests\acceptance\Swift\Mime\SimpleMessageAcceptanceTest.php">
-   <todo pos="61;6" name="TODO: Test with the charset defined"/>
+   <todo name="TODO: Test with the charset defined" pos="61;6"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\symfony\css-selector\XPath\Extension\FunctionExtension.php">
-   <todo pos="9;96" name="todo: handle an+b, odd, even"/>
+   <todo name="todo: handle an+b, odd, even" pos="9;96"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\symfony\css-selector\XPath\Extension\HtmlExtension.php">
-   <todo pos="9;102" name="todo: in the second half, add &quot;and is not a descendant of that fieldset element's first legend elem"/>
+   <todo name="todo: in the second half, add &quot;and is not a descendant of that fieldset element's first legend elem" pos="9;102"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\symfony\http-kernel\HttpCache\Store.php">
-   <todo pos="9;156" name="TODO the metaStore referenced an entity that doesn't exist in"/>
+   <todo name="TODO the metaStore referenced an entity that doesn't exist in" pos="9;156"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\symfony\mime\Header\ParameterizedHeader.php">
-   <todo pos="13;117" name="TODO: text, or something else"/>
+   <todo name="TODO: text, or something else" pos="13;117"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\symfony\translation\Loader\PoFileLoader.php">
-   <todo pos="17;89" name="TODO: this fails when comments or contexts are added"/>
+   <todo name="TODO: this fails when comments or contexts are added" pos="17;89"/>
   </todofile>
  </todoblock>
  <dbgurls/>
@@ -6881,11 +6871,11 @@
   <file name="F:\wamp\www\dente\tests\Feature\ExampleTest.php" crc="1607426490537"/>
   <file name="F:\wamp\www\dente\tests\TestCase.php" crc="1607426490554"/>
   <file name="F:\wamp\www\dente\tests\CreatesApplication.php" crc="1607426490514"/>
-  <file name="F:\wamp\www\dente\storage\framework\views\ffcd7d51aa40af2f130c50492309bb825ad6da04.php" crc="1609623033200"/>
+  <file name="F:\wamp\www\dente\storage\framework\views\ffcd7d51aa40af2f130c50492309bb825ad6da04.php" crc="1610579170879"/>
   <file name="F:\wamp\www\dente\storage\framework\views\f4b6392a098ef2c299767ec1a7f814ed48d2656d.php" crc="1610315404404"/>
   <file name="F:\wamp\www\dente\storage\framework\views\f3575cbce65bad393ce125953e1895979f4b7970.php" crc="1610150346423"/>
   <file name="F:\wamp\www\dente\storage\framework\views\ebff13156a432a8059a546ed6a9059bf35173434.php" crc="1610314319941"/>
-  <file name="F:\wamp\www\dente\storage\framework\views\e826a6ae1200ed32f98be453476d9ed4bcffda1f.php" crc="1609681736515"/>
+  <file name="F:\wamp\www\dente\storage\framework\views\e826a6ae1200ed32f98be453476d9ed4bcffda1f.php" crc="1610577962181"/>
   <file name="F:\wamp\www\dente\storage\framework\views\e2d39246982cbee3d89769831f6f394156f1cebc.php" crc="1607463012472"/>
   <file name="F:\wamp\www\dente\storage\framework\views\d5130f6114cd60b6311ec7a629705a5bd05cdb2c.php" crc="1608387412913"/>
   <file name="F:\wamp\www\dente\storage\framework\views\d30ed4652c30d145a60d5e743e801ae7e3e643f7.php" crc="1610315304481"/>
@@ -6901,6 +6891,7 @@
   <file name="F:\wamp\www\dente\storage\framework\views\915142a497942b54c90d9618c6bc5da5cd9dcda5.php" crc="1610491408004"/>
   <file name="F:\wamp\www\dente\storage\framework\views\8b8e72d4343c76d577bcb9ef19a902af8167c8bc.php" crc="1610284236472"/>
   <file name="F:\wamp\www\dente\storage\framework\views\84a0329d2b3abe495ebae2a8c7c7fd5b3b625a69.php" crc="1610315808220"/>
+  <file name="F:\wamp\www\dente\storage\framework\views\813a0f81c3d3e538c27ba2baa0358019542eda8b.php" crc="1610579253296"/>
   <file name="F:\wamp\www\dente\storage\framework\views\808d16572feda635a42d5c1be2fcd09a03d5f33d.php" crc="1609680556330"/>
   <file name="F:\wamp\www\dente\storage\framework\views\7f70766a77db1315263ab4e50256db0a29042b6c.php" crc="1610312620317"/>
   <file name="F:\wamp\www\dente\storage\framework\views\7865ae83898389e963b7c4bbbce3aeb382c0f238.php" crc="1610314376109"/>
@@ -6911,6 +6902,7 @@
   <file name="F:\wamp\www\dente\storage\framework\views\63607504aff24380f1732eab589f6cb57e1fcfe5.php" crc="1610489969578"/>
   <file name="F:\wamp\www\dente\storage\framework\views\5d9830f25483880866110e497322152a25d8d5f9.php" crc="1610490980298"/>
   <file name="F:\wamp\www\dente\storage\framework\views\5b395c6a4a840d0d2d253a6de78656eda1714f6c.php" crc="1610317600079"/>
+  <file name="F:\wamp\www\dente\storage\framework\views\5b27e8b3156f4985dbc03227937b8cbca35a853c.php" crc="1610491409699"/>
   <file name="F:\wamp\www\dente\storage\framework\views\3b02456dccb5a435348b0e33abc77ac97d953bcf.php" crc="1608506819231"/>
   <file name="F:\wamp\www\dente\storage\framework\views\3adc7f59ad0f2195fa0879d2bd1b935fdd353f2f.php" crc="1608416281047"/>
   <file name="F:\wamp\www\dente\storage\framework\views\33949163d7780c8a47375538dc96782be5d1b100.php" crc="1609071501094"/>
@@ -6921,7 +6913,7 @@
   <file name="F:\wamp\www\dente\storage\framework\views\19e5a0a5d69c70a0bb68130f13546979d937b4ca.php" crc="1609621387243"/>
   <file name="F:\wamp\www\dente\storage\framework\views\11a387557727fc97a3a1c85480a5be5be79d3a9f.php" crc="1610298853613"/>
   <file name="F:\wamp\www\dente\storage\framework\views\0d169e4bbbfa34f88262271db9da77d1860c36c1.php" crc="1607463012848"/>
-  <file name="F:\wamp\www\dente\routes\web.php" crc="1610491295238"/>
+  <file name="F:\wamp\www\dente\routes\web.php" crc="1610576297771"/>
   <file name="F:\wamp\www\dente\routes\console.php" crc="1607426490392"/>
   <file name="F:\wamp\www\dente\routes\channels.php" crc="1607426490371"/>
   <file name="F:\wamp\www\dente\routes\api.php" crc="1607426490350"/>
@@ -6935,7 +6927,7 @@
   <file name="F:\wamp\www\dente\resources\views\includes\menu.blade.php" crc="1610315401464"/>
   <file name="F:\wamp\www\dente\resources\views\includes\header.blade.php" crc="1610314278980"/>
   <file name="F:\wamp\www\dente\resources\views\includes\footer.blade.php" crc="1610314043861"/>
-  <file name="F:\wamp\www\dente\resources\views\admin\layouts\default.blade.php" crc="1609623025570"/>
+  <file name="F:\wamp\www\dente\resources\views\admin\layouts\default.blade.php" crc="1610579168081"/>
   <file name="F:\wamp\www\dente\resources\views\admin\includes\sidebar.blade.php" crc="1610491406071"/>
   <file name="F:\wamp\www\dente\resources\views\admin\includes\navbar.blade.php" crc="1609621384613"/>
   <file name="F:\wamp\www\dente\resources\views\admin\includes\footer.blade.php" crc="1608471305900"/>
@@ -6943,6 +6935,7 @@
   <file name="F:\wamp\www\dente\resources\views\admin\settings.blade.php" crc="1610284195058"/>
   <file name="F:\wamp\www\dente\resources\views\admin\login.blade.php" crc="1609071499263"/>
   <file name="F:\wamp\www\dente\resources\views\admin\gallery.blade.php" crc="1610298851467"/>
+  <file name="F:\wamp\www\dente\resources\views\admin\faq.blade.php" crc="1610579251981"/>
   <file name="F:\wamp\www\dente\resources\views\admin\dashboard.blade.php" crc="1608506817110"/>
   <file name="F:\wamp\www\dente\resources\views\admin\cures.blade.php" crc="1609680553836"/>
   <file name="F:\wamp\www\dente\resources\views\admin\contact.blade.php" crc="1610491379166"/>
@@ -6953,7 +6946,7 @@
   <file name="F:\wamp\www\dente\resources\views\profile.blade.php" crc="1608414271705"/>
   <file name="F:\wamp\www\dente\resources\views\home.blade.php" crc="1610149363934"/>
   <file name="F:\wamp\www\dente\resources\views\gallery.blade.php" crc="1610317595773"/>
-  <file name="F:\wamp\www\dente\resources\views\faq.blade.php" crc="1609681680727"/>
+  <file name="F:\wamp\www\dente\resources\views\faq.blade.php" crc="1610577959753"/>
   <file name="F:\wamp\www\dente\resources\views\contact.blade.php" crc="1610315805904"/>
   <file name="F:\wamp\www\dente\resources\views\about.blade.php" crc="1610314373914"/>
   <file name="F:\wamp\www\dente\resources\lang\en\validation.php" crc="1607426490312"/>
@@ -7004,7 +6997,7 @@
   <file name="F:\wamp\www\dente\public\css\admin\paper-dashboard.min.css" crc="1607335907000"/>
   <file name="F:\wamp\www\dente\public\css\admin\paper-dashboard.css" crc="1607335907000"/>
   <file name="F:\wamp\www\dente\public\css\admin\demo.js" crc="1607335907000"/>
-  <file name="F:\wamp\www\dente\public\css\admin\demo.css" crc="1609507231644"/>
+  <file name="F:\wamp\www\dente\public\css\admin\demo.css" crc="1610579163715"/>
   <file name="F:\wamp\www\dente\public\css\admin\bootstrap.min.css" crc="1607335907000"/>
   <file name="F:\wamp\www\dente\public\css\style.css" crc="1608383595516"/>
   <file name="F:\wamp\www\dente\public\css\owl.theme.default.min.css" crc="1541229140000"/>
@@ -7021,7 +7014,8 @@
   <file name="F:\wamp\www\dente\database\seeders\UserTableSeeder.php" crc="1608385628747"/>
   <file name="F:\wamp\www\dente\database\seeders\TedaviTableSeeder.php" crc="1609538846392"/>
   <file name="F:\wamp\www\dente\database\seeders\SettingTableSeeder.php" crc="1610314394335"/>
-  <file name="F:\wamp\www\dente\database\seeders\DatabaseSeeder.php" crc="1609535811781"/>
+  <file name="F:\wamp\www\dente\database\seeders\FaqTableSeeder.php" crc="1610576916421"/>
+  <file name="F:\wamp\www\dente\database\seeders\DatabaseSeeder.php" crc="1610577434557"/>
   <file name="F:\wamp\www\dente\database\migrations\2021_01_08_225522_create_categories_table.php" crc="1610486795176"/>
   <file name="F:\wamp\www\dente\database\migrations\2021_01_08_225428_create_processes_table.php" crc="1610486787919"/>
   <file name="F:\wamp\www\dente\database\migrations\2021_01_08_225242_create_images_table.php" crc="1610486782024"/>
@@ -7050,7 +7044,6 @@
   <file name="F:\wamp\www\dente\config\app.php" crc="1607426489581"/>
   <file name="F:\wamp\www\dente\bootstrap\cache\services.php" crc="1610146530083"/>
   <file name="F:\wamp\www\dente\bootstrap\cache\packages.php" crc="1610146530434"/>
-  <file name="F:\wamp\www\dente\bootstrap\cache\config.php" crc="1609019157535"/>
   <file name="F:\wamp\www\dente\bootstrap\app.php" crc="1607426489538"/>
   <file name="F:\wamp\www\dente\app\Providers\RouteServiceProvider.php" crc="1607426489491"/>
   <file name="F:\wamp\www\dente\app\Providers\EventServiceProvider.php" crc="1607426489470"/>
@@ -7075,16 +7068,17 @@
   <file name="F:\wamp\www\dente\app\Http\Middleware\RedirectIfAuthenticated.php" crc="1607426489266"/>
   <file name="F:\wamp\www\dente\app\Http\Middleware\PreventRequestsDuringMaintenance.php" crc="1607426489245"/>
   <file name="F:\wamp\www\dente\app\Http\Middleware\EncryptCookies.php" crc="1607426489225"/>
-  <file name="F:\wamp\www\dente\app\Http\Middleware\Authenticate.php" crc="1610487087847"/>
+  <file name="F:\wamp\www\dente\app\Http\Middleware\Authenticate.php" crc="1610575970459"/>
   <file name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminUserController.php" crc="1610487256696"/>
   <file name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminSettingsController.php" crc="1610488511752"/>
   <file name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminHomeController.php" crc="1610286991031"/>
   <file name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminGallerysController.php" crc="1610487518561"/>
+  <file name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminFaqController.php" crc="1610578059038"/>
   <file name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminCuresController.php" crc="1610487464118"/>
   <file name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminContactController.php" crc="1610491342266"/>
   <file name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminCommentController.php" crc="1610490921218"/>
   <file name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminAppointmentController.php" crc="1610490275306"/>
-  <file name="F:\wamp\www\dente\app\Http\Controllers\SystemController.php" crc="1610314529447"/>
+  <file name="F:\wamp\www\dente\app\Http\Controllers\SystemController.php" crc="1610577598657"/>
   <file name="F:\wamp\www\dente\app\Http\Controllers\ServiceController.php" crc="1610315328761"/>
   <file name="F:\wamp\www\dente\app\Http\Controllers\ReferenceController.php" crc="1610314188189"/>
   <file name="F:\wamp\www\dente\app\Http\Controllers\ProfileController.php" crc="1610286881307"/>

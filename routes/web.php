@@ -21,6 +21,7 @@ use App\Http\Controllers\Admin\AdminCuresController;
 use App\Http\Controllers\Admin\AdminGallerysController;
 use App\Http\Controllers\Admin\AdminCommentController;
 use App\Http\Controllers\Admin\AdminContactController;
+use App\Http\Controllers\Admin\AdminFaqController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,8 +39,7 @@ Route::any('admin/login', function() {
 })->name('admin.login');
 
 // admin roots
-
-Route::group( ['prefix' => 'admin',"middleware" => "auth:admin"], function() {
+Route::group( ['prefix' => 'admin',"middleware" => "auth"], function() {
 		Route::get('/', [AdminHomeController::class,'show'])->name("admin_home");
 		Route::get('users', [AdminUserController::class,'show'])->name("admin_user");
 		Route::any('appointments', [AdminAppointmentController::class,'show'])->name("admin_appointment");
@@ -50,9 +50,9 @@ Route::group( ['prefix' => 'admin',"middleware" => "auth:admin"], function() {
 			Route::any('cures/save', [AdminCuresController::class,'save'])->name("admin_cure_save");
 			Route::any('cures/delete/{id}', [AdminCuresController::class,'delete'])->name("admin_delete");
 		Route::any('gallerys', [AdminGallerysController::class,'show'])->name("admin_gallery");
-		Route::any('gallerys/save', [AdminGallerysController::class,'save'])->name("admin_gallery_save");
-		Route::any('gallerys/delete/{id}', [AdminGallerysController::class,'delete'])->name("admin_gallery_delete");
-		Route::any('faq', [AdminGallerysController::class,'show'])->name("admin_faq");
+			Route::any('gallerys/save', [AdminGallerysController::class,'save'])->name("admin_gallery_save");
+			Route::any('gallerys/delete/{id}', [AdminGallerysController::class,'delete'])->name("admin_gallery_delete");
+		Route::any('faq', [AdminFaqController::class,'index'])->name("admin_faq");
 		Route::any('comment', [AdminCommentController::class,'show'])->name("admin_comment");
 		Route::any('contact', [AdminContactController::class,'show'])->name("admin_contact");
 });

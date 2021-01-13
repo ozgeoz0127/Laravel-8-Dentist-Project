@@ -19,7 +19,7 @@
 		<link href="{{asset("css/admin/paper-dashboard.css?v=2.0.1")}}" rel="stylesheet" />
 		<link href="{{asset("css/admin/perfectscrollbar.css?v=2.0.1")}}" rel="stylesheet" />
 		<!-- CSS Just for demo purpose, don't include it in your project -->
-		<link href="{{asset("css/admin/demo.css?123")}}" rel="stylesheet" />
+		<link href="{{asset("css/admin/demo.css?111")}}" rel="stylesheet" />
 		<script src="{{asset("js/admin/core/jquery.min.js")}}"> </script>
 		<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
 		<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"> </script>
