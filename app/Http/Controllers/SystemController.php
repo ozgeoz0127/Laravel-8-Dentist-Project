@@ -35,8 +35,11 @@ class SystemController extends Controller
 		}
 	}
 
-	public static function faq()
+	public static function faq($type="")
 	{
+		if ($type=="all") {
+			return Faq::all();	
+		}
 		return Faq::where("status",1)->get();
 	}
 

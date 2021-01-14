@@ -18,7 +18,7 @@ class AdminFaqController extends Controller
     public function index()
     {
     	
-		return  view('admin/faq',["faq" => SystemController::faq()]);
+		return  view('admin/faq',["faq" => SystemController::faq("all")]);
     }
 
     /**
@@ -28,7 +28,7 @@ class AdminFaqController extends Controller
      */
     public function create()
     {
-        //
+		return  view('admin/faq_create');
     }
 
     /**
@@ -39,7 +39,12 @@ class AdminFaqController extends Controller
      */
     public function store(Request $request)
     {
-        //
+		$new = new Faq;
+		$new->question 		= $request->input('question');
+		$new->answer 		= $request->input('answer');
+		$new->status 		= $request->input('status');
+		$new->save();
+		return redirect()->route('admin_faq');
     }
 
     /**
@@ -61,7 +66,8 @@ class AdminFaqController extends Controller
      */
     public function edit($id)
     {
-        //
+    	
+		return  view('admin/faq_edit',["faq" => Faq::find($id)]);
     }
 
     /**
@@ -73,7 +79,12 @@ class AdminFaqController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+		$new = Faq::find($id);
+		$new->question 		= $request->input('question');
+		$new->answer 		= $request->input('answer');
+		$new->status 		= $request->input('status');
+		$new->save();
+		return redirect()->route('admin_faq');
     }
 
     /**
@@ -84,6 +95,7 @@ class AdminFaqController extends Controller
      */
     public function destroy($id)
     {
-        //
+		Faq::find($id)->delete();
+		return redirect()->back();
     }
 }

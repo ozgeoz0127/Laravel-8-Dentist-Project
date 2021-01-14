@@ -53,6 +53,11 @@ Route::group( ['prefix' => 'admin',"middleware" => "auth"], function() {
 			Route::any('gallerys/save', [AdminGallerysController::class,'save'])->name("admin_gallery_save");
 			Route::any('gallerys/delete/{id}', [AdminGallerysController::class,'delete'])->name("admin_gallery_delete");
 		Route::any('faq', [AdminFaqController::class,'index'])->name("admin_faq");
+			Route::any('faq/new', [AdminFaqController::class,'create'])->name("admin_faq_new");
+			Route::any('faq/save', [AdminFaqController::class,'store'])->name("admin_faq_save");
+			Route::any('faq/edit/{id}', [AdminFaqController::class,'edit'])->name("admin_faq_edit");
+			Route::any('faq/update/{id}', [AdminFaqController::class,'update'])->name("admin_faq_update");
+			Route::any('faq/delete/{id}', [AdminFaqController::class,'destroy'])->name("admin_faq_delete");
 		Route::any('comment', [AdminCommentController::class,'show'])->name("admin_comment");
 		Route::any('contact', [AdminContactController::class,'show'])->name("admin_contact");
 });

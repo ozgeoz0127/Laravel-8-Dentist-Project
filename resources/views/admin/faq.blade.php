@@ -6,7 +6,7 @@
 			<div class="card">
 				<div class="card-header">
 					<h4 class="card-title"> Sık Sorulan Sorular</h4>
-					<button class="btn btn-success addnew"> + Yeni Ekle</button>
+					<a href="{{Route("admin_faq_new")}}" class="btn btn-success"> + Yeni Ekle</a>
 				</div>
 				<div class="card-body">
 					<div class="table-responsive">
@@ -40,15 +40,13 @@
 										@if ($v->status == 1) Aktif  @else Pasif @endif
 									</td>
 									<td class="text-right">
-										<button type="button" data-toggle="tooltip" class="btn btn-info btn-icon btn-sm "  title="Aktif/Pasif">
-											<i class="fa fa-low-vision"></i>
-										</button>
-										<button type="button" data-toggle="tooltip" class="btn btn-warning btn-icon btn-sm "  title="Düzenle">
+
+										<a href="{{Route("admin_faq_edit",$v->id)}}" data-toggle="tooltip" class="btn btn-warning btn-icon btn-sm "  title="Düzenle">
 											<i class="fa fa-edit"></i>
-										</button>
-										<button type="button" data-toggle="tooltip" class="btn btn-danger btn-icon btn-sm "  title="Kaldır">
+										</a>
+										<a href="{{Route("admin_faq_delete",$v->id)}}" data-toggle="tooltip" class="btn btn-danger btn-icon btn-sm "  title="Kaldır">
 											<i class="fa fa-times"></i>
-										</button>
+										</a>
 									</td>
 								</tr>
 
