@@ -1,46 +1,106 @@
 <?php
 
-namespace App\Http\Controllers\admin;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Tedavi;
+
 class AdminCuresController extends Controller
 {
-	public function show(Request $request)
-	{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
 		return view('admin/cures',["cures" => Tedavi::all()]);
     }
-    
-	public function getdata(Request $request)
-	{
-		$post = $request->post();
-		return \DB::table('tedavi')->where('id',  $post["tedaviID"])->get()->toArray();
 
-	}
-	public function delete($id)
-	{
-		\DB::table('tedavi')->where('id', $id)->delete();
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+		return  view('admin/cures_create');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+		$new = new Tedavi;
+		$new->title 		= $request->input('title');
+		$new->keywords 		= $request->input('keywords');
+		$new->image 		= $request->input('image');
+		$new->description	= $request->input('description');
+		$new->detail		= $request->input('detail');
+		$new->status 		= $request->input('status');
+		$new->url 			= $request->input('url');
+		$new->save();
+		return redirect()->route('admin_cure');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+		return  view('admin/cures_edit',["cure" => Tedavi::find($id)]);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+		
+		$new = Tedavi::find($id);
+		$new->title 		= $request->input('title');
+		$new->keywords 		= $request->input('keywords');
+		$new->image 		= $request->input('image');
+		$new->description	= $request->input('description');
+		$new->detail		= $request->input('detail');
+		$new->status 		= $request->input('status');
+		$new->url 			= $request->input('url');
+		$new->save();
+		return redirect()->route('admin_cure');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+		Tedavi::find($id)->delete();
 		return redirect()->back();
-
-	}
-	public function save(Request $request)
-	{
-		$post = $request->post();
-		
-		// post["id"] = 0 iser insert , farklı ise update
-		
-		if ($post["id"] == 0) {
-			unset($post["id"]);
-			\DB::table('tedavi')->insert($post);	
-		}else {
-			\DB::table('tedavi')->where('id',  $post["id"])->update($post);	
-		}
-		
-		
-		return response()->json([
-			"status" => true
-		]);
-	}
-    
+    }
 }

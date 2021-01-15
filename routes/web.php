@@ -45,21 +45,41 @@ Route::group( ['prefix' => 'admin',"middleware" => "auth"], function() {
 		Route::any('appointments', [AdminAppointmentController::class,'show'])->name("admin_appointment");
 		Route::any('settings', [AdminSettingsController::class,'show'])->name("admin_setting");
 		Route::any('settings/save', [AdminSettingsController::class,'save'])->name("admin_setting_save");
-		Route::any('cures', [AdminCuresController::class,'show'])->name("admin_cure");
-			Route::any('cures/getdata', [AdminCuresController::class,'getdata'])->name("admin_cure_data");
-			Route::any('cures/save', [AdminCuresController::class,'save'])->name("admin_cure_save");
-			Route::any('cures/delete/{id}', [AdminCuresController::class,'delete'])->name("admin_delete");
+
 		Route::any('gallerys', [AdminGallerysController::class,'show'])->name("admin_gallery");
 			Route::any('gallerys/save', [AdminGallerysController::class,'save'])->name("admin_gallery_save");
 			Route::any('gallerys/delete/{id}', [AdminGallerysController::class,'delete'])->name("admin_gallery_delete");
-		Route::any('faq', [AdminFaqController::class,'index'])->name("admin_faq");
-			Route::any('faq/new', [AdminFaqController::class,'create'])->name("admin_faq_new");
-			Route::any('faq/save', [AdminFaqController::class,'store'])->name("admin_faq_save");
-			Route::any('faq/edit/{id}', [AdminFaqController::class,'edit'])->name("admin_faq_edit");
-			Route::any('faq/update/{id}', [AdminFaqController::class,'update'])->name("admin_faq_update");
-			Route::any('faq/delete/{id}', [AdminFaqController::class,'destroy'])->name("admin_faq_delete");
+			
+			
+	Route::group( ['prefix' => 'cures'], function() {
+		Route::any('/', [AdminCuresController::class,'index'])->name("admin_cure");
+		Route::any('edit/{id}', [AdminCuresController::class,'edit'])->name("admin_cure_edit");
+		Route::any('save', [AdminCuresController::class,'store'])->name("admin_cure_save");
+		Route::any('new', [AdminCuresController::class,'create'])->name("admin_cure_create");
+		Route::any('delete/{id}', [AdminCuresController::class,'destroy'])->name("admin_cure_delete");
+		Route::any('update/{id}', [AdminCuresController::class,'update'])->name("admin_cure_update");
+	});
+			
+	Route::group( ['prefix' => 'faq'], function() {
+		Route::any('/', [AdminFaqController::class,'index'])->name("admin_faq");
+		Route::any('new', [AdminFaqController::class,'create'])->name("admin_faq_new");
+		Route::any('save', [AdminFaqController::class,'store'])->name("admin_faq_save");
+		Route::any('edit/{id}', [AdminFaqController::class,'edit'])->name("admin_faq_edit");
+		Route::any('update/{id}', [AdminFaqController::class,'update'])->name("admin_faq_update");
+		Route::any('delete/{id}', [AdminFaqController::class,'destroy'])->name("admin_faq_delete");
+	});
+			
 		Route::any('comment', [AdminCommentController::class,'show'])->name("admin_comment");
-		Route::any('contact', [AdminContactController::class,'show'])->name("admin_contact");
+
+		
+	Route::group( ['prefix' => 'contact'], function() {
+		Route::any('/', [AdminContactController::class,'index'])->name("admin_contact");
+		Route::any('save', [AdminContactController::class,'store'])->name("admin_contact_save");
+		Route::any('edit/{id}', [AdminContactController::class,'edit'])->name("admin_contact_edit");
+		Route::any('update/{id}', [AdminContactController::class,'update'])->name("admin_contact_update");
+		Route::any('delete/{id}', [AdminContactController::class,'destroy'])->name("admin_contact_delete");
+	});
+		
 });
 
 
