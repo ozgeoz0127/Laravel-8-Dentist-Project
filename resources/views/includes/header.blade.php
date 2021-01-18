@@ -21,16 +21,14 @@
 		<link rel="stylesheet" href="{{ asset('fonts/flaticon/font/flaticon.css') }}">
 		<link rel="stylesheet" href="{{ asset('css/aos.css') }}">
 		<link rel="stylesheet" href="{{ asset('css/style.css') }}">
-		<link rel="stylesheet" href="{{ asset('css/dente.css?'.time()) }}">
+		<link rel="stylesheet" href="{{ asset('css/dente.css?234234234'.time()) }}">
 
 		<script src="{{asset('js/jquery-3.3.1.min.js')}}"> </script>
 		<script src="{{asset('js/jquery-migrate-3.0.1.min.js')}}"> </script>
 		<script src="{{asset('js/jquery-ui.js')}}"> </script>
 		<script src="{{asset('js/popper.min.js')}}"> </script>
 		<script src="{{asset('js/bootstrap.min.js')}}"> </script>
-
-
-
+		@livewireStyles
 </head>
 <body>
 	<div class="site-wrap">

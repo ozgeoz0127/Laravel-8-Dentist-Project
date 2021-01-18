@@ -89,14 +89,17 @@ Route::get('/about', [AboutController::class,'show'])->name("about");
 Route::get('/gallery', [GalleryController::class,'show'])->name("gallery");
 Route::get('/faq', [FaqController::class,'show'])->name("faq");
 Route::get('/services/{url}', [ServiceController::class,'show'])->name("services");
-Route::get('/profile/{url}', [ProfileController::class,'show'])->name("profile");
 
-/*Route::get('/services', function () {
-	return redirect('/home');
+Route::group( ['prefix' => 'profile'], function() {
+	Route::any('/', [ProfileController::class,'show'])->name("profile");
+	Route::any('/userinfo', [ProfileController::class,'userinfo'])->name("profile_userinfo");
+		Route::any('/userupdate', [ProfileController::class,'userupdate'])->name("user_update");
+	Route::any('/appointment', [ProfileController::class,'appointment'])->name("profile_appointment");
+	Route::any('/review', [ProfileController::class,'review'])->name("profile_review");
+	Route::any('/message', [ProfileController::class,'review'])->name("profile_message");
+	
 });
-Route::get('/profile', function () {
-	return redirect('/home');
-});*/
+
 
 Route::get('/contact', [ContactController::class,'show'])->name("contact");
 Route::post('/contact/send', [ContactController::class,'send'])->name("contact_sendmessage");
@@ -110,3 +113,7 @@ Route::get('/logout', [AuthController::class,'logout'])->name("logout");
 
 
 
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');

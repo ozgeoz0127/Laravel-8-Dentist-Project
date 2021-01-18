@@ -11,13 +11,11 @@
  <removed value=";"/>
  <added value=""/>
  <lastopfiles>
-  <file name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminFaqController.php"/>
+  <file name="F:\wamp\www\dente\resources\views\profile.blade.php"/>
   <file name="F:\wamp\www\dente\routes\web.php"/>
-  <file name="F:\wamp\www\dente\resources\views\faq.blade.php"/>
-  <file name="F:\wamp\www\dente\resources\views\admin\faq.blade.php"/>
-  <file name="F:\wamp\www\dente\resources\views\admin\faq_edit.blade.php"/>
-  <file name="F:\wamp\www\dente\resources\views\admin\faq_create.blade.php"/>
-  <file name="F:\wamp\www\dente\app\Http\Controllers\SystemController.php"/>
+  <file name="F:\wamp\www\dente\app\Models\User.php"/>
+  <file name="F:\wamp\www\dente\app\Http\Controllers\ProfileController.php"/>
+  <file name="F:\wamp\www\dente\resources\views\profile\review.blade.php"/>
   <lastactivefile name=""/>
  </lastopfiles>
  <errors version="1.10">
@@ -84,6 +82,9 @@
   <errfile name="F:\wamp\www\dente\vendor\brick\math\src\BigDecimal.php">
    <error val="9;291;10;291;101;1;"/>
   </errfile>
+  <errfile name="F:\wamp\www\dente\storage\framework\views\9fdf5d129966b1a3578dc02606456d1e018baae0.php">
+   <error val="1;19;2;19;102;1;"/>
+  </errfile>
   <errfile name="F:\wamp\www\dente\resources\views\admin\layouts\default.blade.php">
    <error val="24;33;58;33;2002;1;"/>
    <error val="24;34;58;34;2002;1;"/>
@@ -109,6 +110,15 @@
   </errfile>
   <errfile name="F:\wamp\www\dente\resources\views\admin\faq_create.blade.php">
    <error val="28;10;7;12;2002;1;"/>
+  </errfile>
+  <errfile name="F:\wamp\www\dente\resources\views\admin\cures_edit.blade.php">
+   <error val="28;10;6;12;2002;1;"/>
+  </errfile>
+  <errfile name="F:\wamp\www\dente\resources\views\admin\cures_create.blade.php">
+   <error val="28;10;6;12;2002;1;"/>
+  </errfile>
+  <errfile name="F:\wamp\www\dente\resources\views\admin\contact_edit.blade.php">
+   <error val="28;11;5;13;2002;1;"/>
   </errfile>
   <errfile name="F:\wamp\www\dente\resources\views\reference.blade.php">
    <error val="131;15;1;16;2002;1;"/>
@@ -181,78 +191,80 @@
  <cakedata/>
  <dplmenupath/>
  <laravael>
-  <facade name="app" class="App"/>
-  <facade name="auth" class="Auth"/>
-  <facade name="blade.compiler" class="Blade"/>
-  <facade name="cache" class="Cache"/>
-  <facade name="config" class="Config"/>
-  <facade name="cookie" class="Cookie"/>
-  <facade name="encrypter" class="Crypt"/>
-  <facade name="db" class="DB"/>
-  <facade name="date" class="Date"/>
-  <facade name="events" class="Event"/>
-  <facade name="Facade does not implement getFacadeAccessor method." class="Facade"/>
-  <facade name="files" class="File"/>
-  <facade name="hash" class="Hash"/>
-  <facade name="translator" class="Lang"/>
-  <facade name="log" class="Log"/>
-  <facade name="mail.manager" class="Mail"/>
-  <facade name="auth.password" class="Password"/>
-  <facade name="queue" class="Queue"/>
-  <facade name="Illuminate\Cache\RateLimiter" class="RateLimiter"/>
-  <facade name="redirect" class="Redirect"/>
-  <facade name="redis" class="Redis"/>
-  <facade name="request" class="Request"/>
-  <facade name="router" class="Route"/>
-  <facade name="db" class="Schema"/>
-  <facade name="session" class="Session"/>
-  <facade name="filesystem" class="Storage"/>
-  <facade name="url" class="URL"/>
-  <facade name="validator" class="Validator"/>
-  <facade name="view" class="View"/>
+  <facade class="Agent" name="agent"/>
+  <facade class="App" name="app"/>
+  <facade class="Auth" name="auth"/>
+  <facade class="Blade" name="blade.compiler"/>
+  <facade class="Cache" name="cache"/>
+  <facade class="Config" name="config"/>
+  <facade class="Cookie" name="cookie"/>
+  <facade class="Crypt" name="encrypter"/>
+  <facade class="DB" name="db"/>
+  <facade class="Date" name="date"/>
+  <facade class="Event" name="events"/>
+  <facade class="Facade" name="Facade does not implement getFacadeAccessor method."/>
+  <facade class="File" name="files"/>
+  <facade class="Hash" name="hash"/>
+  <facade class="Lang" name="translator"/>
+  <facade class="Livewire" name="livewire"/>
+  <facade class="Log" name="log"/>
+  <facade class="Mail" name="mail.manager"/>
+  <facade class="Password" name="auth.password"/>
+  <facade class="Queue" name="queue"/>
+  <facade class="RateLimiter" name="Illuminate\Cache\RateLimiter"/>
+  <facade class="Redirect" name="redirect"/>
+  <facade class="Redis" name="redis"/>
+  <facade class="Request" name="request"/>
+  <facade class="Route" name="router"/>
+  <facade class="Schema" name="db"/>
+  <facade class="Session" name="session"/>
+  <facade class="Storage" name="filesystem"/>
+  <facade class="URL" name="url"/>
+  <facade class="Validator" name="validator"/>
+  <facade class="View" name="view"/>
   <file name="F:\wamp\www\dente\vendor\laravel\framework\src\Illuminate\Cache\CacheServiceProvider.php">
-   <type name="memcached.connector" class="MemcachedConnector"/>
+   <type class="MemcachedConnector" name="memcached.connector"/>
   </file>
   <file name="F:\wamp\www\dente\vendor\laravel\framework\src\Illuminate\Database\DatabaseServiceProvider.php">
-   <type name="db.transactions" class="DatabaseTransactionsManager"/>
+   <type class="DatabaseTransactionsManager" name="db.transactions"/>
   </file>
   <file name="F:\wamp\www\dente\vendor\laravel\framework\src\Illuminate\Database\MigrationServiceProvider.php">
-   <type name="command.migrate.fresh" class="FreshCommand"/>
-   <type name="command.migrate.refresh" class="RefreshCommand"/>
+   <type class="FreshCommand" name="command.migrate.fresh"/>
+   <type class="RefreshCommand" name="command.migrate.refresh"/>
   </file>
   <file name="F:\wamp\www\dente\vendor\laravel\framework\src\Illuminate\Filesystem\FilesystemServiceProvider.php">
-   <type name="files" class="Filesystem"/>
+   <type class="Filesystem" name="files"/>
   </file>
   <file name="F:\wamp\www\dente\vendor\laravel\framework\src\Illuminate\Foundation\Providers\ArtisanServiceProvider.php">
-   <type name="command.auth.resets.clear" class="ClearResetsCommand"/>
-   <type name="command.clear-compiled" class="ClearCompiledCommand"/>
-   <type name="command.db.wipe" class="WipeCommand"/>
-   <type name="command.down" class="DownCommand"/>
-   <type name="command.environment" class="EnvironmentCommand"/>
-   <type name="command.event.cache" class="EventCacheCommand"/>
-   <type name="command.event.generate" class="EventGenerateCommand"/>
-   <type name="command.key.generate" class="KeyGenerateCommand"/>
-   <type name="command.optimize" class="OptimizeCommand"/>
-   <type name="command.optimize.clear" class="OptimizeClearCommand"/>
-   <type name="command.package.discover" class="PackageDiscoverCommand"/>
-   <type name="command.queue.clear" class="QueueClearCommand"/>
-   <type name="command.queue.failed" class="ListFailedQueueCommand"/>
-   <type name="command.queue.flush" class="FlushFailedQueueCommand"/>
-   <type name="command.queue.forget" class="ForgetFailedQueueCommand"/>
-   <type name="command.queue.retry" class="QueueRetryCommand"/>
-   <type name="command.queue.retry-batch" class="QueueRetryBatchCommand"/>
-   <type name="command.schema.dump" class="DumpCommand"/>
-   <type name="command.serve" class="ServeCommand"/>
-   <type name="command.storage.link" class="StorageLinkCommand"/>
-   <type name="command.stub.publish" class="StubPublishCommand"/>
-   <type name="command.up" class="UpCommand"/>
-   <type name="command.view.cache" class="ViewCacheCommand"/>
+   <type class="ClearResetsCommand" name="command.auth.resets.clear"/>
+   <type class="ClearCompiledCommand" name="command.clear-compiled"/>
+   <type class="WipeCommand" name="command.db.wipe"/>
+   <type class="DownCommand" name="command.down"/>
+   <type class="EnvironmentCommand" name="command.environment"/>
+   <type class="EventCacheCommand" name="command.event.cache"/>
+   <type class="EventGenerateCommand" name="command.event.generate"/>
+   <type class="KeyGenerateCommand" name="command.key.generate"/>
+   <type class="OptimizeCommand" name="command.optimize"/>
+   <type class="OptimizeClearCommand" name="command.optimize.clear"/>
+   <type class="PackageDiscoverCommand" name="command.package.discover"/>
+   <type class="QueueClearCommand" name="command.queue.clear"/>
+   <type class="ListFailedQueueCommand" name="command.queue.failed"/>
+   <type class="FlushFailedQueueCommand" name="command.queue.flush"/>
+   <type class="ForgetFailedQueueCommand" name="command.queue.forget"/>
+   <type class="QueueRetryCommand" name="command.queue.retry"/>
+   <type class="QueueRetryBatchCommand" name="command.queue.retry-batch"/>
+   <type class="DumpCommand" name="command.schema.dump"/>
+   <type class="ServeCommand" name="command.serve"/>
+   <type class="StorageLinkCommand" name="command.storage.link"/>
+   <type class="StubPublishCommand" name="command.stub.publish"/>
+   <type class="UpCommand" name="command.up"/>
+   <type class="ViewCacheCommand" name="command.view.cache"/>
   </file>
   <file name="F:\wamp\www\dente\vendor\laravel\framework\src\Illuminate\View\ViewServiceProvider.php">
-   <type name="view.engine.resolver" class="EngineResolver"/>
+   <type class="EngineResolver" name="view.engine.resolver"/>
   </file>
   <file name="F:\wamp\www\dente\vendor\laravel\tinker\src\TinkerServiceProvider.php">
-   <type name="command.tinker" class="TinkerCommand"/>
+   <type class="TinkerCommand" name="command.tinker"/>
   </file>
  </laravael>
  <smartyassings/>
@@ -260,225 +272,271 @@
  <yiidata/>
  <todoblock>
   <todofile name="F:\wamp\www\dente\public\js\jquery-ui.js">
-   <todo name="TODO: remove support for widgetEventPrefix" pos="3;154"/>
-   <todo name="TODO: make sure destroying one instance of mouse doesn't mess with" pos="2;831"/>
+   <todo pos="3;154" name="TODO: remove support for widgetEventPrefix"/>
+   <todo pos="2;831" name="TODO: make sure destroying one instance of mouse doesn't mess with"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\facade\ignition\src\Support\ComposerClassMap.php">
-   <todo name="TODO: This is incorrect. Doesnt list all fqcns. Need to parse namespace" pos="9;50"/>
+   <todo pos="9;50" name="TODO: This is incorrect. Doesnt list all fqcns. Need to parse namespace"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\fakerphp\faker\src\Faker\ORM\CakePHP\EntityPopulator.php">
-   <todo name="TODO check if TreeBehavior attached to modify lft/rgt cols" pos="9;117"/>
+   <todo pos="9;117" name="TODO check if TreeBehavior attached to modify lft/rgt cols"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\fakerphp\faker\src\Faker\Provider\Base.php">
-   <todo name="TODO: remove in v2" pos="9;545"/>
+   <todo pos="9;545" name="TODO: remove in v2"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\fakerphp\faker\src\Faker\Provider\de_AT\Address.php">
-   <todo name="todo implement more strict p" pos="76;15"/>
-   <todo name="@todo implement more strict p" pos="75;15"/>
+   <todo pos="76;15" name="todo implement more strict p"/>
+   <todo pos="75;15" name="@todo implement more strict p"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\fakerphp\faker\src\Faker\Provider\kk_KZ\Address.php">
-   <todo name="TODO list all country names in the world" pos="5;15"/>
+   <todo pos="5;15" name="TODO list all country names in the world"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\filp\whoops\src\Whoops\Exception\Frame.php">
-   <todo name="todo: This can be made more reliable by checking if we've entered" pos="10;54"/>
-   <todo name="@todo: This can be made more reliable by checking if we've entered" pos="9;54"/>
+   <todo pos="10;54" name="todo: This can be made more reliable by checking if we've entered"/>
+   <todo pos="9;54" name="@todo: This can be made more reliable by checking if we've entered"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\filp\whoops\src\Whoops\Handler\PrettyPageHandler.php">
-   <todo name="todo: Make this more robust" pos="14;182"/>
-   <todo name="@todo: Make this more robust" pos="13;182"/>
-   <todo name="todo: Asset compiler" pos="14;220"/>
-   <todo name="@todo: Asset compiler" pos="13;220"/>
-   <todo name="todo: Consolidate addDataTable and addDataTableCallback" pos="10;276"/>
-   <todo name="@todo: Consolidate addDataTable and addDataTableCallback" pos="9;276"/>
+   <todo pos="14;182" name="todo: Make this more robust"/>
+   <todo pos="13;182" name="@todo: Make this more robust"/>
+   <todo pos="14;220" name="todo: Asset compiler"/>
+   <todo pos="13;220" name="@todo: Asset compiler"/>
+   <todo pos="10;276" name="todo: Consolidate addDataTable and addDataTableCallback"/>
+   <todo pos="9;276" name="@todo: Consolidate addDataTable and addDataTableCallback"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\filp\whoops\src\Whoops\Run.php">
-   <todo name="todo Might be able to clean this up a bit better" pos="14;362"/>
-   <todo name="@todo Might be able to clean this up a bit better" pos="13;362"/>
+   <todo pos="14;362" name="todo Might be able to clean this up a bit better"/>
+   <todo pos="13;362" name="@todo Might be able to clean this up a bit better"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\guzzlehttp\guzzle\src\Client.php">
-   <todo name="todo: Do not rely on curl" pos="22;405"/>
-   <todo name="@todo: Do not rely on curl" pos="21;405"/>
-   <todo name="TODO: Add more sink validation" pos="13;430"/>
+   <todo pos="22;405" name="todo: Do not rely on curl"/>
+   <todo pos="21;405" name="@todo: Do not rely on curl"/>
+   <todo pos="13;430" name="TODO: Add more sink validation"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\guzzlehttp\psr7\src\BufferStream.php">
-   <todo name="TODO: What should happen here" pos="9;123"/>
+   <todo pos="9;123" name="TODO: What should happen here"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\hamcrest\hamcrest-php\hamcrest\Hamcrest\Arrays\IsArray.php">
-   <todo name="TODO: Allow this to take matchers or values within the array" pos="1;10"/>
+   <todo pos="1;10" name="TODO: Allow this to take matchers or values within the array"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\league\commonmark\src\Extension\Attributes\Node\AttributesInline.php">
-   <todo name="TODO: Re-implement as a delimiter" pos="42;34"/>
+   <todo pos="42;34" name="TODO: Re-implement as a delimiter"/>
+  </todofile>
+  <todofile name="F:\wamp\www\dente\vendor\mobiledetect\mobiledetectlib\Mobile_Detect.php">
+   <todo pos="10;169" name="todo: Is 'Dell Streak' a tablet or a phone"/>
+   <todo pos="9;169" name="@todo: Is 'Dell Streak' a tablet or a phone"/>
+   <todo pos="10;180" name="todo Complete the regex."/>
+   <todo pos="9;180" name="@todo Complete the regex."/>
+   <todo pos="10;214" name="todo: check for mobile friendly emails topic."/>
+   <todo pos="9;214" name="@todo: check for mobile friendly emails topic."/>
+   <todo pos="10;218" name="todo Merge NexusTablet into GoogleTablet."/>
+   <todo pos="9;218" name="@todo Merge NexusTablet into GoogleTablet."/>
+   <todo pos="10;262" name="todo: http://www.nbhkdz.com/read/b8e64202f92a2df129126bff.html - investigate"/>
+   <todo pos="9;262" name="@todo: http://www.nbhkdz.com/read/b8e64202f92a2df129126bff.html - investigate"/>
+   <todo pos="10;277" name="todo: inspect http://esupport.sony.com/US/p/select-system.pl"/>
+   <todo pos="9;277" name="@todo: inspect http://esupport.sony.com/US/p/select-system.pl"/>
+   <todo pos="10;290" name="todo Research the Windows Tablets."/>
+   <todo pos="9;290" name="@todo Research the Windows Tablets."/>
+   <todo pos="10;292" name="todo http://www.kyoceramobile.com/support/drivers/"/>
+   <todo pos="9;292" name="@todo http://www.kyoceramobile.com/support/drivers/"/>
+   <todo pos="10;294" name="todo http://intexuae.com/index.php/category/mobile-devices/tablets-products/"/>
+   <todo pos="9;294" name="@todo http://intexuae.com/index.php/category/mobile-devices/tablets-products/"/>
+   <todo pos="10;356" name="todo: Softwiner tablets"/>
+   <todo pos="9;356" name="@todo: Softwiner tablets"/>
+   <todo pos="10;362" name="todo: add more tests."/>
+   <todo pos="9;362" name="@todo: add more tests."/>
+   <todo pos="10;402" name="todo: add them gradually to avoid conflicts."/>
+   <todo pos="9;402" name="@todo: add them gradually to avoid conflicts."/>
+   <todo pos="10;434" name="todo: Ebooks also (if requested)"/>
+   <todo pos="9;434" name="@todo: Ebooks also (if requested)"/>
+   <todo pos="10;438" name="todo: Research some more"/>
+   <todo pos="9;438" name="@todo: Research some more"/>
+   <todo pos="10;440" name="todo http://www.lavamobiles.com/tablets-data-cards"/>
+   <todo pos="9;440" name="@todo http://www.lavamobiles.com/tablets-data-cards"/>
+   <todo pos="10;498" name="todo: research MeeGo in UAs"/>
+   <todo pos="9;498" name="@todo: research MeeGo in UAs"/>
+   <todo pos="10;501" name="todo: research Maemo in UAs"/>
+   <todo pos="9;501" name="@todo: research Maemo in UAs"/>
+   <todo pos="10;574" name="todo: Include JXD consoles."/>
+   <todo pos="9;574" name="@todo: Include JXD consoles."/>
+   <todo pos="73;857" name="todo: should use getHttpHeader(), but it would be slow. (Serban)"/>
+   <todo pos="72;857" name="@todo: should use getHttpHeader(), but it would be slow. (Serban)"/>
+   <todo pos="62;1291" name="todo: treat strings versions."/>
+   <todo pos="61;1291" name="@todo: treat strings versions."/>
+   <todo pos="14;1403" name="todo: more tests here!"/>
+   <todo pos="13;1403" name="@todo: more tests here!"/>
+   <todo pos="14;1449" name="todo: report this (tested on Nokia N71)"/>
+   <todo pos="13;1449" name="@todo: report this (tested on Nokia N71)"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\nesbot\carbon\src\Carbon\Carbon.php">
-   <todo name="todoc generated by `composer phpdoc`>" pos="5;20"/>
-   <todo name="todoc>" pos="6;507"/>
+   <todo pos="5;20" name="todoc generated by `composer phpdoc`>"/>
+   <todo pos="6;507" name="todoc>"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\nesbot\carbon\src\Carbon\CarbonImmutable.php">
-   <todo name="todoc generated by `composer phpdoc`>" pos="5;20"/>
-   <todo name="todoc>" pos="6;507"/>
+   <todo pos="5;20" name="todoc generated by `composer phpdoc`>"/>
+   <todo pos="6;507" name="todoc>"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\nesbot\carbon\src\Carbon\CarbonInterface.php">
-   <todo name="todoc generated by `composer phpdoc`>" pos="5;33"/>
-   <todo name="todoc>" pos="6;518"/>
+   <todo pos="5;33" name="todoc generated by `composer phpdoc`>"/>
+   <todo pos="6;518" name="todoc>"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\nesbot\carbon\src\Carbon\Factory.php">
-   <todo name="todoc generated by `composer phpdoc`>" pos="5;18"/>
-   <todo name="todoc>" pos="6;222"/>
+   <todo pos="5;18" name="todoc generated by `composer phpdoc`>"/>
+   <todo pos="6;222" name="todoc>"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\nesbot\carbon\src\Carbon\FactoryImmutable.php">
-   <todo name="todoc generated by `composer phpdoc`>" pos="5;17"/>
-   <todo name="todoc>" pos="6;221"/>
+   <todo pos="5;17" name="todoc generated by `composer phpdoc`>"/>
+   <todo pos="6;221" name="todoc>"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\nesbot\carbon\src\Carbon\Lang\ar_Shakl.php">
-   <todo name="TODO add shakl to months" pos="6;19"/>
-   <todo name="@TODO add shakl to months" pos="5;19"/>
-   <todo name="TODO add shakl to translations below" pos="6;54"/>
-   <todo name="@TODO add shakl to translations below" pos="5;54"/>
+   <todo pos="6;19" name="TODO add shakl to months"/>
+   <todo pos="5;19" name="@TODO add shakl to months"/>
+   <todo pos="6;54" name="TODO add shakl to translations below"/>
+   <todo pos="5;54" name="@TODO add shakl to translations below"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\nesbot\carbon\src\Carbon\Traits\Date.php">
-   <todo name="todoc generated by `composer phpdoc`>" pos="5;38"/>
-   <todo name="todoc>" pos="6;523"/>
+   <todo pos="5;38" name="todoc generated by `composer phpdoc`>"/>
+   <todo pos="6;523" name="todoc>"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\nikic\php-parser\lib\PhpParser\Comment.php">
-   <todo name="TODO: Rename these to include &quot;start&quot;." pos="13;229"/>
+   <todo pos="13;229" name="TODO: Rename these to include &quot;start&quot;."/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\nikic\php-parser\lib\PhpParser\Internal\TokenStream.php">
-   <todo name="TODO Handle non-space indentation" pos="21;239"/>
+   <todo pos="21;239" name="TODO Handle non-space indentation"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\nikic\php-parser\lib\PhpParser\Lexer\TokenEmulator\AttributeEmulator.php">
-   <todo name="TODO" pos="9;41"/>
+   <todo pos="9;41" name="TODO"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\nikic\php-parser\lib\PhpParser\PrettyPrinterAbstract.php">
-   <todo name="TODO Add &lt;" pos="13;496"/>
-   <todo name="TODO: Try to preserve formatting" pos="17;727"/>
-   <todo name="TODO: Preserve formatting." pos="25;778"/>
-   <todo name="TODO: Preserve formatting." pos="25;877"/>
-   <todo name="TODO: Support removing single node." pos="13;900"/>
-   <todo name="TODO: FIXUP_NEW_VARIABLE" pos="52;1162"/>
-   <todo name="TODO: FIXUP_NEW_VARIABLE" pos="69;1173"/>
-   <todo name="TODO: &quot;yield&quot; where both key and value are inserted doesn't work" pos="9;1293"/>
-   <todo name="TODO" pos="86;1319"/>
-   <todo name="TODO These need to be treated more carefully" pos="47;1335"/>
-   <todo name="TODO Insertion into empty statement lists." pos="9;1422"/>
-   <todo name="TODO" pos="14;1459"/>
-   <todo name="TODO" pos="67;1480"/>
+   <todo pos="13;496" name="TODO Add &lt;"/>
+   <todo pos="17;727" name="TODO: Try to preserve formatting"/>
+   <todo pos="25;778" name="TODO: Preserve formatting."/>
+   <todo pos="25;877" name="TODO: Preserve formatting."/>
+   <todo pos="13;900" name="TODO: Support removing single node."/>
+   <todo pos="52;1162" name="TODO: FIXUP_NEW_VARIABLE"/>
+   <todo pos="69;1173" name="TODO: FIXUP_NEW_VARIABLE"/>
+   <todo pos="9;1293" name="TODO: &quot;yield&quot; where both key and value are inserted doesn't work"/>
+   <todo pos="86;1319" name="TODO"/>
+   <todo pos="47;1335" name="TODO These need to be treated more carefully"/>
+   <todo pos="9;1422" name="TODO Insertion into empty statement lists."/>
+   <todo pos="14;1459" name="TODO"/>
+   <todo pos="67;1480" name="TODO"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\nikic\php-parser\lib\PhpParser\PrettyPrinter\Standard.php">
-   <todo name="TODO: This is not fully accurate." pos="9;1034"/>
+   <todo pos="9;1034" name="TODO: This is not fully accurate."/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\phpdocumentor\reflection-docblock\src\DocBlock\StandardTagFactory.php">
-   <todo name="TODO: Annotation support is planned for a later stage and as such is disabled for now" pos="13;234"/>
+   <todo pos="13;234" name="TODO: Annotation support is planned for a later stage and as such is disabled for now"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\phpunit\php-code-coverage\src\StaticAnalysis\CodeUnitFindingVisitor.php">
-   <todo name="todo Handle default values" pos="15;142"/>
-   <todo name="@todo Handle default values" pos="14;142"/>
+   <todo pos="15;142" name="todo Handle default values"/>
+   <todo pos="14;142" name="@todo Handle default values"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\psy\psysh\src\CodeCleaner\CalledClassPass.php">
-   <todo name="todo switch this to actually validate args when we get context-aware code cleaner passes." pos="14;50"/>
-   <todo name="@todo switch this to actually validate args when we get context-aware code cleaner passes." pos="13;50"/>
+   <todo pos="14;50" name="todo switch this to actually validate args when we get context-aware code cleaner passes."/>
+   <todo pos="13;50" name="@todo switch this to actually validate args when we get context-aware code cleaner passes."/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\psy\psysh\src\CodeCleaner\PassableByReferencePass.php">
-   <todo name="todo support MethodCall and StaticCall as well." pos="10;38"/>
-   <todo name="@todo support MethodCall and StaticCall as well." pos="9;38"/>
+   <todo pos="10;38" name="todo support MethodCall and StaticCall as well."/>
+   <todo pos="9;38" name="@todo support MethodCall and StaticCall as well."/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\psy\psysh\src\CodeCleaner\RequirePass.php">
-   <todo name="todo Shell::handleError would be better here, because we could" pos="14;80"/>
-   <todo name="@todo Shell::handleError would be better here, because we could" pos="13;80"/>
-   <todo name="todo trigger an error as fallback" pos="14;86"/>
-   <todo name="@todo trigger an error as fallback" pos="13;86"/>
+   <todo pos="14;80" name="todo Shell::handleError would be better here, because we could"/>
+   <todo pos="13;80" name="@todo Shell::handleError would be better here, because we could"/>
+   <todo pos="14;86" name="todo trigger an error as fallback"/>
+   <todo pos="13;86" name="@todo trigger an error as fallback"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\psy\psysh\src\CodeCleaner\ValidFunctionNamePass.php">
-   <todo name="todo add an &quot;else&quot; here which adds a runtime check for instances where we can't tell" pos="14;48"/>
-   <todo name="@todo add an &quot;else&quot; here which adds a runtime check for instances where we can't tell" pos="13;48"/>
+   <todo pos="14;48" name="todo add an &quot;else&quot; here which adds a runtime check for instances where we can't tell"/>
+   <todo pos="13;48" name="@todo add an &quot;else&quot; here which adds a runtime check for instances where we can't tell"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\psy\psysh\src\Command\DocCommand.php">
-   <todo name="todo this is going to collide with ReflectionMethod ids" pos="18;143"/>
-   <todo name="@todo this is going to collide with ReflectionMethod ids" pos="17;143"/>
+   <todo pos="18;143" name="todo this is going to collide with ReflectionMethod ids"/>
+   <todo pos="17;143" name="@todo this is going to collide with ReflectionMethod ids"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\psy\psysh\src\Command\ListCommand.php">
-   <todo name="todo something cleaner than this :-/" pos="10;128"/>
-   <todo name="@todo something cleaner than this :-/" pos="9;128"/>
-   <todo name="todo ensure that 'functions', 'classes', 'interfaces', 'traits' only accept namespace target" pos="14;266"/>
-   <todo name="@todo ensure that 'functions', 'classes', 'interfaces', 'traits' only accept namespace target" pos="13;266"/>
+   <todo pos="10;128" name="todo something cleaner than this :-/"/>
+   <todo pos="9;128" name="@todo something cleaner than this :-/"/>
+   <todo pos="14;266" name="todo ensure that 'functions', 'classes', 'interfaces', 'traits' only accept namespace target"/>
+   <todo pos="13;266" name="@todo ensure that 'functions', 'classes', 'interfaces', 'traits' only accept namespace target"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\psy\psysh\src\Command\ListCommand\ClassConstantEnumerator.php">
-   <todo name="todo handle ReflectionExtension as well" pos="14;33"/>
-   <todo name="@todo handle ReflectionExtension as well" pos="13;33"/>
+   <todo pos="14;33" name="todo handle ReflectionExtension as well"/>
+   <todo pos="13;33" name="@todo handle ReflectionExtension as well"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\psy\psysh\src\Command\ShowCommand.php">
-   <todo name="todo maybe set $__file to $target" pos="18;116"/>
-   <todo name="@todo maybe set $__file to $target" pos="17;116"/>
+   <todo pos="18;116" name="todo maybe set $__file to $target"/>
+   <todo pos="17;116" name="@todo maybe set $__file to $target"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\psy\psysh\src\Configuration.php">
-   <todo name="todo support raw output with interactive input" pos="10;194"/>
-   <todo name="@todo support raw output with interactive input" pos="9;194"/>
-   <todo name="todo mebbe turn this on by default some day" pos="10;824"/>
-   <todo name="@todo mebbe turn this on by default some day" pos="9;824"/>
-   <todo name="todo detect `chsh` != 65001 on Windows and return false" pos="10;937"/>
-   <todo name="@todo detect `chsh` != 65001 on Windows and return false" pos="9;937"/>
-   <todo name="todo Fix capitalization for 0.11.0" pos="14;1405"/>
-   <todo name="@todo Fix capitalization for 0.11.0" pos="13;1405"/>
-   <todo name="todo Fix capitalization for 0.11.0" pos="14;1529"/>
-   <todo name="@todo Fix capitalization for 0.11.0" pos="13;1529"/>
+   <todo pos="10;194" name="todo support raw output with interactive input"/>
+   <todo pos="9;194" name="@todo support raw output with interactive input"/>
+   <todo pos="10;824" name="todo mebbe turn this on by default some day"/>
+   <todo pos="9;824" name="@todo mebbe turn this on by default some day"/>
+   <todo pos="10;937" name="todo detect `chsh` != 65001 on Windows and return false"/>
+   <todo pos="9;937" name="@todo detect `chsh` != 65001 on Windows and return false"/>
+   <todo pos="14;1405" name="todo Fix capitalization for 0.11.0"/>
+   <todo pos="13;1405" name="@todo Fix capitalization for 0.11.0"/>
+   <todo pos="14;1529" name="todo Fix capitalization for 0.11.0"/>
+   <todo pos="13;1529" name="@todo Fix capitalization for 0.11.0"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\psy\psysh\src\ExecutionLoop\ProcessForker.php">
-   <todo name="todo remove this once we don't support PHP 5.x anymore :)" pos="18;277"/>
-   <todo name="@todo remove this once we don't support PHP 5.x anymore :)" pos="17;277"/>
+   <todo pos="18;277" name="todo remove this once we don't support PHP 5.x anymore :)"/>
+   <todo pos="17;277" name="@todo remove this once we don't support PHP 5.x anymore :)"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\psy\psysh\src\Formatter\CodeFormatter.php">
-   <todo name="todo something better here" pos="10;71"/>
-   <todo name="@todo something better here" pos="9;71"/>
+   <todo pos="10;71" name="todo something better here"/>
+   <todo pos="9;71" name="@todo something better here"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\psy\psysh\src\Formatter\SignatureFormatter.php">
-   <todo name="todo Do we want to include the" pos="14;352"/>
-   <todo name="@todo Do we want to include the" pos="13;352"/>
+   <todo pos="14;352" name="todo Do we want to include the"/>
+   <todo pos="13;352" name="@todo Do we want to include the"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\psy\psysh\src\Shell.php">
-   <todo name="todo should it be possible to have raw output in an interactive run" pos="14;339"/>
-   <todo name="@todo should it be possible to have raw output in an interactive run" pos="13;339"/>
-   <todo name="todo overrides via environment variables (or should these happen in config" pos="10;424"/>
-   <todo name="@todo overrides via environment variables (or should these happen in config" pos="9;424"/>
+   <todo pos="14;339" name="todo should it be possible to have raw output in an interactive run"/>
+   <todo pos="13;339" name="@todo should it be possible to have raw output in an interactive run"/>
+   <todo pos="10;424" name="todo overrides via environment variables (or should these happen in config"/>
+   <todo pos="9;424" name="@todo overrides via environment variables (or should these happen in config"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\psy\psysh\src\functions.php">
-   <todo name="todo come up with a better way of doing this which doesn't involve injecting input :-P" pos="10;87"/>
-   <todo name="@todo come up with a better way of doing this which doesn't involve injecting input :-P" pos="9;87"/>
-   <todo name="todo Show Presenter / custom casters." pos="10;274"/>
-   <todo name="@todo Show Presenter / custom casters." pos="9;274"/>
-   <todo name="todo this triggers the &quot;exited unexpectedly&quot; logic in the" pos="18;391"/>
-   <todo name="@todo this triggers the &quot;exited unexpectedly&quot; logic in the" pos="17;391"/>
+   <todo pos="10;87" name="todo come up with a better way of doing this which doesn't involve injecting input :-P"/>
+   <todo pos="9;87" name="@todo come up with a better way of doing this which doesn't involve injecting input :-P"/>
+   <todo pos="10;274" name="todo Show Presenter / custom casters."/>
+   <todo pos="9;274" name="@todo Show Presenter / custom casters."/>
+   <todo pos="18;391" name="todo this triggers the &quot;exited unexpectedly&quot; logic in the"/>
+   <todo pos="17;391" name="@todo this triggers the &quot;exited unexpectedly&quot; logic in the"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Mime\Headers\ParameterizedHeader.php">
-   <todo name="TODO: Check caching here" pos="36;126"/>
-   <todo name="TODO: text, or something else" pos="13;186"/>
+   <todo pos="36;126" name="TODO: Check caching here"/>
+   <todo pos="13;186" name="TODO: text, or something else"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Mime\SimpleMimeEntity.php">
-   <todo name="TODO: Try to refactor this logic" pos="9;299"/>
+   <todo pos="9;299" name="TODO: Try to refactor this logic"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Signers\DKIMSigner.php">
-   <todo name="TODO fix return" pos="5;217"/>
-   <todo name="todo handle it but should never happen" pos="25;601"/>
+   <todo pos="5;217" name="TODO fix return"/>
+   <todo pos="25;601" name="todo handle it but should never happen"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\StreamBuffer.php">
-   <todo name="TODO make tls arguments configurable" pos="10;92"/>
-   <todo name="@TODO make tls arguments configurable" pos="9;92"/>
+   <todo pos="10;92" name="TODO make tls arguments configurable"/>
+   <todo pos="9;92" name="@TODO make tls arguments configurable"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\swiftmailer\swiftmailer\tests\acceptance\Swift\Mime\SimpleMessageAcceptanceTest.php">
-   <todo name="TODO: Test with the charset defined" pos="61;6"/>
+   <todo pos="61;6" name="TODO: Test with the charset defined"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\symfony\css-selector\XPath\Extension\FunctionExtension.php">
-   <todo name="todo: handle an+b, odd, even" pos="9;96"/>
+   <todo pos="9;96" name="todo: handle an+b, odd, even"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\symfony\css-selector\XPath\Extension\HtmlExtension.php">
-   <todo name="todo: in the second half, add &quot;and is not a descendant of that fieldset element's first legend elem" pos="9;102"/>
+   <todo pos="9;102" name="todo: in the second half, add &quot;and is not a descendant of that fieldset element's first legend elem"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\symfony\http-kernel\HttpCache\Store.php">
-   <todo name="TODO the metaStore referenced an entity that doesn't exist in" pos="9;156"/>
+   <todo pos="9;156" name="TODO the metaStore referenced an entity that doesn't exist in"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\symfony\mime\Header\ParameterizedHeader.php">
-   <todo name="TODO: text, or something else" pos="13;117"/>
+   <todo pos="13;117" name="TODO: text, or something else"/>
   </todofile>
   <todofile name="F:\wamp\www\dente\vendor\symfony\translation\Loader\PoFileLoader.php">
-   <todo name="TODO: this fails when comments or contexts are added" pos="17;89"/>
+   <todo pos="17;89" name="TODO: this fails when comments or contexts are added"/>
   </todofile>
  </todoblock>
  <dbgurls/>
@@ -2372,6 +2430,21 @@
   <file crc="1607426529679" name="F:\wamp\www\dente\vendor\psr\container\src\ContainerInterface.php"/>
   <file crc="1607426529662" name="F:\wamp\www\dente\vendor\psr\container\src\ContainerExceptionInterface.php"/>
   <file crc="1607426529648" name="F:\wamp\www\dente\vendor\psr\container\composer.json"/>
+  <file crc="1610805459061" name="F:\wamp\www\dente\vendor\pragmarx\google2fa\src\Support\QRCode.php"/>
+  <file crc="1610805459037" name="F:\wamp\www\dente\vendor\pragmarx\google2fa\src\Support\Constants.php"/>
+  <file crc="1610805458988" name="F:\wamp\www\dente\vendor\pragmarx\google2fa\src\Support\Base32.php"/>
+  <file crc="1610805458813" name="F:\wamp\www\dente\vendor\pragmarx\google2fa\src\Exceptions\Contracts\SecretKeyTooShort.php"/>
+  <file crc="1610805458797" name="F:\wamp\www\dente\vendor\pragmarx\google2fa\src\Exceptions\Contracts\InvalidCharacters.php"/>
+  <file crc="1610805458781" name="F:\wamp\www\dente\vendor\pragmarx\google2fa\src\Exceptions\Contracts\InvalidAlgorithm.php"/>
+  <file crc="1610805458765" name="F:\wamp\www\dente\vendor\pragmarx\google2fa\src\Exceptions\Contracts\IncompatibleWithGoogleAuthenticator.php"/>
+  <file crc="1610805458750" name="F:\wamp\www\dente\vendor\pragmarx\google2fa\src\Exceptions\Contracts\Google2FA.php"/>
+  <file crc="1610805458897" name="F:\wamp\www\dente\vendor\pragmarx\google2fa\src\Exceptions\SecretKeyTooShortException.php"/>
+  <file crc="1610805458879" name="F:\wamp\www\dente\vendor\pragmarx\google2fa\src\Exceptions\InvalidCharactersException.php"/>
+  <file crc="1610805458862" name="F:\wamp\www\dente\vendor\pragmarx\google2fa\src\Exceptions\InvalidAlgorithmException.php"/>
+  <file crc="1610805458844" name="F:\wamp\www\dente\vendor\pragmarx\google2fa\src\Exceptions\IncompatibleWithGoogleAuthenticatorException.php"/>
+  <file crc="1610805458828" name="F:\wamp\www\dente\vendor\pragmarx\google2fa\src\Exceptions\Google2FAException.php"/>
+  <file crc="1610805458945" name="F:\wamp\www\dente\vendor\pragmarx\google2fa\src\Google2FA.php"/>
+  <file crc="1610805458726" name="F:\wamp\www\dente\vendor\pragmarx\google2fa\composer.json"/>
   <file crc="1607426745719" name="F:\wamp\www\dente\vendor\phpunit\phpunit\src\Util\Xml\Validator.php"/>
   <file crc="1607426745699" name="F:\wamp\www\dente\vendor\phpunit\phpunit\src\Util\Xml\ValidationResult.php"/>
   <file crc="1607426745676" name="F:\wamp\www\dente\vendor\phpunit\phpunit\src\Util\Xml\SuccessfulSchemaDetectionResult.php"/>
@@ -3103,6 +3176,30 @@
   <file crc="1607426733820" name="F:\wamp\www\dente\vendor\phar-io\manifest\src\ManifestLoader.php"/>
   <file crc="1607426733779" name="F:\wamp\www\dente\vendor\phar-io\manifest\src\ManifestDocumentMapper.php"/>
   <file crc="1607426733752" name="F:\wamp\www\dente\vendor\phar-io\manifest\composer.json"/>
+  <file crc="1610805458046" name="F:\wamp\www\dente\vendor\paragonie\constant_time_encoding\tests\RFC4648Test.php"/>
+  <file crc="1610805458028" name="F:\wamp\www\dente\vendor\paragonie\constant_time_encoding\tests\HexTest.php"/>
+  <file crc="1610805458003" name="F:\wamp\www\dente\vendor\paragonie\constant_time_encoding\tests\EncodingTest.php"/>
+  <file crc="1610805457984" name="F:\wamp\www\dente\vendor\paragonie\constant_time_encoding\tests\Base64UrlSafeTest.php"/>
+  <file crc="1610805457962" name="F:\wamp\www\dente\vendor\paragonie\constant_time_encoding\tests\Base64Test.php"/>
+  <file crc="1610805457943" name="F:\wamp\www\dente\vendor\paragonie\constant_time_encoding\tests\Base64DotSlashTest.php"/>
+  <file crc="1610805457925" name="F:\wamp\www\dente\vendor\paragonie\constant_time_encoding\tests\Base64DotSlashOrderedTest.php"/>
+  <file crc="1610805457906" name="F:\wamp\www\dente\vendor\paragonie\constant_time_encoding\tests\Base32Test.php"/>
+  <file crc="1610805457888" name="F:\wamp\www\dente\vendor\paragonie\constant_time_encoding\tests\Base32HexTest.php"/>
+  <file crc="1610805457860" name="F:\wamp\www\dente\vendor\paragonie\constant_time_encoding\src\RFC4648.php"/>
+  <file crc="1610805457834" name="F:\wamp\www\dente\vendor\paragonie\constant_time_encoding\src\Hex.php"/>
+  <file crc="1610805457805" name="F:\wamp\www\dente\vendor\paragonie\constant_time_encoding\src\Encoding.php"/>
+  <file crc="1610805457785" name="F:\wamp\www\dente\vendor\paragonie\constant_time_encoding\src\EncoderInterface.php"/>
+  <file crc="1610805457766" name="F:\wamp\www\dente\vendor\paragonie\constant_time_encoding\src\Binary.php"/>
+  <file crc="1610805457742" name="F:\wamp\www\dente\vendor\paragonie\constant_time_encoding\src\Base64UrlSafe.php"/>
+  <file crc="1610805457718" name="F:\wamp\www\dente\vendor\paragonie\constant_time_encoding\src\Base64DotSlashOrdered.php"/>
+  <file crc="1610805457694" name="F:\wamp\www\dente\vendor\paragonie\constant_time_encoding\src\Base64DotSlash.php"/>
+  <file crc="1610805457663" name="F:\wamp\www\dente\vendor\paragonie\constant_time_encoding\src\Base64.php"/>
+  <file crc="1610805457638" name="F:\wamp\www\dente\vendor\paragonie\constant_time_encoding\src\Base32Hex.php"/>
+  <file crc="1610805457605" name="F:\wamp\www\dente\vendor\paragonie\constant_time_encoding\src\Base32.php"/>
+  <file crc="1610805457593" name="F:\wamp\www\dente\vendor\paragonie\constant_time_encoding\psalm.xml"/>
+  <file crc="1610805457540" name="F:\wamp\www\dente\vendor\paragonie\constant_time_encoding\LICENSE.txt"/>
+  <file crc="1610805457569" name="F:\wamp\www\dente\vendor\paragonie\constant_time_encoding\composer.json"/>
+  <file crc="1610805457530" name="F:\wamp\www\dente\vendor\paragonie\constant_time_encoding\.travis.yml"/>
   <file crc="1607426590758" name="F:\wamp\www\dente\vendor\opis\closure\src\SerializableClosure.php"/>
   <file crc="1607426590741" name="F:\wamp\www\dente\vendor\opis\closure\src\SelfReference.php"/>
   <file crc="1607426590717" name="F:\wamp\www\dente\vendor\opis\closure\src\SecurityProvider.php"/>
@@ -4518,6 +4615,185 @@
   <file crc="1607426699096" name="F:\wamp\www\dente\vendor\mockery\mockery\docs\cookbook\map.rst.inc"/>
   <file crc="1607426698990" name="F:\wamp\www\dente\vendor\mockery\mockery\composer.json"/>
   <file crc="1607426698906" name="F:\wamp\www\dente\vendor\mockery\mockery\.phpstorm.meta.php"/>
+  <file crc="1610805462337" name="F:\wamp\www\dente\vendor\mobiledetect\mobiledetectlib\namespaced\Detection\MobileDetect.php"/>
+  <file crc="1610805462311" name="F:\wamp\www\dente\vendor\mobiledetect\mobiledetectlib\export\exportToJSON.php"/>
+  <file crc="1610805462354" name="F:\wamp\www\dente\vendor\mobiledetect\mobiledetectlib\phpcs.xml"/>
+  <file crc="1610805462159" name="F:\wamp\www\dente\vendor\mobiledetect\mobiledetectlib\Mobile_Detect.php"/>
+  <file crc="1610805462145" name="F:\wamp\www\dente\vendor\mobiledetect\mobiledetectlib\Mobile_Detect.json"/>
+  <file crc="1610805462133" name="F:\wamp\www\dente\vendor\mobiledetect\mobiledetectlib\LICENSE.txt"/>
+  <file crc="1610805462252" name="F:\wamp\www\dente\vendor\mobiledetect\mobiledetectlib\docker-compose.yml"/>
+  <file crc="1610805462227" name="F:\wamp\www\dente\vendor\mobiledetect\mobiledetectlib\composer.json"/>
+  <file crc="1610805869167" name="F:\wamp\www\dente\vendor\livewire\livewire\src\views\pagination\tailwind.blade.php"/>
+  <file crc="1610805869155" name="F:\wamp\www\dente\vendor\livewire\livewire\src\views\pagination\simple-tailwind.blade.php"/>
+  <file crc="1610805869142" name="F:\wamp\www\dente\vendor\livewire\livewire\src\views\pagination\simple-bootstrap.blade.php"/>
+  <file crc="1610805869129" name="F:\wamp\www\dente\vendor\livewire\livewire\src\views\pagination\bootstrap.blade.php"/>
+  <file crc="1610805869116" name="F:\wamp\www\dente\vendor\livewire\livewire\src\views\mount-component.blade.php"/>
+  <file crc="1610805868934" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Testing\Concerns\MakesCallsToComponent.php"/>
+  <file crc="1610805868910" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Testing\Concerns\MakesAssertions.php"/>
+  <file crc="1610805868889" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Testing\Concerns\HasFunLittleUtilities.php"/>
+  <file crc="1610805868987" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Testing\TestableLivewire.php"/>
+  <file crc="1610805868957" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Testing\MakesHttpRequestsWrapper.php"/>
+  <file crc="1610805868778" name="F:\wamp\www\dente\vendor\livewire\livewire\src\RenameMe\SupportValidation.php"/>
+  <file crc="1610805868750" name="F:\wamp\www\dente\vendor\livewire\livewire\src\RenameMe\SupportRedirects.php"/>
+  <file crc="1610805868729" name="F:\wamp\www\dente\vendor\livewire\livewire\src\RenameMe\SupportLocales.php"/>
+  <file crc="1610805868709" name="F:\wamp\www\dente\vendor\livewire\livewire\src\RenameMe\SupportFileUploads.php"/>
+  <file crc="1610805868683" name="F:\wamp\www\dente\vendor\livewire\livewire\src\RenameMe\SupportFileDownloads.php"/>
+  <file crc="1610805868655" name="F:\wamp\www\dente\vendor\livewire\livewire\src\RenameMe\SupportEvents.php"/>
+  <file crc="1610805868636" name="F:\wamp\www\dente\vendor\livewire\livewire\src\RenameMe\SupportDateTimes.php"/>
+  <file crc="1610805868616" name="F:\wamp\www\dente\vendor\livewire\livewire\src\RenameMe\SupportComponentTraits.php"/>
+  <file crc="1610805868597" name="F:\wamp\www\dente\vendor\livewire\livewire\src\RenameMe\SupportCollections.php"/>
+  <file crc="1610805868574" name="F:\wamp\www\dente\vendor\livewire\livewire\src\RenameMe\SupportChildren.php"/>
+  <file crc="1610805868550" name="F:\wamp\www\dente\vendor\livewire\livewire\src\RenameMe\SupportBrowserHistory.php"/>
+  <file crc="1610805868525" name="F:\wamp\www\dente\vendor\livewire\livewire\src\RenameMe\SupportActionReturns.php"/>
+  <file crc="1610805868500" name="F:\wamp\www\dente\vendor\livewire\livewire\src\RenameMe\Placeholder.php"/>
+  <file crc="1610805868476" name="F:\wamp\www\dente\vendor\livewire\livewire\src\RenameMe\OptimizeRenderedDom.php"/>
+  <file crc="1610805868378" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Macros\ViewMacros.php"/>
+  <file crc="1610805868425" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Macros\livewire-view-extends.blade.php"/>
+  <file crc="1610805868414" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Macros\livewire-view-component.blade.php"/>
+  <file crc="1610805868330" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Macros\DuskBrowserMacros.php"/>
+  <file crc="1610805868066" name="F:\wamp\www\dente\vendor\livewire\livewire\src\HydrationMiddleware\SecureHydrationWithChecksum.php"/>
+  <file crc="1610805868045" name="F:\wamp\www\dente\vendor\livewire\livewire\src\HydrationMiddleware\RenderView.php"/>
+  <file crc="1610805868023" name="F:\wamp\www\dente\vendor\livewire\livewire\src\HydrationMiddleware\PerformEventEmissions.php"/>
+  <file crc="1610805868000" name="F:\wamp\www\dente\vendor\livewire\livewire\src\HydrationMiddleware\PerformDataBindingUpdates.php"/>
+  <file crc="1610805867976" name="F:\wamp\www\dente\vendor\livewire\livewire\src\HydrationMiddleware\PerformActionCalls.php"/>
+  <file crc="1610805867953" name="F:\wamp\www\dente\vendor\livewire\livewire\src\HydrationMiddleware\NormalizeServerMemoSansDataForJavaScript.php"/>
+  <file crc="1610805867930" name="F:\wamp\www\dente\vendor\livewire\livewire\src\HydrationMiddleware\NormalizeDataForJavaScript.php"/>
+  <file crc="1610805867907" name="F:\wamp\www\dente\vendor\livewire\livewire\src\HydrationMiddleware\NormalizeComponentPropertiesForJavaScript.php"/>
+  <file crc="1610805867889" name="F:\wamp\www\dente\vendor\livewire\livewire\src\HydrationMiddleware\HydrationMiddleware.php"/>
+  <file crc="1610805867866" name="F:\wamp\www\dente\vendor\livewire\livewire\src\HydrationMiddleware\HydratePublicProperties.php"/>
+  <file crc="1610805867835" name="F:\wamp\www\dente\vendor\livewire\livewire\src\HydrationMiddleware\HashDataPropertiesForDirtyDetection.php"/>
+  <file crc="1610805867816" name="F:\wamp\www\dente\vendor\livewire\livewire\src\HydrationMiddleware\CallPropertyHydrationHooks.php"/>
+  <file crc="1610805867798" name="F:\wamp\www\dente\vendor\livewire\livewire\src\HydrationMiddleware\CallHydrationHooks.php"/>
+  <file crc="1610805867772" name="F:\wamp\www\dente\vendor\livewire\livewire\src\HydrationMiddleware\AddAttributesToRootTagOfHtml.php"/>
+  <file crc="1610805867706" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Exceptions\S3DoesntSupportMultipleFileUploads.php"/>
+  <file crc="1610805867690" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Exceptions\RootTagMissingFromViewException.php"/>
+  <file crc="1610805867672" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Exceptions\PublicPropertyTypeNotAllowedException.php"/>
+  <file crc="1610805867655" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Exceptions\PublicPropertyNotFoundException.php"/>
+  <file crc="1610805867637" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Exceptions\PropertyNotFoundException.php"/>
+  <file crc="1610805867621" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Exceptions\NonPublicComponentMethodCall.php"/>
+  <file crc="1610805867605" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Exceptions\MissingRulesException.php"/>
+  <file crc="1610805867588" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Exceptions\MissingFileUploadsTraitException.php"/>
+  <file crc="1610805867570" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Exceptions\MethodNotFoundException.php"/>
+  <file crc="1610805867554" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Exceptions\CorruptComponentPayloadException.php"/>
+  <file crc="1610805867538" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Exceptions\ComponentNotFoundException.php"/>
+  <file crc="1610805867521" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Exceptions\CannotUseReservedLivewireComponentProperties.php"/>
+  <file crc="1610805867504" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Exceptions\CannotBindToModelDataWithoutValidationRuleException.php"/>
+  <file crc="1610805867486" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Exceptions\BypassViewHandler.php"/>
+  <file crc="1610805867423" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Controllers\LivewireJavaScriptAssets.php"/>
+  <file crc="1610805867405" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Controllers\HttpConnectionHandler.php"/>
+  <file crc="1610805867380" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Controllers\FileUploadHandler.php"/>
+  <file crc="1610805867362" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Controllers\FilePreviewHandler.php"/>
+  <file crc="1610805867337" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Controllers\CanPretendToBeAFile.php"/>
+  <file crc="1610805867317" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Connection\ConnectionHandler.php"/>
+  <file crc="1610805867270" name="F:\wamp\www\dente\vendor\livewire\livewire\src\ComponentConcerns\ValidatesInput.php"/>
+  <file crc="1610805867245" name="F:\wamp\www\dente\vendor\livewire\livewire\src\ComponentConcerns\TracksRenderedChildren.php"/>
+  <file crc="1610805867225" name="F:\wamp\www\dente\vendor\livewire\livewire\src\ComponentConcerns\RendersLivewireComponents.php"/>
+  <file crc="1610805867198" name="F:\wamp\www\dente\vendor\livewire\livewire\src\ComponentConcerns\ReceivesEvents.php"/>
+  <file crc="1610805867180" name="F:\wamp\www\dente\vendor\livewire\livewire\src\ComponentConcerns\PerformsRedirects.php"/>
+  <file crc="1610805867157" name="F:\wamp\www\dente\vendor\livewire\livewire\src\ComponentConcerns\InteractsWithProperties.php"/>
+  <file crc="1610805867127" name="F:\wamp\www\dente\vendor\livewire\livewire\src\ComponentConcerns\HandlesActions.php"/>
+  <file crc="1610805866982" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Commands\TouchCommand.php"/>
+  <file crc="1610805867047" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Commands\the-tao.php"/>
+  <file crc="1610805866963" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Commands\StubsCommand.php"/>
+  <file crc="1610805866940" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Commands\StubParser.php"/>
+  <file crc="1610805866920" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Commands\S3CleanupCommand.php"/>
+  <file crc="1610805866902" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Commands\RmCommand.php"/>
+  <file crc="1610805866882" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Commands\PublishCommand.php"/>
+  <file crc="1610805866863" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Commands\MvCommand.php"/>
+  <file crc="1610805866837" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Commands\MoveCommand.php"/>
+  <file crc="1610805866820" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Commands\MakeLivewireCommand.php"/>
+  <file crc="1610805866794" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Commands\MakeCommand.php"/>
+  <file crc="1610805866767" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Commands\FileManipulationCommand.php"/>
+  <file crc="1610805866749" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Commands\DiscoverCommand.php"/>
+  <file crc="1610805866724" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Commands\DeleteCommand.php"/>
+  <file crc="1610805866707" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Commands\CpCommand.php"/>
+  <file crc="1610805866682" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Commands\CopyCommand.php"/>
+  <file crc="1610805866662" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Commands\ComponentParserFromExistingComponent.php"/>
+  <file crc="1610805866631" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Commands\ComponentParser.php"/>
+  <file crc="1610805869066" name="F:\wamp\www\dente\vendor\livewire\livewire\src\WithPagination.php"/>
+  <file crc="1610805869036" name="F:\wamp\www\dente\vendor\livewire\livewire\src\WithFileUploads.php"/>
+  <file crc="1610805869014" name="F:\wamp\www\dente\vendor\livewire\livewire\src\WireDirective.php"/>
+  <file crc="1610805868862" name="F:\wamp\www\dente\vendor\livewire\livewire\src\TemporaryUploadedFile.php"/>
+  <file crc="1610805868839" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Response.php"/>
+  <file crc="1610805868814" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Request.php"/>
+  <file crc="1610805868452" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Redirector.php"/>
+  <file crc="1610805868435" name="F:\wamp\www\dente\vendor\livewire\livewire\src\ObjectPrybar.php"/>
+  <file crc="1610805868313" name="F:\wamp\www\dente\vendor\livewire\livewire\src\LivewireViewCompilerEngine.php"/>
+  <file crc="1610805868290" name="F:\wamp\www\dente\vendor\livewire\livewire\src\LivewireTagCompiler.php"/>
+  <file crc="1610805868259" name="F:\wamp\www\dente\vendor\livewire\livewire\src\LivewireServiceProvider.php"/>
+  <file crc="1610805868235" name="F:\wamp\www\dente\vendor\livewire\livewire\src\LivewireManager.php"/>
+  <file crc="1610805868215" name="F:\wamp\www\dente\vendor\livewire\livewire\src\LivewireComponentsFinder.php"/>
+  <file crc="1610805868187" name="F:\wamp\www\dente\vendor\livewire\livewire\src\LivewireBladeDirectives.php"/>
+  <file crc="1610805868166" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Livewire.php"/>
+  <file crc="1610805868133" name="F:\wamp\www\dente\vendor\livewire\livewire\src\LifecycleManager.php"/>
+  <file crc="1610805868090" name="F:\wamp\www\dente\vendor\livewire\livewire\src\ImplicitRouteBinding.php"/>
+  <file crc="1610805868111" name="F:\wamp\www\dente\vendor\livewire\livewire\src\ImplicitlyBoundMethod.php"/>
+  <file crc="1610805869094" name="F:\wamp\www\dente\vendor\livewire\livewire\src\helpers.php"/>
+  <file crc="1610805867750" name="F:\wamp\www\dente\vendor\livewire\livewire\src\GenerateSignedUploadUrl.php"/>
+  <file crc="1610805867723" name="F:\wamp\www\dente\vendor\livewire\livewire\src\FileUploadConfiguration.php"/>
+  <file crc="1610805867461" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Event.php"/>
+  <file crc="1610805867440" name="F:\wamp\www\dente\vendor\livewire\livewire\src\CreateBladeView.php"/>
+  <file crc="1610805867104" name="F:\wamp\www\dente\vendor\livewire\livewire\src\ComponentChecksumManager.php"/>
+  <file crc="1610805867082" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Component.php"/>
+  <file crc="1610805867065" name="F:\wamp\www\dente\vendor\livewire\livewire\src\CompilerEngineForIgnition.php"/>
+  <file crc="1610805866611" name="F:\wamp\www\dente\vendor\livewire\livewire\src\Castable.php"/>
+  <file crc="1610805866522" name="F:\wamp\www\dente\vendor\livewire\livewire\js\util\wire-directives.js"/>
+  <file crc="1610805866508" name="F:\wamp\www\dente\vendor\livewire\livewire\js\util\walk.js"/>
+  <file crc="1610805866497" name="F:\wamp\www\dente\vendor\livewire\livewire\js\util\index.js"/>
+  <file crc="1610805866485" name="F:\wamp\www\dente\vendor\livewire\livewire\js\util\getCsrfToken.js"/>
+  <file crc="1610805866473" name="F:\wamp\www\dente\vendor\livewire\livewire\js\util\dispatch.js"/>
+  <file crc="1610805866460" name="F:\wamp\www\dente\vendor\livewire\livewire\js\util\debounce.js"/>
+  <file crc="1610805866402" name="F:\wamp\www\dente\vendor\livewire\livewire\js\dom\polyfills\modules\es.element.matches.js"/>
+  <file crc="1610805866387" name="F:\wamp\www\dente\vendor\livewire\livewire\js\dom\polyfills\modules\es.element.get-attribute-names.js"/>
+  <file crc="1610805866373" name="F:\wamp\www\dente\vendor\livewire\livewire\js\dom\polyfills\modules\es.element.closest.js"/>
+  <file crc="1610805866361" name="F:\wamp\www\dente\vendor\livewire\livewire\js\dom\polyfills\index.js"/>
+  <file crc="1610805866341" name="F:\wamp\www\dente\vendor\livewire\livewire\js\dom\morphdom\util.js"/>
+  <file crc="1610805866324" name="F:\wamp\www\dente\vendor\livewire\livewire\js\dom\morphdom\specialElHandlers.js"/>
+  <file crc="1610805866305" name="F:\wamp\www\dente\vendor\livewire\livewire\js\dom\morphdom\morphdom.js"/>
+  <file crc="1610805866290" name="F:\wamp\www\dente\vendor\livewire\livewire\js\dom\morphdom\morphAttrs.js"/>
+  <file crc="1610805866277" name="F:\wamp\www\dente\vendor\livewire\livewire\js\dom\morphdom\index.js"/>
+  <file crc="1610805866261" name="F:\wamp\www\dente\vendor\livewire\livewire\js\dom\dom.js"/>
+  <file crc="1610805866240" name="F:\wamp\www\dente\vendor\livewire\livewire\js\connection\index.js"/>
+  <file crc="1610805866168" name="F:\wamp\www\dente\vendor\livewire\livewire\js\component\UploadManager.js"/>
+  <file crc="1610805866148" name="F:\wamp\www\dente\vendor\livewire\livewire\js\component\SyncBrowserHistory.js"/>
+  <file crc="1610805866128" name="F:\wamp\www\dente\vendor\livewire\livewire\js\component\SupportAlpine.js"/>
+  <file crc="1610805866117" name="F:\wamp\www\dente\vendor\livewire\livewire\js\component\PrefetchManager.js"/>
+  <file crc="1610805866103" name="F:\wamp\www\dente\vendor\livewire\livewire\js\component\Polling.js"/>
+  <file crc="1610805866088" name="F:\wamp\www\dente\vendor\livewire\livewire\js\component\OfflineStates.js"/>
+  <file crc="1610805866071" name="F:\wamp\www\dente\vendor\livewire\livewire\js\component\LoadingStates.js"/>
+  <file crc="1610805866058" name="F:\wamp\www\dente\vendor\livewire\livewire\js\component\LaravelEcho.js"/>
+  <file crc="1610805866189" name="F:\wamp\www\dente\vendor\livewire\livewire\js\component\index.js"/>
+  <file crc="1610805866042" name="F:\wamp\www\dente\vendor\livewire\livewire\js\component\FileUploads.js"/>
+  <file crc="1610805866026" name="F:\wamp\www\dente\vendor\livewire\livewire\js\component\FileDownloads.js"/>
+  <file crc="1610805866010" name="F:\wamp\www\dente\vendor\livewire\livewire\js\component\DisableForms.js"/>
+  <file crc="1610805865996" name="F:\wamp\www\dente\vendor\livewire\livewire\js\component\DirtyStates.js"/>
+  <file crc="1610805865983" name="F:\wamp\www\dente\vendor\livewire\livewire\js\action\model.js"/>
+  <file crc="1610805865972" name="F:\wamp\www\dente\vendor\livewire\livewire\js\action\method.js"/>
+  <file crc="1610805865961" name="F:\wamp\www\dente\vendor\livewire\livewire\js\action\index.js"/>
+  <file crc="1610805865947" name="F:\wamp\www\dente\vendor\livewire\livewire\js\action\event.js"/>
+  <file crc="1610805865935" name="F:\wamp\www\dente\vendor\livewire\livewire\js\action\deferred-model.js"/>
+  <file crc="1610805865920" name="F:\wamp\www\dente\vendor\livewire\livewire\js\Store.js"/>
+  <file crc="1610805865907" name="F:\wamp\www\dente\vendor\livewire\livewire\js\PrefetchMessage.js"/>
+  <file crc="1610805866431" name="F:\wamp\www\dente\vendor\livewire\livewire\js\node_initializer.js"/>
+  <file crc="1610805865893" name="F:\wamp\www\dente\vendor\livewire\livewire\js\MessageBus.js"/>
+  <file crc="1610805865878" name="F:\wamp\www\dente\vendor\livewire\livewire\js\MessageBag.js"/>
+  <file crc="1610805865859" name="F:\wamp\www\dente\vendor\livewire\livewire\js\Message.js"/>
+  <file crc="1610805866416" name="F:\wamp\www\dente\vendor\livewire\livewire\js\index.js"/>
+  <file crc="1610805865842" name="F:\wamp\www\dente\vendor\livewire\livewire\js\HookManager.js"/>
+  <file crc="1610805865829" name="F:\wamp\www\dente\vendor\livewire\livewire\js\DirectiveManager.js"/>
+  <file crc="1610805865804" name="F:\wamp\www\dente\vendor\livewire\livewire\dist\manifest.json"/>
+  <file crc="1610805865719" name="F:\wamp\www\dente\vendor\livewire\livewire\dist\livewire.js"/>
+  <file crc="1610805865694" name="F:\wamp\www\dente\vendor\livewire\livewire\config\livewire.php"/>
+  <file crc="1610805865613" name="F:\wamp\www\dente\vendor\livewire\livewire\.github\workflows\test.yml"/>
+  <file crc="1610805865574" name="F:\wamp\www\dente\vendor\livewire\livewire\.github\ISSUE_TEMPLATE\config.yml"/>
+  <file crc="1610805865550" name="F:\wamp\www\dente\vendor\livewire\livewire\.github\FUNDING.yml"/>
+  <file crc="1610805866574" name="F:\wamp\www\dente\vendor\livewire\livewire\rollup.config.js"/>
+  <file crc="1610805866563" name="F:\wamp\www\dente\vendor\livewire\livewire\phpunit.xml"/>
+  <file crc="1610805866552" name="F:\wamp\www\dente\vendor\livewire\livewire\package.json"/>
+  <file crc="1610805866539" name="F:\wamp\www\dente\vendor\livewire\livewire\package-lock.json"/>
+  <file crc="1610805865814" name="F:\wamp\www\dente\vendor\livewire\livewire\jest.config.js"/>
+  <file crc="1610805865682" name="F:\wamp\www\dente\vendor\livewire\livewire\composer.json"/>
+  <file crc="1610805865670" name="F:\wamp\www\dente\vendor\livewire\livewire\babel.config.js"/>
   <file crc="1607426610273" name="F:\wamp\www\dente\vendor\league\mime-type-detection\src\MimeTypeDetector.php"/>
   <file crc="1607426610244" name="F:\wamp\www\dente\vendor\league\mime-type-detection\src\GeneratedExtensionToMimeTypeMap.php"/>
   <file crc="1607426610223" name="F:\wamp\www\dente\vendor\league\mime-type-detection\src\FinfoMimeTypeDetector.php"/>
@@ -4793,6 +5069,272 @@
   <file crc="1607426693876" name="F:\wamp\www\dente\vendor\laravel\tinker\src\ClassAliasAutoloader.php"/>
   <file crc="1607426693851" name="F:\wamp\www\dente\vendor\laravel\tinker\config\tinker.php"/>
   <file crc="1607426693838" name="F:\wamp\www\dente\vendor\laravel\tinker\composer.json"/>
+  <file crc="1610805864761" name="F:\wamp\www\dente\vendor\laravel\sanctum\src\Http\Middleware\EnsureFrontendRequestsAreStateful.php"/>
+  <file crc="1610805864739" name="F:\wamp\www\dente\vendor\laravel\sanctum\src\Http\Controllers\CsrfCookieController.php"/>
+  <file crc="1610805864670" name="F:\wamp\www\dente\vendor\laravel\sanctum\src\Contracts\HasAbilities.php"/>
+  <file crc="1610805864888" name="F:\wamp\www\dente\vendor\laravel\sanctum\src\TransientToken.php"/>
+  <file crc="1610805864859" name="F:\wamp\www\dente\vendor\laravel\sanctum\src\SanctumServiceProvider.php"/>
+  <file crc="1610805864839" name="F:\wamp\www\dente\vendor\laravel\sanctum\src\Sanctum.php"/>
+  <file crc="1610805864814" name="F:\wamp\www\dente\vendor\laravel\sanctum\src\PersonalAccessToken.php"/>
+  <file crc="1610805864789" name="F:\wamp\www\dente\vendor\laravel\sanctum\src\NewAccessToken.php"/>
+  <file crc="1610805864712" name="F:\wamp\www\dente\vendor\laravel\sanctum\src\HasApiTokens.php"/>
+  <file crc="1610805864687" name="F:\wamp\www\dente\vendor\laravel\sanctum\src\Guard.php"/>
+  <file crc="1610805864650" name="F:\wamp\www\dente\vendor\laravel\sanctum\database\migrations\2019_12_14_000001_create_personal_access_tokens_table.php"/>
+  <file crc="1610805864627" name="F:\wamp\www\dente\vendor\laravel\sanctum\config\sanctum.php"/>
+  <file crc="1610805864615" name="F:\wamp\www\dente\vendor\laravel\sanctum\composer.json"/>
+  <file crc="1610805468328" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\livewire\UpdateTeamNameTest.php"/>
+  <file crc="1610805468310" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\livewire\UpdateTeamMemberRoleTest.php"/>
+  <file crc="1610805468292" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\livewire\UpdatePasswordTest.php"/>
+  <file crc="1610805468274" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\livewire\TwoFactorAuthenticationSettingsTest.php"/>
+  <file crc="1610805468257" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\livewire\RemoveTeamMemberTest.php"/>
+  <file crc="1610805468239" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\livewire\ProfileInformationTest.php"/>
+  <file crc="1610805468222" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\livewire\LeaveTeamTest.php"/>
+  <file crc="1610805468205" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\livewire\InviteTeamMemberTest.php"/>
+  <file crc="1610805468187" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\livewire\DeleteTeamTest.php"/>
+  <file crc="1610805468170" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\livewire\DeleteApiTokenTest.php"/>
+  <file crc="1610805468153" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\livewire\DeleteAccountTest.php"/>
+  <file crc="1610805468136" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\livewire\CreateTeamTest.php"/>
+  <file crc="1610805468115" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\livewire\CreateApiTokenTest.php"/>
+  <file crc="1610805468092" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\livewire\BrowserSessionsTest.php"/>
+  <file crc="1610805468071" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\livewire\ApiTokenPermissionsTest.php"/>
+  <file crc="1610805468050" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\inertia\UpdateTeamNameTest.php"/>
+  <file crc="1610805468030" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\inertia\UpdateTeamMemberRoleTest.php"/>
+  <file crc="1610805468013" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\inertia\UpdatePasswordTest.php"/>
+  <file crc="1610805467995" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\inertia\TwoFactorAuthenticationSettingsTest.php"/>
+  <file crc="1610805467978" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\inertia\RemoveTeamMemberTest.php"/>
+  <file crc="1610805467959" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\inertia\ProfileInformationTest.php"/>
+  <file crc="1610805467943" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\inertia\LeaveTeamTest.php"/>
+  <file crc="1610805467926" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\inertia\InviteTeamMemberTest.php"/>
+  <file crc="1610805467909" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\inertia\DeleteTeamTest.php"/>
+  <file crc="1610805467893" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\inertia\DeleteApiTokenTest.php"/>
+  <file crc="1610805467876" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\inertia\DeleteAccountTest.php"/>
+  <file crc="1610805467859" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\inertia\CreateTeamTest.php"/>
+  <file crc="1610805467842" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\inertia\CreateApiTokenTest.php"/>
+  <file crc="1610805467825" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\inertia\BrowserSessionsTest.php"/>
+  <file crc="1610805467809" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\inertia\ApiTokenPermissionsTest.php"/>
+  <file crc="1610805467791" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\RegistrationTest.php"/>
+  <file crc="1610805467773" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\PasswordResetTest.php"/>
+  <file crc="1610805467756" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\PasswordConfirmationTest.php"/>
+  <file crc="1610805467738" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\EmailVerificationTest.php"/>
+  <file crc="1610805467720" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\tests\AuthenticationTest.php"/>
+  <file crc="1610805467688" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\resources\css\app.css"/>
+  <file crc="1610805467673" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\public\css\app.css"/>
+  <file crc="1610805467622" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\resources\views\teams\update-team-name-form.blade.php"/>
+  <file crc="1610805467607" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\resources\views\teams\team-member-manager.blade.php"/>
+  <file crc="1610805467595" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\resources\views\teams\show.blade.php"/>
+  <file crc="1610805467583" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\resources\views\teams\delete-team-form.blade.php"/>
+  <file crc="1610805467572" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\resources\views\teams\create.blade.php"/>
+  <file crc="1610805467562" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\resources\views\teams\create-team-form.blade.php"/>
+  <file crc="1610805467547" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\resources\views\profile\update-profile-information-form.blade.php"/>
+  <file crc="1610805467535" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\resources\views\profile\update-password-form.blade.php"/>
+  <file crc="1610805467521" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\resources\views\profile\two-factor-authentication-form.blade.php"/>
+  <file crc="1610805467509" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\resources\views\profile\show.blade.php"/>
+  <file crc="1610805467495" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\resources\views\profile\logout-other-browser-sessions-form.blade.php"/>
+  <file crc="1610805467484" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\resources\views\profile\delete-user-form.blade.php"/>
+  <file crc="1610805467446" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\resources\views\layouts\guest.blade.php"/>
+  <file crc="1610805467434" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\resources\views\layouts\app.blade.php"/>
+  <file crc="1610805467408" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\resources\views\auth\verify-email.blade.php"/>
+  <file crc="1610805467397" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\resources\views\auth\two-factor-challenge.blade.php"/>
+  <file crc="1610805467385" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\resources\views\auth\reset-password.blade.php"/>
+  <file crc="1610805467372" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\resources\views\auth\register.blade.php"/>
+  <file crc="1610805467360" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\resources\views\auth\login.blade.php"/>
+  <file crc="1610805467347" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\resources\views\auth\forgot-password.blade.php"/>
+  <file crc="1610805467336" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\resources\views\auth\confirm-password.blade.php"/>
+  <file crc="1610805467325" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\resources\views\api\index.blade.php"/>
+  <file crc="1610805467312" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\resources\views\api\api-token-manager.blade.php"/>
+  <file crc="1610805467634" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\resources\views\terms.blade.php"/>
+  <file crc="1610805467472" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\resources\views\policy.blade.php"/>
+  <file crc="1610805467458" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\resources\views\navigation-menu.blade.php"/>
+  <file crc="1610805467422" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\resources\views\dashboard.blade.php"/>
+  <file crc="1610805467300" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\resources\js\app.js"/>
+  <file crc="1610805467246" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\app\View\Components\GuestLayout.php"/>
+  <file crc="1610805467225" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\app\View\Components\AppLayout.php"/>
+  <file crc="1610805467657" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\webpack.mix.js"/>
+  <file crc="1610805467645" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\livewire\tailwind.config.js"/>
+  <file crc="1610805467163" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\routes\web.php"/>
+  <file crc="1610805467151" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\views\app.blade.php"/>
+  <file crc="1610805467074" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Pages\Teams\UpdateTeamNameForm.vue"/>
+  <file crc="1610805467054" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Pages\Teams\TeamMemberManager.vue"/>
+  <file crc="1610805467034" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Pages\Teams\Show.vue"/>
+  <file crc="1610805467005" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Pages\Teams\DeleteTeamForm.vue"/>
+  <file crc="1610805466983" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Pages\Teams\CreateTeamForm.vue"/>
+  <file crc="1610805466963" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Pages\Teams\Create.vue"/>
+  <file crc="1610805466943" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Pages\Profile\UpdateProfileInformationForm.vue"/>
+  <file crc="1610805466923" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Pages\Profile\UpdatePasswordForm.vue"/>
+  <file crc="1610805466902" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Pages\Profile\TwoFactorAuthenticationForm.vue"/>
+  <file crc="1610805466884" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Pages\Profile\Show.vue"/>
+  <file crc="1610805466863" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Pages\Profile\LogoutOtherBrowserSessionsForm.vue"/>
+  <file crc="1610805466843" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Pages\Profile\DeleteUserForm.vue"/>
+  <file crc="1610805466783" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Pages\Auth\VerifyEmail.vue"/>
+  <file crc="1610805466764" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Pages\Auth\TwoFactorChallenge.vue"/>
+  <file crc="1610805466745" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Pages\Auth\ResetPassword.vue"/>
+  <file crc="1610805466724" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Pages\Auth\Register.vue"/>
+  <file crc="1610805466705" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Pages\Auth\Login.vue"/>
+  <file crc="1610805466686" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Pages\Auth\ForgotPassword.vue"/>
+  <file crc="1610805466666" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Pages\Auth\ConfirmPassword.vue"/>
+  <file crc="1610805466649" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Pages\API\Index.vue"/>
+  <file crc="1610805466629" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Pages\API\ApiTokenManager.vue"/>
+  <file crc="1610805467115" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Pages\Welcome.vue"/>
+  <file crc="1610805467093" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Pages\TermsOfService.vue"/>
+  <file crc="1610805466819" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Pages\PrivacyPolicy.vue"/>
+  <file crc="1610805466802" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Pages\Dashboard.vue"/>
+  <file crc="1610805466609" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Layouts\AppLayout.vue"/>
+  <file crc="1610805466588" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Jetstream\Welcome.vue"/>
+  <file crc="1610805466570" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Jetstream\ValidationErrors.vue"/>
+  <file crc="1610805466560" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Jetstream\SectionTitle.vue"/>
+  <file crc="1610805466549" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Jetstream\SectionBorder.vue"/>
+  <file crc="1610805466532" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Jetstream\SecondaryButton.vue"/>
+  <file crc="1610805466510" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Jetstream\ResponsiveNavLink.vue"/>
+  <file crc="1610805466487" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Jetstream\NavLink.vue"/>
+  <file crc="1610805466469" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Jetstream\Modal.vue"/>
+  <file crc="1610805466452" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Jetstream\Label.vue"/>
+  <file crc="1610805466435" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Jetstream\InputError.vue"/>
+  <file crc="1610805466418" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Jetstream\Input.vue"/>
+  <file crc="1610805466399" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Jetstream\FormSection.vue"/>
+  <file crc="1610805466380" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Jetstream\DropdownLink.vue"/>
+  <file crc="1610805466362" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Jetstream\Dropdown.vue"/>
+  <file crc="1610805466343" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Jetstream\DialogModal.vue"/>
+  <file crc="1610805466323" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Jetstream\DangerButton.vue"/>
+  <file crc="1610805466303" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Jetstream\ConfirmsPassword.vue"/>
+  <file crc="1610805466285" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Jetstream\ConfirmationModal.vue"/>
+  <file crc="1610805466267" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Jetstream\Checkbox.vue"/>
+  <file crc="1610805466249" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Jetstream\Button.vue"/>
+  <file crc="1610805466230" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Jetstream\Banner.vue"/>
+  <file crc="1610805466219" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Jetstream\AuthenticationCardLogo.vue"/>
+  <file crc="1610805466208" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Jetstream\AuthenticationCard.vue"/>
+  <file crc="1610805466198" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Jetstream\ApplicationMark.vue"/>
+  <file crc="1610805466186" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Jetstream\ApplicationLogo.vue"/>
+  <file crc="1610805466168" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Jetstream\ActionSection.vue"/>
+  <file crc="1610805466148" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\Jetstream\ActionMessage.vue"/>
+  <file crc="1610805467137" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\resources\js\app.js"/>
+  <file crc="1610805467209" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\webpack.mix.js"/>
+  <file crc="1610805467198" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\webpack.config.js"/>
+  <file crc="1610805467185" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\inertia\tailwind.config.js"/>
+  <file crc="1610805466117" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\app\Providers\JetstreamWithTeamsServiceProvider.php"/>
+  <file crc="1610805466095" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\app\Providers\JetstreamServiceProvider.php"/>
+  <file crc="1610805466074" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\app\Providers\AuthServiceProvider.php"/>
+  <file crc="1610805466054" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\app\Policies\TeamPolicy.php"/>
+  <file crc="1610805466036" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\app\Models\UserWithTeams.php"/>
+  <file crc="1610805466019" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\app\Models\User.php"/>
+  <file crc="1610805465998" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\app\Models\TeamInvitation.php"/>
+  <file crc="1610805465982" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\app\Models\Team.php"/>
+  <file crc="1610805465965" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\app\Models\Membership.php"/>
+  <file crc="1610805465942" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\app\Actions\Jetstream\UpdateTeamName.php"/>
+  <file crc="1610805465914" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\app\Actions\Jetstream\RemoveTeamMember.php"/>
+  <file crc="1610805465888" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\app\Actions\Jetstream\InviteTeamMember.php"/>
+  <file crc="1610805465868" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\app\Actions\Jetstream\DeleteUserWithTeams.php"/>
+  <file crc="1610805465851" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\app\Actions\Jetstream\DeleteUser.php"/>
+  <file crc="1610805465834" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\app\Actions\Jetstream\DeleteTeam.php"/>
+  <file crc="1610805465812" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\app\Actions\Jetstream\CreateTeam.php"/>
+  <file crc="1610805465790" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\app\Actions\Jetstream\AddTeamMember.php"/>
+  <file crc="1610805465768" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\app\Actions\Fortify\UpdateUserProfileInformation.php"/>
+  <file crc="1610805465749" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\app\Actions\Fortify\CreateNewUserWithTeams.php"/>
+  <file crc="1610805465732" name="F:\wamp\www\dente\vendor\laravel\jetstream\stubs\app\Actions\Fortify\CreateNewUser.php"/>
+  <file crc="1610805465658" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Rules\Role.php"/>
+  <file crc="1610805465564" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Mail\TeamInvitation.php"/>
+  <file crc="1610805465428" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Http\Middleware\ShareInertiaData.php"/>
+  <file crc="1610805465406" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Http\Middleware\AuthenticateSession.php"/>
+  <file crc="1610805465382" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Http\Livewire\UpdateTeamNameForm.php"/>
+  <file crc="1610805465360" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Http\Livewire\UpdateProfileInformationForm.php"/>
+  <file crc="1610805465337" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Http\Livewire\UpdatePasswordForm.php"/>
+  <file crc="1610805465317" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Http\Livewire\TwoFactorAuthenticationForm.php"/>
+  <file crc="1610805465285" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Http\Livewire\TeamMemberManager.php"/>
+  <file crc="1610805465264" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Http\Livewire\NavigationMenu.php"/>
+  <file crc="1610805465201" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Http\Livewire\LogoutOtherBrowserSessionsForm.php"/>
+  <file crc="1610805465176" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Http\Livewire\DeleteUserForm.php"/>
+  <file crc="1610805465159" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Http\Livewire\DeleteTeamForm.php"/>
+  <file crc="1610805465141" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Http\Livewire\CreateTeamForm.php"/>
+  <file crc="1610805465112" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Http\Livewire\ApiTokenManager.php"/>
+  <file crc="1610805465070" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Http\Controllers\Livewire\UserProfileController.php"/>
+  <file crc="1610805465052" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Http\Controllers\Livewire\TermsOfServiceController.php"/>
+  <file crc="1610805465032" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Http\Controllers\Livewire\TeamController.php"/>
+  <file crc="1610805465013" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Http\Controllers\Livewire\PrivacyPolicyController.php"/>
+  <file crc="1610805464994" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Http\Controllers\Livewire\ApiTokenController.php"/>
+  <file crc="1610805464972" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Http\Controllers\Inertia\UserProfileController.php"/>
+  <file crc="1610805464953" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Http\Controllers\Inertia\TermsOfServiceController.php"/>
+  <file crc="1610805464930" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Http\Controllers\Inertia\TeamMemberController.php"/>
+  <file crc="1610805464910" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Http\Controllers\Inertia\TeamController.php"/>
+  <file crc="1610805464889" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Http\Controllers\Inertia\ProfilePhotoController.php"/>
+  <file crc="1610805464870" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Http\Controllers\Inertia\PrivacyPolicyController.php"/>
+  <file crc="1610805464836" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Http\Controllers\Inertia\OtherBrowserSessionsController.php"/>
+  <file crc="1610805464802" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Http\Controllers\Inertia\CurrentUserController.php"/>
+  <file crc="1610805464776" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Http\Controllers\Inertia\ApiTokenController.php"/>
+  <file crc="1610805465089" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Http\Controllers\TeamInvitationController.php"/>
+  <file crc="1610805464754" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Http\Controllers\CurrentTeamController.php"/>
+  <file crc="1610805464650" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Events\TeamUpdated.php"/>
+  <file crc="1610805464634" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Events\TeamMemberUpdated.php"/>
+  <file crc="1610805464618" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Events\TeamMemberRemoved.php"/>
+  <file crc="1610805464601" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Events\TeamMemberAdded.php"/>
+  <file crc="1610805464584" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Events\TeamEvent.php"/>
+  <file crc="1610805464565" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Events\TeamDeleted.php"/>
+  <file crc="1610805464546" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Events\TeamCreated.php"/>
+  <file crc="1610805464529" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Events\RemovingTeamMember.php"/>
+  <file crc="1610805464513" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Events\InvitingTeamMember.php"/>
+  <file crc="1610805464495" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Events\AddingTeamMember.php"/>
+  <file crc="1610805464478" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Events\AddingTeam.php"/>
+  <file crc="1610805464460" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Contracts\UpdatesTeamNames.php"/>
+  <file crc="1610805464444" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Contracts\RemovesTeamMembers.php"/>
+  <file crc="1610805464426" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Contracts\InvitesTeamMembers.php"/>
+  <file crc="1610805464410" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Contracts\DeletesUsers.php"/>
+  <file crc="1610805464394" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Contracts\DeletesTeams.php"/>
+  <file crc="1610805464377" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Contracts\CreatesTeams.php"/>
+  <file crc="1610805464357" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Contracts\AddsTeamMembers.php"/>
+  <file crc="1610805464332" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Console\InstallCommand.php"/>
+  <file crc="1610805464287" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Actions\ValidateTeamDeletion.php"/>
+  <file crc="1610805464268" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Actions\UpdateTeamMemberRole.php"/>
+  <file crc="1610805465706" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\TeamInvitation.php"/>
+  <file crc="1610805465679" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Team.php"/>
+  <file crc="1610805465638" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Role.php"/>
+  <file crc="1610805465618" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\RedirectsActions.php"/>
+  <file crc="1610805465601" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\OwnerRole.php"/>
+  <file crc="1610805465584" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Membership.php"/>
+  <file crc="1610805465527" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\JetstreamServiceProvider.php"/>
+  <file crc="1610805465496" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Jetstream.php"/>
+  <file crc="1610805465476" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\InteractsWithBanner.php"/>
+  <file crc="1610805465454" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\InertiaManager.php"/>
+  <file crc="1610805464722" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\HasTeams.php"/>
+  <file crc="1610805464696" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\HasProfilePhoto.php"/>
+  <file crc="1610805464669" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\Features.php"/>
+  <file crc="1610805464305" name="F:\wamp\www\dente\vendor\laravel\jetstream\src\ConfirmsPasswords.php"/>
+  <file crc="1610805464231" name="F:\wamp\www\dente\vendor\laravel\jetstream\routes\livewire.php"/>
+  <file crc="1610805464206" name="F:\wamp\www\dente\vendor\laravel\jetstream\routes\inertia.php"/>
+  <file crc="1610805464193" name="F:\wamp\www\dente\vendor\laravel\jetstream\resources\views\mail\team-invitation.blade.php"/>
+  <file crc="1610805464180" name="F:\wamp\www\dente\vendor\laravel\jetstream\resources\views\components\welcome.blade.php"/>
+  <file crc="1610805464168" name="F:\wamp\www\dente\vendor\laravel\jetstream\resources\views\components\validation-errors.blade.php"/>
+  <file crc="1610805464155" name="F:\wamp\www\dente\vendor\laravel\jetstream\resources\views\components\switchable-team.blade.php"/>
+  <file crc="1610805464144" name="F:\wamp\www\dente\vendor\laravel\jetstream\resources\views\components\section-title.blade.php"/>
+  <file crc="1610805464134" name="F:\wamp\www\dente\vendor\laravel\jetstream\resources\views\components\section-border.blade.php"/>
+  <file crc="1610805464124" name="F:\wamp\www\dente\vendor\laravel\jetstream\resources\views\components\secondary-button.blade.php"/>
+  <file crc="1610805464112" name="F:\wamp\www\dente\vendor\laravel\jetstream\resources\views\components\responsive-nav-link.blade.php"/>
+  <file crc="1610805464100" name="F:\wamp\www\dente\vendor\laravel\jetstream\resources\views\components\nav-link.blade.php"/>
+  <file crc="1610805464077" name="F:\wamp\www\dente\vendor\laravel\jetstream\resources\views\components\modal.blade.php"/>
+  <file crc="1610805464067" name="F:\wamp\www\dente\vendor\laravel\jetstream\resources\views\components\label.blade.php"/>
+  <file crc="1610805464056" name="F:\wamp\www\dente\vendor\laravel\jetstream\resources\views\components\input.blade.php"/>
+  <file crc="1610805464046" name="F:\wamp\www\dente\vendor\laravel\jetstream\resources\views\components\input-error.blade.php"/>
+  <file crc="1610805464034" name="F:\wamp\www\dente\vendor\laravel\jetstream\resources\views\components\form-section.blade.php"/>
+  <file crc="1610805464022" name="F:\wamp\www\dente\vendor\laravel\jetstream\resources\views\components\dropdown.blade.php"/>
+  <file crc="1610805464011" name="F:\wamp\www\dente\vendor\laravel\jetstream\resources\views\components\dropdown-link.blade.php"/>
+  <file crc="1610805464001" name="F:\wamp\www\dente\vendor\laravel\jetstream\resources\views\components\dialog-modal.blade.php"/>
+  <file crc="1610805463990" name="F:\wamp\www\dente\vendor\laravel\jetstream\resources\views\components\danger-button.blade.php"/>
+  <file crc="1610805463978" name="F:\wamp\www\dente\vendor\laravel\jetstream\resources\views\components\confirms-password.blade.php"/>
+  <file crc="1610805463968" name="F:\wamp\www\dente\vendor\laravel\jetstream\resources\views\components\confirmation-modal.blade.php"/>
+  <file crc="1610805463957" name="F:\wamp\www\dente\vendor\laravel\jetstream\resources\views\components\checkbox.blade.php"/>
+  <file crc="1610805463946" name="F:\wamp\www\dente\vendor\laravel\jetstream\resources\views\components\button.blade.php"/>
+  <file crc="1610805463935" name="F:\wamp\www\dente\vendor\laravel\jetstream\resources\views\components\banner.blade.php"/>
+  <file crc="1610805463925" name="F:\wamp\www\dente\vendor\laravel\jetstream\resources\views\components\authentication-card.blade.php"/>
+  <file crc="1610805463915" name="F:\wamp\www\dente\vendor\laravel\jetstream\resources\views\components\authentication-card-logo.blade.php"/>
+  <file crc="1610805463904" name="F:\wamp\www\dente\vendor\laravel\jetstream\resources\views\components\application-mark.blade.php"/>
+  <file crc="1610805463892" name="F:\wamp\www\dente\vendor\laravel\jetstream\resources\views\components\application-logo.blade.php"/>
+  <file crc="1610805463882" name="F:\wamp\www\dente\vendor\laravel\jetstream\resources\views\components\action-section.blade.php"/>
+  <file crc="1610805463871" name="F:\wamp\www\dente\vendor\laravel\jetstream\resources\views\components\action-message.blade.php"/>
+  <file crc="1610805463851" name="F:\wamp\www\dente\vendor\laravel\jetstream\database\migrations\2020_05_21_300000_create_team_invitations_table.php"/>
+  <file crc="1610805463833" name="F:\wamp\www\dente\vendor\laravel\jetstream\database\migrations\2020_05_21_200000_create_team_user_table.php"/>
+  <file crc="1610805463815" name="F:\wamp\www\dente\vendor\laravel\jetstream\database\migrations\2020_05_21_100000_create_teams_table.php"/>
+  <file crc="1610805463796" name="F:\wamp\www\dente\vendor\laravel\jetstream\database\migrations\2014_10_12_000000_create_users_table.php"/>
+  <file crc="1610805463762" name="F:\wamp\www\dente\vendor\laravel\jetstream\database\factories\UserFactory.php"/>
+  <file crc="1610805463734" name="F:\wamp\www\dente\vendor\laravel\jetstream\database\factories\TeamFactory.php"/>
+  <file crc="1610805463708" name="F:\wamp\www\dente\vendor\laravel\jetstream\config\jetstream.php"/>
+  <file crc="1610805463696" name="F:\wamp\www\dente\vendor\laravel\jetstream\composer.json"/>
   <file crc="1607426649839" name="F:\wamp\www\dente\vendor\laravel\framework\src\Illuminate\View\Middleware\ShareErrorsFromSession.php"/>
   <file crc="1607426649748" name="F:\wamp\www\dente\vendor\laravel\framework\src\Illuminate\View\Engines\PhpEngine.php"/>
   <file crc="1607426649726" name="F:\wamp\www\dente\vendor\laravel\framework\src\Illuminate\View\Engines\FileEngine.php"/>
@@ -5810,6 +6352,108 @@
   <file crc="1607426619173" name="F:\wamp\www\dente\vendor\laravel\framework\src\Illuminate\Auth\AuthenticationException.php"/>
   <file crc="1607426619150" name="F:\wamp\www\dente\vendor\laravel\framework\src\Illuminate\Auth\Authenticatable.php"/>
   <file crc="1607426618993" name="F:\wamp\www\dente\vendor\laravel\framework\composer.json"/>
+  <file crc="1610805461493" name="F:\wamp\www\dente\vendor\laravel\fortify\stubs\UpdateUserProfileInformation.php"/>
+  <file crc="1610805461476" name="F:\wamp\www\dente\vendor\laravel\fortify\stubs\UpdateUserPassword.php"/>
+  <file crc="1610805461460" name="F:\wamp\www\dente\vendor\laravel\fortify\stubs\ResetUserPassword.php"/>
+  <file crc="1610805461440" name="F:\wamp\www\dente\vendor\laravel\fortify\stubs\PasswordValidationRules.php"/>
+  <file crc="1610805461417" name="F:\wamp\www\dente\vendor\laravel\fortify\stubs\FortifyServiceProvider.php"/>
+  <file crc="1610805461514" name="F:\wamp\www\dente\vendor\laravel\fortify\stubs\fortify.php"/>
+  <file crc="1610805461400" name="F:\wamp\www\dente\vendor\laravel\fortify\stubs\CreateNewUser.php"/>
+  <file crc="1610805461323" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Rules\Password.php"/>
+  <file crc="1610805461257" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Responses\TwoFactorLoginResponse.php"/>
+  <file crc="1610805461239" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Responses\SuccessfulPasswordResetLinkRequestResponse.php"/>
+  <file crc="1610805461215" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Responses\SimpleViewResponse.php"/>
+  <file crc="1610805461199" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Responses\RegisterResponse.php"/>
+  <file crc="1610805461181" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Responses\PasswordResetResponse.php"/>
+  <file crc="1610805461164" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Responses\PasswordConfirmedResponse.php"/>
+  <file crc="1610805461147" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Responses\LogoutResponse.php"/>
+  <file crc="1610805461131" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Responses\LoginResponse.php"/>
+  <file crc="1610805461112" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Responses\LockoutResponse.php"/>
+  <file crc="1610805461089" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Responses\FailedTwoFactorLoginResponse.php"/>
+  <file crc="1610805461069" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Responses\FailedPasswordResetResponse.php"/>
+  <file crc="1610805461049" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Responses\FailedPasswordResetLinkRequestResponse.php"/>
+  <file crc="1610805461027" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Responses\FailedPasswordConfirmationResponse.php"/>
+  <file crc="1610805461004" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Requests\VerifyEmailRequest.php"/>
+  <file crc="1610805460978" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Requests\TwoFactorLoginRequest.php"/>
+  <file crc="1610805460955" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Requests\LoginRequest.php"/>
+  <file crc="1610805460932" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Controllers\VerifyEmailController.php"/>
+  <file crc="1610805460912" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Controllers\TwoFactorQrCodeController.php"/>
+  <file crc="1610805460895" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Controllers\TwoFactorAuthenticationController.php"/>
+  <file crc="1610805460872" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Controllers\TwoFactorAuthenticatedSessionController.php"/>
+  <file crc="1610805460849" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Controllers\RegisteredUserController.php"/>
+  <file crc="1610805460827" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Controllers\RecoveryCodeController.php"/>
+  <file crc="1610805460810" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Controllers\ProfileInformationController.php"/>
+  <file crc="1610805460786" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Controllers\PasswordResetLinkController.php"/>
+  <file crc="1610805460769" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Controllers\PasswordController.php"/>
+  <file crc="1610805460743" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Controllers\NewPasswordController.php"/>
+  <file crc="1610805460726" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Controllers\EmailVerificationPromptController.php"/>
+  <file crc="1610805460708" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Controllers\EmailVerificationNotificationController.php"/>
+  <file crc="1610805460689" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Controllers\ConfirmedPasswordStatusController.php"/>
+  <file crc="1610805460662" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Controllers\ConfirmablePasswordController.php"/>
+  <file crc="1610805460636" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Http\Controllers\AuthenticatedSessionController.php"/>
+  <file crc="1610805460488" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Contracts\VerifyEmailViewResponse.php"/>
+  <file crc="1610805460404" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Contracts\UpdatesUserProfileInformation.php"/>
+  <file crc="1610805460388" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Contracts\UpdatesUserPasswords.php"/>
+  <file crc="1610805460369" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Contracts\TwoFactorLoginResponse.php"/>
+  <file crc="1610805460350" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Contracts\TwoFactorChallengeViewResponse.php"/>
+  <file crc="1610805460333" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Contracts\TwoFactorAuthenticationProvider.php"/>
+  <file crc="1610805460314" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Contracts\SuccessfulPasswordResetLinkRequestResponse.php"/>
+  <file crc="1610805460298" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Contracts\ResetsUserPasswords.php"/>
+  <file crc="1610805460279" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Contracts\ResetPasswordViewResponse.php"/>
+  <file crc="1610805460258" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Contracts\RequestPasswordResetLinkViewResponse.php"/>
+  <file crc="1610805460240" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Contracts\RegisterViewResponse.php"/>
+  <file crc="1610805460221" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Contracts\RegisterResponse.php"/>
+  <file crc="1610805460202" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Contracts\PasswordResetResponse.php"/>
+  <file crc="1610805460184" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Contracts\PasswordConfirmedResponse.php"/>
+  <file crc="1610805460163" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Contracts\LogoutResponse.php"/>
+  <file crc="1610805460144" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Contracts\LoginViewResponse.php"/>
+  <file crc="1610805460125" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Contracts\LoginResponse.php"/>
+  <file crc="1610805460106" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Contracts\LockoutResponse.php"/>
+  <file crc="1610805460088" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Contracts\FailedTwoFactorLoginResponse.php"/>
+  <file crc="1610805460069" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Contracts\FailedPasswordResetResponse.php"/>
+  <file crc="1610805460050" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Contracts\FailedPasswordResetLinkRequestResponse.php"/>
+  <file crc="1610805460031" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Contracts\FailedPasswordConfirmationResponse.php"/>
+  <file crc="1610805460015" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Contracts\CreatesNewUsers.php"/>
+  <file crc="1610805459995" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Contracts\ConfirmPasswordViewResponse.php"/>
+  <file crc="1610805459962" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Actions\RedirectIfTwoFactorAuthenticatable.php"/>
+  <file crc="1610805459940" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Actions\PrepareAuthenticatedSession.php"/>
+  <file crc="1610805459918" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Actions\GenerateNewRecoveryCodes.php"/>
+  <file crc="1610805459897" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Actions\EnsureLoginIsNotThrottled.php"/>
+  <file crc="1610805459875" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Actions\EnableTwoFactorAuthentication.php"/>
+  <file crc="1610805459857" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Actions\DisableTwoFactorAuthentication.php"/>
+  <file crc="1610805459837" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Actions\ConfirmPassword.php"/>
+  <file crc="1610805459816" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Actions\CompletePasswordReset.php"/>
+  <file crc="1610805459789" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Actions\AttemptToAuthenticate.php"/>
+  <file crc="1610805461376" name="F:\wamp\www\dente\vendor\laravel\fortify\src\TwoFactorAuthenticationProvider.php"/>
+  <file crc="1610805461351" name="F:\wamp\www\dente\vendor\laravel\fortify\src\TwoFactorAuthenticatable.php"/>
+  <file crc="1610805461302" name="F:\wamp\www\dente\vendor\laravel\fortify\src\RecoveryCode.php"/>
+  <file crc="1610805461273" name="F:\wamp\www\dente\vendor\laravel\fortify\src\LoginRateLimiter.php"/>
+  <file crc="1610805460604" name="F:\wamp\www\dente\vendor\laravel\fortify\src\FortifyServiceProvider.php"/>
+  <file crc="1610805460574" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Fortify.php"/>
+  <file crc="1610805460529" name="F:\wamp\www\dente\vendor\laravel\fortify\src\Features.php"/>
+  <file crc="1610805459759" name="F:\wamp\www\dente\vendor\laravel\fortify\routes\routes.php"/>
+  <file crc="1610805459740" name="F:\wamp\www\dente\vendor\laravel\fortify\database\migrations\2014_10_12_200000_add_two_factor_columns_to_users_table.php"/>
+  <file crc="1610805459720" name="F:\wamp\www\dente\vendor\laravel\fortify\config\fortify.php"/>
+  <file crc="1610805459707" name="F:\wamp\www\dente\vendor\laravel\fortify\composer.json"/>
+  <file crc="1610805463056" name="F:\wamp\www\dente\vendor\jenssegers\agent\src\Facades\Agent.php"/>
+  <file crc="1610805463033" name="F:\wamp\www\dente\vendor\jenssegers\agent\src\AgentServiceProvider.php"/>
+  <file crc="1610805463012" name="F:\wamp\www\dente\vendor\jenssegers\agent\src\Agent.php"/>
+  <file crc="1610805463000" name="F:\wamp\www\dente\vendor\jenssegers\agent\composer.json"/>
+  <file crc="1610805456895" name="F:\wamp\www\dente\vendor\jaybizzle\crawler-detect\src\Fixtures\Headers.php"/>
+  <file crc="1610805456864" name="F:\wamp\www\dente\vendor\jaybizzle\crawler-detect\src\Fixtures\Exclusions.php"/>
+  <file crc="1610805455656" name="F:\wamp\www\dente\vendor\jaybizzle\crawler-detect\src\Fixtures\Crawlers.php"/>
+  <file crc="1610805455635" name="F:\wamp\www\dente\vendor\jaybizzle\crawler-detect\src\Fixtures\AbstractProvider.php"/>
+  <file crc="1610805455612" name="F:\wamp\www\dente\vendor\jaybizzle\crawler-detect\src\CrawlerDetect.php"/>
+  <file crc="1610805455601" name="F:\wamp\www\dente\vendor\jaybizzle\crawler-detect\raw\Headers.txt"/>
+  <file crc="1610805455590" name="F:\wamp\www\dente\vendor\jaybizzle\crawler-detect\raw\Headers.json"/>
+  <file crc="1610805455579" name="F:\wamp\www\dente\vendor\jaybizzle\crawler-detect\raw\Exclusions.txt"/>
+  <file crc="1610805455569" name="F:\wamp\www\dente\vendor\jaybizzle\crawler-detect\raw\Exclusions.json"/>
+  <file crc="1610805455556" name="F:\wamp\www\dente\vendor\jaybizzle\crawler-detect\raw\Crawlers.txt"/>
+  <file crc="1610805455543" name="F:\wamp\www\dente\vendor\jaybizzle\crawler-detect\raw\Crawlers.json"/>
+  <file crc="1610805455450" name="F:\wamp\www\dente\vendor\jaybizzle\crawler-detect\.github\workflows\test.yml"/>
+  <file crc="1610805455439" name="F:\wamp\www\dente\vendor\jaybizzle\crawler-detect\.github\workflows\php-cs-fixer.yml"/>
+  <file crc="1610805455524" name="F:\wamp\www\dente\vendor\jaybizzle\crawler-detect\export.php"/>
+  <file crc="1610805455514" name="F:\wamp\www\dente\vendor\jaybizzle\crawler-detect\composer.json"/>
   <file crc="1607426698258" name="F:\wamp\www\dente\vendor\hamcrest\hamcrest-php\tests\Hamcrest\Xml\HasXPathTest.php"/>
   <file crc="1607426698199" name="F:\wamp\www\dente\vendor\hamcrest\hamcrest-php\tests\Hamcrest\Type\IsStringTest.php"/>
   <file crc="1607426698172" name="F:\wamp\www\dente\vendor\hamcrest\hamcrest-php\tests\Hamcrest\Type\IsScalarTest.php"/>
@@ -6846,17 +7490,33 @@
   <file crc="1607426518238" name="F:\wamp\www\dente\vendor\doctrine\inflector\composer.json"/>
   <file crc="1607426688330" name="F:\wamp\www\dente\vendor\dnoegel\php-xdg-base-dir\src\Xdg.php"/>
   <file crc="1607426688317" name="F:\wamp\www\dente\vendor\dnoegel\php-xdg-base-dir\composer.json"/>
+  <file crc="1610805452549" name="F:\wamp\www\dente\vendor\dasprid\enum\test\WeekDay.php"/>
+  <file crc="1610805452530" name="F:\wamp\www\dente\vendor\dasprid\enum\test\Planet.php"/>
+  <file crc="1610805452513" name="F:\wamp\www\dente\vendor\dasprid\enum\test\NullValueTest.php"/>
+  <file crc="1610805452489" name="F:\wamp\www\dente\vendor\dasprid\enum\test\EnumMapTest.php"/>
+  <file crc="1610805452464" name="F:\wamp\www\dente\vendor\dasprid\enum\test\AbstractEnumTest.php"/>
+  <file crc="1610805452424" name="F:\wamp\www\dente\vendor\dasprid\enum\src\Exception\UnserializeNotSupportedException.php"/>
+  <file crc="1610805452407" name="F:\wamp\www\dente\vendor\dasprid\enum\src\Exception\SerializeNotSupportedException.php"/>
+  <file crc="1610805452392" name="F:\wamp\www\dente\vendor\dasprid\enum\src\Exception\MismatchException.php"/>
+  <file crc="1610805452377" name="F:\wamp\www\dente\vendor\dasprid\enum\src\Exception\IllegalArgumentException.php"/>
+  <file crc="1610805452361" name="F:\wamp\www\dente\vendor\dasprid\enum\src\Exception\ExpectationException.php"/>
+  <file crc="1610805452345" name="F:\wamp\www\dente\vendor\dasprid\enum\src\Exception\ExceptionInterface.php"/>
+  <file crc="1610805452329" name="F:\wamp\www\dente\vendor\dasprid\enum\src\Exception\CloneNotSupportedException.php"/>
+  <file crc="1610805452440" name="F:\wamp\www\dente\vendor\dasprid\enum\src\NullValue.php"/>
+  <file crc="1610805452307" name="F:\wamp\www\dente\vendor\dasprid\enum\src\EnumMap.php"/>
+  <file crc="1610805452284" name="F:\wamp\www\dente\vendor\dasprid\enum\src\AbstractEnum.php"/>
+  <file crc="1610805452260" name="F:\wamp\www\dente\vendor\dasprid\enum\composer.json"/>
   <file crc="1607426753071" name="F:\wamp\www\dente\vendor\composer\platform_check.php"/>
-  <file crc="1607426746325" name="F:\wamp\www\dente\vendor\composer\InstalledVersions.php"/>
-  <file crc="1607426746299" name="F:\wamp\www\dente\vendor\composer\installed.php"/>
-  <file crc="1607426746283" name="F:\wamp\www\dente\vendor\composer\installed.json"/>
+  <file crc="1610805869827" name="F:\wamp\www\dente\vendor\composer\InstalledVersions.php"/>
+  <file crc="1610805869800" name="F:\wamp\www\dente\vendor\composer\installed.php"/>
+  <file crc="1610805869784" name="F:\wamp\www\dente\vendor\composer\installed.json"/>
   <file crc="1607426753131" name="F:\wamp\www\dente\vendor\composer\ClassLoader.php"/>
-  <file crc="1610146529111" name="F:\wamp\www\dente\vendor\composer\autoload_static.php"/>
+  <file crc="1610806868889" name="F:\wamp\www\dente\vendor\composer\autoload_static.php"/>
   <file crc="1607426753112" name="F:\wamp\www\dente\vendor\composer\autoload_real.php"/>
-  <file crc="1607427521981" name="F:\wamp\www\dente\vendor\composer\autoload_psr4.php"/>
-  <file crc="1607426752745" name="F:\wamp\www\dente\vendor\composer\autoload_namespaces.php"/>
-  <file crc="1607427522005" name="F:\wamp\www\dente\vendor\composer\autoload_files.php"/>
-  <file crc="1610146528968" name="F:\wamp\www\dente\vendor\composer\autoload_classmap.php"/>
+  <file crc="1610805876561" name="F:\wamp\www\dente\vendor\composer\autoload_psr4.php"/>
+  <file crc="1610805630487" name="F:\wamp\www\dente\vendor\composer\autoload_namespaces.php"/>
+  <file crc="1610805876695" name="F:\wamp\www\dente\vendor\composer\autoload_files.php"/>
+  <file crc="1610806868736" name="F:\wamp\www\dente\vendor\composer\autoload_classmap.php"/>
   <file crc="1607426586173" name="F:\wamp\www\dente\vendor\brick\math\src\Internal\Calculator\NativeCalculator.php"/>
   <file crc="1607426586145" name="F:\wamp\www\dente\vendor\brick\math\src\Internal\Calculator\GmpCalculator.php"/>
   <file crc="1607426586121" name="F:\wamp\www\dente\vendor\brick\math\src\Internal\Calculator\BcMathCalculator.php"/>
@@ -6876,70 +7536,201 @@
   <file crc="1607426585783" name="F:\wamp\www\dente\vendor\brick\math\psalm.xml"/>
   <file crc="1607426585771" name="F:\wamp\www\dente\vendor\brick\math\psalm-baseline.xml"/>
   <file crc="1607426585759" name="F:\wamp\www\dente\vendor\brick\math\composer.json"/>
+  <file crc="1610805454808" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\test\Encoder\MatrixUtilTest.php"/>
+  <file crc="1610805454779" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\test\Encoder\MaskUtilTest.php"/>
+  <file crc="1610805454759" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\test\Encoder\EncoderTest.php"/>
+  <file crc="1610805454733" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\test\Common\VersionTest.php"/>
+  <file crc="1610805454715" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\test\Common\ReedSolomonCodecTest.php"/>
+  <file crc="1610805454698" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\test\Common\ModeTest.php"/>
+  <file crc="1610805454677" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\test\Common\FormatInformationTest.php"/>
+  <file crc="1610805454659" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\test\Common\ErrorCorrectionLevelTest.php"/>
+  <file crc="1610805454642" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\test\Common\BitUtilsTest.php"/>
+  <file crc="1610805454617" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\test\Common\BitMatrixTest.php"/>
+  <file crc="1610805454588" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\test\Common\BitArrayTest.php"/>
+  <file crc="1610805454544" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\RendererStyle\RendererStyle.php"/>
+  <file crc="1610805454528" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\RendererStyle\GradientType.php"/>
+  <file crc="1610805454506" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\RendererStyle\Gradient.php"/>
+  <file crc="1610805454479" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\RendererStyle\Fill.php"/>
+  <file crc="1610805454452" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\RendererStyle\EyeFill.php"/>
+  <file crc="1610805454396" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\Path\Path.php"/>
+  <file crc="1610805454380" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\Path\OperationInterface.php"/>
+  <file crc="1610805454359" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\Path\Move.php"/>
+  <file crc="1610805454337" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\Path\Line.php"/>
+  <file crc="1610805454310" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\Path\EllipticArc.php"/>
+  <file crc="1610805454288" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\Path\Curve.php"/>
+  <file crc="1610805454267" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\Path\Close.php"/>
+  <file crc="1610805454184" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\Module\EdgeIterator\EdgeIterator.php"/>
+  <file crc="1610805454160" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\Module\EdgeIterator\Edge.php"/>
+  <file crc="1610805454243" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\Module\SquareModule.php"/>
+  <file crc="1610805454221" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\Module\RoundnessModule.php"/>
+  <file crc="1610805454205" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\Module\ModuleInterface.php"/>
+  <file crc="1610805454129" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\Module\DotsModule.php"/>
+  <file crc="1610805454076" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\Image\TransformationMatrix.php"/>
+  <file crc="1610805454047" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\Image\SvgImageBackEnd.php"/>
+  <file crc="1610805454017" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\Image\ImagickImageBackEnd.php"/>
+  <file crc="1610805453996" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\Image\ImageBackEndInterface.php"/>
+  <file crc="1610805453969" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\Image\EpsImageBackEnd.php"/>
+  <file crc="1610805453946" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\Eye\SquareEye.php"/>
+  <file crc="1610805453924" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\Eye\SimpleCircleEye.php"/>
+  <file crc="1610805453902" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\Eye\ModuleEye.php"/>
+  <file crc="1610805453886" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\Eye\EyeInterface.php"/>
+  <file crc="1610805453864" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\Eye\CompositeEye.php"/>
+  <file crc="1610805453839" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\Color\Rgb.php"/>
+  <file crc="1610805453818" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\Color\Gray.php"/>
+  <file crc="1610805453800" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\Color\ColorInterface.php"/>
+  <file crc="1610805453777" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\Color\Cmyk.php"/>
+  <file crc="1610805453755" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\Color\Alpha.php"/>
+  <file crc="1610805454435" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\RendererInterface.php"/>
+  <file crc="1610805454415" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\PlainTextRenderer.php"/>
+  <file crc="1610805454106" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Renderer\ImageRenderer.php"/>
+  <file crc="1610805453737" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Exception\WriterException.php"/>
+  <file crc="1610805453719" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Exception\UnexpectedValueException.php"/>
+  <file crc="1610805453704" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Exception\RuntimeException.php"/>
+  <file crc="1610805453688" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Exception\OutOfBoundsException.php"/>
+  <file crc="1610805453670" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Exception\InvalidArgumentException.php"/>
+  <file crc="1610805453654" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Exception\ExceptionInterface.php"/>
+  <file crc="1610805453630" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Encoder\QrCode.php"/>
+  <file crc="1610805453597" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Encoder\MatrixUtil.php"/>
+  <file crc="1610805453570" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Encoder\MaskUtil.php"/>
+  <file crc="1610805453548" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Encoder\Encoder.php"/>
+  <file crc="1610805453528" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Encoder\ByteMatrix.php"/>
+  <file crc="1610805453511" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Encoder\BlockPair.php"/>
+  <file crc="1610805453491" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Common\Version.php"/>
+  <file crc="1610805453472" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Common\ReedSolomonCodec.php"/>
+  <file crc="1610805453449" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Common\Mode.php"/>
+  <file crc="1610805453424" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Common\FormatInformation.php"/>
+  <file crc="1610805453401" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Common\ErrorCorrectionLevel.php"/>
+  <file crc="1610805453378" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Common\EcBlocks.php"/>
+  <file crc="1610805453357" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Common\EcBlock.php"/>
+  <file crc="1610805453328" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Common\CharacterSetEci.php"/>
+  <file crc="1610805453306" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Common\BitUtils.php"/>
+  <file crc="1610805453286" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Common\BitMatrix.php"/>
+  <file crc="1610805453264" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Common\BitArray.php"/>
+  <file crc="1610805454563" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\src\Writer.php"/>
+  <file crc="1610805453241" name="F:\wamp\www\dente\vendor\bacon\bacon-qr-code\composer.json"/>
   <file crc="1607426672961" name="F:\wamp\www\dente\vendor\asm89\stack-cors\src\CorsService.php"/>
   <file crc="1607426672935" name="F:\wamp\www\dente\vendor\asm89\stack-cors\src\Cors.php"/>
   <file crc="1607426672922" name="F:\wamp\www\dente\vendor\asm89\stack-cors\composer.json"/>
   <file crc="1607426753093" name="F:\wamp\www\dente\vendor\autoload.php"/>
   <file crc="1607426490571" name="F:\wamp\www\dente\tests\Unit\ExampleTest.php"/>
+  <file crc="1610805880141" name="F:\wamp\www\dente\tests\Feature\UpdatePasswordTest.php"/>
+  <file crc="1610805880121" name="F:\wamp\www\dente\tests\Feature\TwoFactorAuthenticationSettingsTest.php"/>
+  <file crc="1610805880247" name="F:\wamp\www\dente\tests\Feature\RegistrationTest.php"/>
+  <file crc="1610805880101" name="F:\wamp\www\dente\tests\Feature\ProfileInformationTest.php"/>
+  <file crc="1610805880227" name="F:\wamp\www\dente\tests\Feature\PasswordResetTest.php"/>
+  <file crc="1610805880209" name="F:\wamp\www\dente\tests\Feature\PasswordConfirmationTest.php"/>
   <file crc="1607426490537" name="F:\wamp\www\dente\tests\Feature\ExampleTest.php"/>
+  <file crc="1610805880187" name="F:\wamp\www\dente\tests\Feature\EmailVerificationTest.php"/>
+  <file crc="1610805880082" name="F:\wamp\www\dente\tests\Feature\DeleteApiTokenTest.php"/>
+  <file crc="1610805880064" name="F:\wamp\www\dente\tests\Feature\DeleteAccountTest.php"/>
+  <file crc="1610805880046" name="F:\wamp\www\dente\tests\Feature\CreateApiTokenTest.php"/>
+  <file crc="1610805880028" name="F:\wamp\www\dente\tests\Feature\BrowserSessionsTest.php"/>
+  <file crc="1610805880168" name="F:\wamp\www\dente\tests\Feature\AuthenticationTest.php"/>
+  <file crc="1610805880009" name="F:\wamp\www\dente\tests\Feature\ApiTokenPermissionsTest.php"/>
   <file crc="1607426490554" name="F:\wamp\www\dente\tests\TestCase.php"/>
   <file crc="1607426490514" name="F:\wamp\www\dente\tests\CreatesApplication.php"/>
   <file crc="1610579170879" name="F:\wamp\www\dente\storage\framework\views\ffcd7d51aa40af2f130c50492309bb825ad6da04.php"/>
-  <file crc="1610315404404" name="F:\wamp\www\dente\storage\framework\views\f4b6392a098ef2c299767ec1a7f814ed48d2656d.php"/>
+  <file crc="1610751756079" name="F:\wamp\www\dente\storage\framework\views\fd30fdefc2a4f9e7c5938ec471be709b54e86b8a.php"/>
+  <file crc="1610926966310" name="F:\wamp\www\dente\storage\framework\views\f4b6392a098ef2c299767ec1a7f814ed48d2656d.php"/>
   <file crc="1610150346423" name="F:\wamp\www\dente\storage\framework\views\f3575cbce65bad393ce125953e1895979f4b7970.php"/>
   <file crc="1610314319941" name="F:\wamp\www\dente\storage\framework\views\ebff13156a432a8059a546ed6a9059bf35173434.php"/>
   <file crc="1610666430286" name="F:\wamp\www\dente\storage\framework\views\e826a6ae1200ed32f98be453476d9ed4bcffda1f.php"/>
   <file crc="1607463012472" name="F:\wamp\www\dente\storage\framework\views\e2d39246982cbee3d89769831f6f394156f1cebc.php"/>
   <file crc="1608387412913" name="F:\wamp\www\dente\storage\framework\views\d5130f6114cd60b6311ec7a629705a5bd05cdb2c.php"/>
+  <file crc="1610924971557" name="F:\wamp\www\dente\storage\framework\views\d4134807d7a2a9e1bbd675ed40d1cb7d924e9d21.php"/>
+  <file crc="1610924975968" name="F:\wamp\www\dente\storage\framework\views\d335cc030451bacddc0efda0a3ca011250f57a5c.php"/>
   <file crc="1610315304481" name="F:\wamp\www\dente\storage\framework\views\d30ed4652c30d145a60d5e743e801ae7e3e643f7.php"/>
   <file crc="1610314047401" name="F:\wamp\www\dente\storage\framework\views\cceb772d6a9bc7bc9b236603cdf21dfbfe1e9f23.php"/>
   <file crc="1610490620709" name="F:\wamp\www\dente\storage\framework\views\c6a637221d49c6ebea3a63054728246fb3336dcf.php"/>
   <file crc="1608155191996" name="F:\wamp\www\dente\storage\framework\views\c245ce5a5cd3ab0d2a1dc63ced23cde8e2f60cce.php"/>
-  <file crc="1610314282165" name="F:\wamp\www\dente\storage\framework\views\bccf6652c3826e232be72ce39ff4bde41451b636.php"/>
-  <file crc="1610490070584" name="F:\wamp\www\dente\storage\framework\views\aa99c5b76a3e1142531e58756cbc26dcd5f7014d.php"/>
+  <file crc="1611011569510" name="F:\wamp\www\dente\storage\framework\views\bccf6652c3826e232be72ce39ff4bde41451b636.php"/>
+  <file crc="1610924979535" name="F:\wamp\www\dente\storage\framework\views\b5957d7b9db1056a2757077e80d2b9fd1b9e1f08.php"/>
+  <file crc="1610837653027" name="F:\wamp\www\dente\storage\framework\views\aa99c5b76a3e1142531e58756cbc26dcd5f7014d.php"/>
   <file crc="1610149370146" name="F:\wamp\www\dente\storage\framework\views\a99fd9138272011ac1ee9d424af3c11be16eac65.php"/>
   <file crc="1608471308409" name="F:\wamp\www\dente\storage\framework\views\a8900582f1cd971f1e1cd9e7f21483d75daf0d8a.php"/>
+  <file crc="1610924971458" name="F:\wamp\www\dente\storage\framework\views\a4de4d6ddc8ed71b4f086a42049df1de1060e258.php"/>
   <file crc="1608161011090" name="F:\wamp\www\dente\storage\framework\views\a1b54a1e817e877aef44ea9b46fbe344fc0ee649.php"/>
   <file crc="1608473538018" name="F:\wamp\www\dente\storage\framework\views\a12bd815807c4c6c16f5699c326372e647c5c10d.php"/>
+  <file crc="1610924975662" name="F:\wamp\www\dente\storage\framework\views\9fdf5d129966b1a3578dc02606456d1e018baae0.php"/>
+  <file crc="1610924975751" name="F:\wamp\www\dente\storage\framework\views\95b67b4dfc66565229029feb0a5501d038515b8c.php"/>
   <file crc="1610491408004" name="F:\wamp\www\dente\storage\framework\views\915142a497942b54c90d9618c6bc5da5cd9dcda5.php"/>
   <file crc="1610284236472" name="F:\wamp\www\dente\storage\framework\views\8b8e72d4343c76d577bcb9ef19a902af8167c8bc.php"/>
   <file crc="1610315808220" name="F:\wamp\www\dente\storage\framework\views\84a0329d2b3abe495ebae2a8c7c7fd5b3b625a69.php"/>
   <file crc="1610667525622" name="F:\wamp\www\dente\storage\framework\views\813a0f81c3d3e538c27ba2baa0358019542eda8b.php"/>
-  <file crc="1609680556330" name="F:\wamp\www\dente\storage\framework\views\808d16572feda635a42d5c1be2fcd09a03d5f33d.php"/>
+  <file crc="1610749359536" name="F:\wamp\www\dente\storage\framework\views\808d16572feda635a42d5c1be2fcd09a03d5f33d.php"/>
   <file crc="1610312620317" name="F:\wamp\www\dente\storage\framework\views\7f70766a77db1315263ab4e50256db0a29042b6c.php"/>
   <file crc="1610314376109" name="F:\wamp\www\dente\storage\framework\views\7865ae83898389e963b7c4bbbce3aeb382c0f238.php"/>
+  <file crc="1610924971049" name="F:\wamp\www\dente\storage\framework\views\76e6a162b6025bec68c37083b05bfccdeb00a768.php"/>
+  <file crc="1610891773428" name="F:\wamp\www\dente\storage\framework\views\72243da43b353e7e45d23ec15a242ab5d78f5abe.php"/>
+  <file crc="1610924969766" name="F:\wamp\www\dente\storage\framework\views\71693e09f59bbd3d4cdc7965fb04213fadeb9140.php"/>
+  <file crc="1610666249661" name="F:\wamp\www\dente\storage\framework\views\70aee8a19d0b9d8cd4922a84b5a8e94d30872cd9.php"/>
   <file crc="1608124046155" name="F:\wamp\www\dente\storage\framework\views\6c3454fa2d9925e8bd6851a77bfbf5a8c8b7d886.php"/>
   <file crc="1608503549147" name="F:\wamp\www\dente\storage\framework\views\6aab73691cf4533e5dcb2ed7d161f43de75fa6ee.php"/>
-  <file crc="1610315342331" name="F:\wamp\www\dente\storage\framework\views\68bfeeb6b736a627943f73697988f678f98d1b99.php"/>
-  <file crc="1608414273584" name="F:\wamp\www\dente\storage\framework\views\6574e280c4a29fe26b020f3ae2f700b8a6029d96.php"/>
+  <file crc="1611011569309" name="F:\wamp\www\dente\storage\framework\views\68bfeeb6b736a627943f73697988f678f98d1b99.php"/>
+  <file crc="1611008003503" name="F:\wamp\www\dente\storage\framework\views\6574e280c4a29fe26b020f3ae2f700b8a6029d96.php"/>
   <file crc="1610489969578" name="F:\wamp\www\dente\storage\framework\views\63607504aff24380f1732eab589f6cb57e1fcfe5.php"/>
   <file crc="1610490980298" name="F:\wamp\www\dente\storage\framework\views\5d9830f25483880866110e497322152a25d8d5f9.php"/>
+  <file crc="1610748031392" name="F:\wamp\www\dente\storage\framework\views\5be0b61f8e612afb1983b020e77056c50fb0f6c8.php"/>
   <file crc="1610317600079" name="F:\wamp\www\dente\storage\framework\views\5b395c6a4a840d0d2d253a6de78656eda1714f6c.php"/>
-  <file crc="1610491409699" name="F:\wamp\www\dente\storage\framework\views\5b27e8b3156f4985dbc03227937b8cbca35a853c.php"/>
+  <file crc="1610750586358" name="F:\wamp\www\dente\storage\framework\views\5b27e8b3156f4985dbc03227937b8cbca35a853c.php"/>
+  <file crc="1610924971340" name="F:\wamp\www\dente\storage\framework\views\59c1fc3f5dc13858b0766be55873c6717b537f74.php"/>
+  <file crc="1610924971252" name="F:\wamp\www\dente\storage\framework\views\536379fc840ccb9e3a30918f2a290a87388c38fa.php"/>
+  <file crc="1610667331478" name="F:\wamp\www\dente\storage\framework\views\4b7f7f0022b37352edff34052d25b0408bcf9a83.php"/>
+  <file crc="1610924972737" name="F:\wamp\www\dente\storage\framework\views\3ffb1c776154693050edfc716a453804aef15584.php"/>
+  <file crc="1610746887909" name="F:\wamp\www\dente\storage\framework\views\3ec0cdc9bb350c7159d1257a6ed1b5c070dedddf.php"/>
   <file crc="1608506819231" name="F:\wamp\www\dente\storage\framework\views\3b02456dccb5a435348b0e33abc77ac97d953bcf.php"/>
-  <file crc="1608416281047" name="F:\wamp\www\dente\storage\framework\views\3adc7f59ad0f2195fa0879d2bd1b935fdd353f2f.php"/>
+  <file crc="1611008844922" name="F:\wamp\www\dente\storage\framework\views\3adc7f59ad0f2195fa0879d2bd1b935fdd353f2f.php"/>
   <file crc="1609071501094" name="F:\wamp\www\dente\storage\framework\views\33949163d7780c8a47375538dc96782be5d1b100.php"/>
+  <file crc="1610924975104" name="F:\wamp\www\dente\storage\framework\views\32cdc2851c61c28c0ba1f0ac3fe4f74cbfb9198b.php"/>
   <file crc="1608123310093" name="F:\wamp\www\dente\storage\framework\views\2f11eb2b5f687ae4105ddf5e0990a59a8670977b.php"/>
   <file crc="1610312746805" name="F:\wamp\www\dente\storage\framework\views\2ea0f1910fe87432080e8d6882029130e96abf8b.php"/>
+  <file crc="1610924979633" name="F:\wamp\www\dente\storage\framework\views\2d9cd3c692984f42b5eec1e2c18417091d8a5d3b.php"/>
+  <file crc="1610924971958" name="F:\wamp\www\dente\storage\framework\views\27c7cf0106fa054552225f606995b3b62d39d2c4.php"/>
   <file crc="1607427998605" name="F:\wamp\www\dente\storage\framework\views\25fdcd51297a3270887dd84c0718b354dacf0416.php"/>
+  <file crc="1610924971785" name="F:\wamp\www\dente\storage\framework\views\253d4b716fe02ab89b5f24daba24f3fc9b860cfa.php"/>
+  <file crc="1610924978985" name="F:\wamp\www\dente\storage\framework\views\203bc31651033ed243460947ac5759378413e80e.php"/>
+  <file crc="1610924971122" name="F:\wamp\www\dente\storage\framework\views\1ed5ac29948d4004e340f403ba802f306ea691a4.php"/>
+  <file crc="1610924975528" name="F:\wamp\www\dente\storage\framework\views\1dd836e78f2216a0bfdd77d30d65e04498207a99.php"/>
   <file crc="1608155426999" name="F:\wamp\www\dente\storage\framework\views\1cec88e6d4836a147068e47984d1f5bee230d761.php"/>
+  <file crc="1610924971406" name="F:\wamp\www\dente\storage\framework\views\1cea3074bade04375bb5c6924df02793365eb845.php"/>
+  <file crc="1610924970278" name="F:\wamp\www\dente\storage\framework\views\1bed0c89deb5a9ef68a6bfe5814b79963b1ba258.php"/>
   <file crc="1609621387243" name="F:\wamp\www\dente\storage\framework\views\19e5a0a5d69c70a0bb68130f13546979d937b4ca.php"/>
+  <file crc="1610924975465" name="F:\wamp\www\dente\storage\framework\views\13014f51cf92e16da0cae4b63b9adedf05748d4c.php"/>
   <file crc="1610298853613" name="F:\wamp\www\dente\storage\framework\views\11a387557727fc97a3a1c85480a5be5be79d3a9f.php"/>
   <file crc="1607463012848" name="F:\wamp\www\dente\storage\framework\views\0d169e4bbbfa34f88262271db9da77d1860c36c1.php"/>
-  <file crc="1610667291993" name="F:\wamp\www\dente\routes\web.php"/>
+  <file crc="1611010799384" name="F:\wamp\www\dente\routes\web.php"/>
   <file crc="1607426490392" name="F:\wamp\www\dente\routes\console.php"/>
   <file crc="1607426490371" name="F:\wamp\www\dente\routes\channels.php"/>
-  <file crc="1607426490350" name="F:\wamp\www\dente\routes\api.php"/>
-  <file crc="1608416205705" name="F:\wamp\www\dente\resources\views\profile\userinfo.blade.php"/>
-  <file crc="1610489967579" name="F:\wamp\www\dente\resources\views\profile\appointment.blade.php"/>
+  <file crc="1610805879924" name="F:\wamp\www\dente\routes\api.php"/>
+  <file crc="1611008829099" name="F:\wamp\www\dente\resources\views\profile\userinfo.blade.php"/>
+  <file crc="1610805879822" name="F:\wamp\www\dente\resources\views\profile\update-profile-information-form.blade.php"/>
+  <file crc="1610805879810" name="F:\wamp\www\dente\resources\views\profile\update-password-form.blade.php"/>
+  <file crc="1610805879797" name="F:\wamp\www\dente\resources\views\profile\two-factor-authentication-form.blade.php"/>
+  <file crc="1610805879785" name="F:\wamp\www\dente\resources\views\profile\show.blade.php"/>
+  <file crc="1611013805096" name="F:\wamp\www\dente\resources\views\profile\review.blade.php"/>
+  <file crc="1610805879771" name="F:\wamp\www\dente\resources\views\profile\logout-other-browser-sessions-form.blade.php"/>
+  <file crc="1610805879759" name="F:\wamp\www\dente\resources\views\profile\delete-user-form.blade.php"/>
+  <file crc="1611011191811" name="F:\wamp\www\dente\resources\views\profile\appointment.blade.php"/>
   <file crc="1610312614243" name="F:\wamp\www\dente\resources\views\modal\login.blade.php"/>
   <file crc="1610312716339" name="F:\wamp\www\dente\resources\views\modal\appointment.blade.php"/>
+  <file crc="1610891771010" name="F:\wamp\www\dente\resources\views\livewire\review.blade.php"/>
+  <file crc="1610805879664" name="F:\wamp\www\dente\resources\views\layouts\guest.blade.php"/>
   <file crc="1608160907600" name="F:\wamp\www\dente\resources\views\layouts\default.blade.php"/>
-  <file crc="1610490068173" name="F:\wamp\www\dente\resources\views\includes\usercomment.blade.php"/>
+  <file crc="1610805879652" name="F:\wamp\www\dente\resources\views\layouts\app.blade.php"/>
+  <file crc="1610836422140" name="F:\wamp\www\dente\resources\views\includes\usercomment.blade.php"/>
   <file crc="1610150219392" name="F:\wamp\www\dente\resources\views\includes\message.blade.php"/>
-  <file crc="1610315401464" name="F:\wamp\www\dente\resources\views\includes\menu.blade.php"/>
-  <file crc="1610314278980" name="F:\wamp\www\dente\resources\views\includes\header.blade.php"/>
+  <file crc="1610926961802" name="F:\wamp\www\dente\resources\views\includes\menu.blade.php"/>
+  <file crc="1611011566052" name="F:\wamp\www\dente\resources\views\includes\header.blade.php"/>
   <file crc="1610314043861" name="F:\wamp\www\dente\resources\views\includes\footer.blade.php"/>
+  <file crc="1610805879911" name="F:\wamp\www\dente\resources\views\auth\verify-email.blade.php"/>
+  <file crc="1610805879898" name="F:\wamp\www\dente\resources\views\auth\two-factor-challenge.blade.php"/>
+  <file crc="1610805879887" name="F:\wamp\www\dente\resources\views\auth\reset-password.blade.php"/>
+  <file crc="1610805879873" name="F:\wamp\www\dente\resources\views\auth\register.blade.php"/>
+  <file crc="1610805879861" name="F:\wamp\www\dente\resources\views\auth\login.blade.php"/>
+  <file crc="1610805879848" name="F:\wamp\www\dente\resources\views\auth\forgot-password.blade.php"/>
+  <file crc="1610805879836" name="F:\wamp\www\dente\resources\views\auth\confirm-password.blade.php"/>
+  <file crc="1610805879747" name="F:\wamp\www\dente\resources\views\api\index.blade.php"/>
+  <file crc="1610805879734" name="F:\wamp\www\dente\resources\views\api\api-token-manager.blade.php"/>
   <file crc="1610579168081" name="F:\wamp\www\dente\resources\views\admin\layouts\default.blade.php"/>
   <file crc="1610491406071" name="F:\wamp\www\dente\resources\views\admin\includes\sidebar.blade.php"/>
   <file crc="1609621384613" name="F:\wamp\www\dente\resources\views\admin\includes\navbar.blade.php"/>
@@ -6952,16 +7743,23 @@
   <file crc="1610666190418" name="F:\wamp\www\dente\resources\views\admin\faq_create.blade.php"/>
   <file crc="1610667524121" name="F:\wamp\www\dente\resources\views\admin\faq.blade.php"/>
   <file crc="1608506817110" name="F:\wamp\www\dente\resources\views\admin\dashboard.blade.php"/>
-  <file crc="1609680553836" name="F:\wamp\www\dente\resources\views\admin\cures.blade.php"/>
-  <file crc="1610491379166" name="F:\wamp\www\dente\resources\views\admin\contact.blade.php"/>
+  <file crc="1610748029385" name="F:\wamp\www\dente\resources\views\admin\cures_edit.blade.php"/>
+  <file crc="1610746885674" name="F:\wamp\www\dente\resources\views\admin\cures_create.blade.php"/>
+  <file crc="1610749119471" name="F:\wamp\www\dente\resources\views\admin\cures.blade.php"/>
+  <file crc="1610751751236" name="F:\wamp\www\dente\resources\views\admin\contact_edit.blade.php"/>
+  <file crc="1610750568123" name="F:\wamp\www\dente\resources\views\admin\contact.blade.php"/>
   <file crc="1610490977144" name="F:\wamp\www\dente\resources\views\admin\comment.blade.php"/>
   <file crc="1610490618791" name="F:\wamp\www\dente\resources\views\admin\appointment.blade.php"/>
-  <file crc="1610315301884" name="F:\wamp\www\dente\resources\views\service.blade.php"/>
+  <file crc="1610805879711" name="F:\wamp\www\dente\resources\views\terms.blade.php"/>
+  <file crc="1611011525953" name="F:\wamp\www\dente\resources\views\service.blade.php"/>
   <file crc="1610314317638" name="F:\wamp\www\dente\resources\views\reference.blade.php"/>
-  <file crc="1608414271705" name="F:\wamp\www\dente\resources\views\profile.blade.php"/>
+  <file crc="1611007986672" name="F:\wamp\www\dente\resources\views\profile.blade.php"/>
+  <file crc="1610805879722" name="F:\wamp\www\dente\resources\views\policy.blade.php"/>
+  <file crc="1610805879698" name="F:\wamp\www\dente\resources\views\navigation-menu.blade.php"/>
   <file crc="1610149363934" name="F:\wamp\www\dente\resources\views\home.blade.php"/>
   <file crc="1610317595773" name="F:\wamp\www\dente\resources\views\gallery.blade.php"/>
   <file crc="1610666426659" name="F:\wamp\www\dente\resources\views\faq.blade.php"/>
+  <file crc="1610805879687" name="F:\wamp\www\dente\resources\views\dashboard.blade.php"/>
   <file crc="1610315805904" name="F:\wamp\www\dente\resources\views\contact.blade.php"/>
   <file crc="1610314373914" name="F:\wamp\www\dente\resources\views\about.blade.php"/>
   <file crc="1607426490312" name="F:\wamp\www\dente\resources\lang\en\validation.php"/>
@@ -6969,8 +7767,11 @@
   <file crc="1607426490273" name="F:\wamp\www\dente\resources\lang\en\pagination.php"/>
   <file crc="1607426490254" name="F:\wamp\www\dente\resources\lang\en\auth.php"/>
   <file crc="1607426490239" name="F:\wamp\www\dente\resources\js\bootstrap.js"/>
-  <file crc="1607426490229" name="F:\wamp\www\dente\resources\js\app.js"/>
+  <file crc="1610805879997" name="F:\wamp\www\dente\resources\js\app.js"/>
+  <file crc="1610805879986" name="F:\wamp\www\dente\resources\css\app.css"/>
   <file crc="1541229140000" name="F:\wamp\www\dente\resources\css\aos.css"/>
+  <file crc="1610886219872" name="F:\wamp\www\dente\public\vendor\livewire\manifest.json"/>
+  <file crc="1610886219715" name="F:\wamp\www\dente\public\vendor\livewire\livewire.js"/>
   <file crc="1607335907000" name="F:\wamp\www\dente\public\js\admin\plugins\perfect-scrollbar.jquery.min.js"/>
   <file crc="1607335907000" name="F:\wamp\www\dente\public\js\admin\plugins\chartjs.min.js"/>
   <file crc="1607335907000" name="F:\wamp\www\dente\public\js\admin\plugins\bootstrap-notify.js"/>
@@ -7019,9 +7820,10 @@
   <file crc="1541229140000" name="F:\wamp\www\dente\public\css\owl.carousel.min.css"/>
   <file crc="1541229140000" name="F:\wamp\www\dente\public\css\magnific-popup.css"/>
   <file crc="1541229140000" name="F:\wamp\www\dente\public\css\jquery-ui.css"/>
-  <file crc="1608384274201" name="F:\wamp\www\dente\public\css\dente.css"/>
+  <file crc="1611011541178" name="F:\wamp\www\dente\public\css\dente.css"/>
   <file crc="1541229140000" name="F:\wamp\www\dente\public\css\bootstrap.min.css"/>
   <file crc="1541229140000" name="F:\wamp\www\dente\public\css\bootstrap-datepicker.css"/>
+  <file crc="1610805879973" name="F:\wamp\www\dente\public\css\app.css"/>
   <file crc="1541229140000" name="F:\wamp\www\dente\public\css\aos.css"/>
   <file crc="1607426490204" name="F:\wamp\www\dente\public\robots.txt"/>
   <file crc="1607900369360" name="F:\wamp\www\dente\public\index.php"/>
@@ -7031,6 +7833,8 @@
   <file crc="1610314394335" name="F:\wamp\www\dente\database\seeders\SettingTableSeeder.php"/>
   <file crc="1610576916421" name="F:\wamp\www\dente\database\seeders\FaqTableSeeder.php"/>
   <file crc="1610577434557" name="F:\wamp\www\dente\database\seeders\DatabaseSeeder.php"/>
+  <file crc="1611012751885" name="F:\wamp\www\dente\database\migrations\2021_01_16_142102_create_reviews_table.php"/>
+  <file crc="1610805847723" name="F:\wamp\www\dente\database\migrations\2021_01_16_140407_create_sessions_table.php"/>
   <file crc="1610486795176" name="F:\wamp\www\dente\database\migrations\2021_01_08_225522_create_categories_table.php"/>
   <file crc="1610486787919" name="F:\wamp\www\dente\database\migrations\2021_01_08_225428_create_processes_table.php"/>
   <file crc="1610486782024" name="F:\wamp\www\dente\database\migrations\2021_01_08_225242_create_images_table.php"/>
@@ -7039,35 +7843,45 @@
   <file crc="1610486757334" name="F:\wamp\www\dente\database\migrations\2021_01_08_224729_create_tedavis_table.php"/>
   <file crc="1610486750370" name="F:\wamp\www\dente\database\migrations\2021_01_08_224409_create_randevus_table.php"/>
   <file crc="1610145813331" name="F:\wamp\www\dente\database\migrations\2021_01_08_224226_create_faqs_table.php"/>
-  <file crc="1610486741640" name="F:\wamp\www\dente\database\migrations\2021_01_08_223519_create_messages_table.php"/>
-  <file crc="1610486735280" name="F:\wamp\www\dente\database\migrations\2020_12_08_114107_create_category_table.php"/>
-  <file crc="1610486724125" name="F:\wamp\www\dente\database\migrations\2020_12_08_114057_create_users_table.php"/>
+  <file crc="1610749062327" name="F:\wamp\www\dente\database\migrations\2021_01_08_223519_create_messages_table.php"/>
+  <file crc="1610805879178" name="F:\wamp\www\dente\database\migrations\2019_12_14_000001_create_personal_access_tokens_table.php"/>
+  <file crc="1610805847622" name="F:\wamp\www\dente\database\migrations\2014_10_12_200000_add_two_factor_columns_to_users_table.php"/>
+  <file crc="1610806147974" name="F:\wamp\www\dente\database\migrations\2014_10_12_000000_create_users_table.php"/>
   <file crc="1607426490029" name="F:\wamp\www\dente\database\factories\UserFactory.php"/>
   <file crc="1607426489982" name="F:\wamp\www\dente\config\view.php"/>
-  <file crc="1607426489955" name="F:\wamp\www\dente\config\session.php"/>
+  <file crc="1610805856616" name="F:\wamp\www\dente\config\session.php"/>
   <file crc="1607426489927" name="F:\wamp\www\dente\config\services.php"/>
+  <file crc="1610805879183" name="F:\wamp\www\dente\config\sanctum.php"/>
   <file crc="1607426489906" name="F:\wamp\www\dente\config\queue.php"/>
   <file crc="1607426489886" name="F:\wamp\www\dente\config\mail.php"/>
   <file crc="1607426489865" name="F:\wamp\www\dente\config\logging.php"/>
+  <file crc="1610805879307" name="F:\wamp\www\dente\config\jetstream.php"/>
   <file crc="1607426489845" name="F:\wamp\www\dente\config\hashing.php"/>
+  <file crc="1610805847584" name="F:\wamp\www\dente\config\fortify.php"/>
   <file crc="1610298790061" name="F:\wamp\www\dente\config\filesystems.php"/>
   <file crc="1607427080542" name="F:\wamp\www\dente\config\database.php"/>
   <file crc="1607426489674" name="F:\wamp\www\dente\config\cors.php"/>
   <file crc="1607426489652" name="F:\wamp\www\dente\config\cache.php"/>
   <file crc="1607426489633" name="F:\wamp\www\dente\config\broadcasting.php"/>
   <file crc="1608244947192" name="F:\wamp\www\dente\config\auth.php"/>
-  <file crc="1607426489581" name="F:\wamp\www\dente\config\app.php"/>
-  <file crc="1610146530083" name="F:\wamp\www\dente\bootstrap\cache\services.php"/>
-  <file crc="1610146530434" name="F:\wamp\www\dente\bootstrap\cache\packages.php"/>
+  <file crc="1610805879493" name="F:\wamp\www\dente\config\app.php"/>
+  <file crc="1610837395552" name="F:\wamp\www\dente\bootstrap\cache\services.php"/>
+  <file crc="1610837396052" name="F:\wamp\www\dente\bootstrap\cache\packages.php"/>
+  <file crc="1610807101355" name="F:\wamp\www\dente\bootstrap\cache\livewire-components.php"/>
   <file crc="1607426489538" name="F:\wamp\www\dente\bootstrap\app.php"/>
-  <file crc="1607426489491" name="F:\wamp\www\dente\app\Providers\RouteServiceProvider.php"/>
+  <file crc="1610805879630" name="F:\wamp\www\dente\app\View\Components\GuestLayout.php"/>
+  <file crc="1610805879606" name="F:\wamp\www\dente\app\View\Components\AppLayout.php"/>
+  <file crc="1610805847625" name="F:\wamp\www\dente\app\Providers\RouteServiceProvider.php"/>
+  <file crc="1610805879471" name="F:\wamp\www\dente\app\Providers\JetstreamServiceProvider.php"/>
+  <file crc="1610805847593" name="F:\wamp\www\dente\app\Providers\FortifyServiceProvider.php"/>
   <file crc="1607426489470" name="F:\wamp\www\dente\app\Providers\EventServiceProvider.php"/>
   <file crc="1607426489453" name="F:\wamp\www\dente\app\Providers\BroadcastServiceProvider.php"/>
   <file crc="1607426489428" name="F:\wamp\www\dente\app\Providers\AuthServiceProvider.php"/>
   <file crc="1607426489407" name="F:\wamp\www\dente\app\Providers\AppServiceProvider.php"/>
-  <file crc="1610146591100" name="F:\wamp\www\dente\app\Models\User.php"/>
-  <file crc="1610146049057" name="F:\wamp\www\dente\app\Models\Tedavi.php"/>
+  <file crc="1610891454402" name="F:\wamp\www\dente\app\Models\User.php"/>
+  <file crc="1611012889274" name="F:\wamp\www\dente\app\Models\Tedavi.php"/>
   <file crc="1610282140981" name="F:\wamp\www\dente\app\Models\Setting.php"/>
+  <file crc="1611013123366" name="F:\wamp\www\dente\app\Models\Review.php"/>
   <file crc="1610145849917" name="F:\wamp\www\dente\app\Models\Randevu.php"/>
   <file crc="1610146468649" name="F:\wamp\www\dente\app\Models\Process.php"/>
   <file crc="1610145318875" name="F:\wamp\www\dente\app\Models\Message.php"/>
@@ -7084,19 +7898,21 @@
   <file crc="1607426489245" name="F:\wamp\www\dente\app\Http\Middleware\PreventRequestsDuringMaintenance.php"/>
   <file crc="1607426489225" name="F:\wamp\www\dente\app\Http\Middleware\EncryptCookies.php"/>
   <file crc="1610575970459" name="F:\wamp\www\dente\app\Http\Middleware\Authenticate.php"/>
+  <file crc="1611013109795" name="F:\wamp\www\dente\app\Http\Livewire\Review.php"/>
   <file crc="1610487256696" name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminUserController.php"/>
   <file crc="1610488511752" name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminSettingsController.php"/>
   <file crc="1610286991031" name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminHomeController.php"/>
   <file crc="1610487518561" name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminGallerysController.php"/>
   <file crc="1610667485340" name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminFaqController.php"/>
-  <file crc="1610487464118" name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminCuresController.php"/>
-  <file crc="1610491342266" name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminContactController.php"/>
+  <file crc="1610747973971" name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminCuresController.php"/>
+  <file crc="1610491342266" name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminContactController1.php"/>
+  <file crc="1610751788706" name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminContactController.php"/>
   <file crc="1610490921218" name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminCommentController.php"/>
   <file crc="1610490275306" name="F:\wamp\www\dente\app\Http\Controllers\Admin\AdminAppointmentController.php"/>
-  <file crc="1610667477227" name="F:\wamp\www\dente\app\Http\Controllers\SystemController.php"/>
-  <file crc="1610315328761" name="F:\wamp\www\dente\app\Http\Controllers\ServiceController.php"/>
+  <file crc="1611012463709" name="F:\wamp\www\dente\app\Http\Controllers\SystemController.php"/>
+  <file crc="1611012954303" name="F:\wamp\www\dente\app\Http\Controllers\ServiceController.php"/>
   <file crc="1610314188189" name="F:\wamp\www\dente\app\Http\Controllers\ReferenceController.php"/>
-  <file crc="1610286881307" name="F:\wamp\www\dente\app\Http\Controllers\ProfileController.php"/>
+  <file crc="1611012659484" name="F:\wamp\www\dente\app\Http\Controllers\ProfileController.php"/>
   <file crc="1610286723757" name="F:\wamp\www\dente\app\Http\Controllers\HomeController.php"/>
   <file crc="1610286865496" name="F:\wamp\www\dente\app\Http\Controllers\GalleryController.php"/>
   <file crc="1610286848263" name="F:\wamp\www\dente\app\Http\Controllers\FaqController.php"/>
@@ -7105,14 +7921,21 @@
   <file crc="1609071186572" name="F:\wamp\www\dente\app\Http\Controllers\AuthController.php"/>
   <file crc="1610488922476" name="F:\wamp\www\dente\app\Http\Controllers\AppointmentController.php"/>
   <file crc="1610286803608" name="F:\wamp\www\dente\app\Http\Controllers\AboutController.php"/>
-  <file crc="1607426489182" name="F:\wamp\www\dente\app\Http\Kernel.php"/>
+  <file crc="1610805856714" name="F:\wamp\www\dente\app\Http\Kernel.php"/>
   <file crc="1607426489144" name="F:\wamp\www\dente\app\Exceptions\Handler.php"/>
   <file crc="1607426489121" name="F:\wamp\www\dente\app\Console\Kernel.php"/>
-  <file crc="1607426490588" name="F:\wamp\www\dente\webpack.mix.js"/>
+  <file crc="1610805879589" name="F:\wamp\www\dente\app\Actions\Jetstream\DeleteUser.php"/>
+  <file crc="1610805879567" name="F:\wamp\www\dente\app\Actions\Fortify\UpdateUserProfileInformation.php"/>
+  <file crc="1610805847606" name="F:\wamp\www\dente\app\Actions\Fortify\UpdateUserPassword.php"/>
+  <file crc="1610805847599" name="F:\wamp\www\dente\app\Actions\Fortify\ResetUserPassword.php"/>
+  <file crc="1610805847596" name="F:\wamp\www\dente\app\Actions\Fortify\PasswordValidationRules.php"/>
+  <file crc="1610805879551" name="F:\wamp\www\dente\app\Actions\Fortify\CreateNewUser.php"/>
+  <file crc="1610805879427" name="F:\wamp\www\dente\webpack.mix.js"/>
+  <file crc="1610805879407" name="F:\wamp\www\dente\tailwind.config.js"/>
   <file crc="1607436591835" name="F:\wamp\www\dente\server.php"/>
   <file crc="1607426490160" name="F:\wamp\www\dente\phpunit.xml"/>
-  <file crc="1607426490150" name="F:\wamp\www\dente\package.json"/>
-  <file crc="1607426489569" name="F:\wamp\www\dente\composer.json"/>
+  <file crc="1610805879387" name="F:\wamp\www\dente\package.json"/>
+  <file crc="1610837230782" name="F:\wamp\www\dente\composer.json"/>
   <file crc="1607426489092" name="F:\wamp\www\dente\.styleci.yml"/>
  </filescache>
 </project>

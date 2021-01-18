@@ -15,32 +15,30 @@
 <div class="site-section section-about">
 	<div class="container">
 		<div class="row">
+		
 			<div class="col-md-3 pr-md-3 text-left mb-12">
 				<ul class="list-unstyled">
 					<li>
-						<a href="{{url('/profile/userinfo')}}" class="profilelink">Bilgilerim</a>
+						<a href="{{route('profile_userinfo')}}" class="profilelink">Bilgilerim</a>
 					</li>
 					<li>
-						<a href="{{url("/profile/appointment")}}" class="profilelink">Randevularım</a>
+						<a href="{{route("profile_appointment")}}" class="profilelink">Randevularım</a>
 					</li>
 					<li>
-						<a href="{{url("/logout")}}" class="profilelink">Çıkış</a>
+						<a href="{{route("profile_review")}}" class="profilelink">Yorumlarım</a>
+					</li>
+					<li>
+						<a href="{{route("profile_message")}}" class="profilelink">Mesajlarım</a>
+					</li>
+					<li>
+						<a href="{{route("logout")}}" class="profilelink">Çıkış</a>
 					</li>
 				</ul>
 			
 			</div>
 			<div class="col-md-9 pr-md-12 text-left mb-12">
 				
-				@switch(basename(URL::current()))
-					@case("userinfo")
-						@include("profile.userinfo")
-					@break
-
-					@case("appointment")
-						@include("profile.appointment")
-					@break
-				@endswitch
-
+				 {!! $detailpage ?? null !!} 
 
 			</div>
 			

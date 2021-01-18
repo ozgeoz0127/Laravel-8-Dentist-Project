@@ -1,14 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Tedavi;
 use App\Models\Faq;
 
+
 class SystemController extends Controller
 {
+	
+	
 	public static function settings()
 	{
 		$arr 						= [];
@@ -16,6 +18,7 @@ class SystemController extends Controller
 
 		$arr["settings"]["doctors"] = self::getdoctors();
 		$arr["settings"]["cures"] 	= self::getcure();
+	
 		$arr["settings"]["gallery"]	= self::gallery();
 		$arr["settings"]["faq"]		= self::faq();
 
