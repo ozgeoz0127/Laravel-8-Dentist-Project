@@ -17,7 +17,7 @@ class CreateRandevusTable extends Migration
 			$table->increments('id');
 			$table->integer('user_id')->autoIncrement(false);
 			$table->integer('tedavi_id')->autoIncrement(false);
-			$table->timestamp('date')->nullable();
+			$table->date('date')->nullable();
 			$table->time('time')->nullable();
 			$table->integer('hekim_id')->autoIncrement(false);
 			$table->string('ip',255)->nullable();

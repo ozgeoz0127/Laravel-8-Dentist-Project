@@ -35,13 +35,11 @@ Hakkımızda
 		<div class="row">
 			<div class="col-md-12 pr-md-12 text-left mb-5">
 				<div>
-					<p>{{!! $settings["aboutus"] !!}}</p>
+					<p>{!! $settings["aboutus"] !!}</p>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
-@include("includes.usercomment")
 
 @stop

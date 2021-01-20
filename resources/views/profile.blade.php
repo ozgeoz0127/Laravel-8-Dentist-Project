@@ -28,9 +28,6 @@
 						<a href="{{route("profile_review")}}" class="profilelink">Yorumlarım</a>
 					</li>
 					<li>
-						<a href="{{route("profile_message")}}" class="profilelink">Mesajlarım</a>
-					</li>
-					<li>
 						<a href="{{route("logout")}}" class="profilelink">Çıkış</a>
 					</li>
 				</ul>

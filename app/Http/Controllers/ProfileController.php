@@ -7,16 +7,20 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use App\Models\Review;
+use App\Models\Randevu;
 
 class ProfileController extends Controller
 {
 	
 	public function show(Request $request)
 	{
+		
 		//login kontrol
 		if (!Auth::check()) {
-			return redirect()->route("home");
-		}
+			$s = SystemController::settings();
+			return view("profilelogin",$s);
+		}	
+
 		$s = SystemController::settings();
 		
 		/*if ($url == "appointment") {
@@ -42,7 +46,8 @@ class ProfileController extends Controller
 		return view('profile',$s); 
 		
 	}
-    
+	
+   
     
 	public function userupdate(Request $request)
 	{
@@ -56,12 +61,11 @@ class ProfileController extends Controller
 	}
     
     
-	public function appointmentlist(){
+	public function appointment(){
 		
-		$user = Auth::user()->id;
-		
-		$appointment = \DB::table('randevus')->where('user_id', $user)->get()->toArray();
-		return $appointment;
+		$s = SystemController::settings();
+		$s["detailpage"]	= view('profile/appointment',["appointment" => Randevu::where("user_id",Auth::user()->id)->get()]);
+		return view('profile',$s); 
 		
 	}
     

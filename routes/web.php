@@ -96,7 +96,6 @@ Route::group( ['prefix' => 'profile'], function() {
 		Route::any('/userupdate', [ProfileController::class,'userupdate'])->name("user_update");
 	Route::any('/appointment', [ProfileController::class,'appointment'])->name("profile_appointment");
 	Route::any('/review', [ProfileController::class,'review'])->name("profile_review");
-	Route::any('/message', [ProfileController::class,'review'])->name("profile_message");
 	
 });
 
@@ -105,7 +104,7 @@ Route::get('/contact', [ContactController::class,'show'])->name("contact");
 Route::post('/contact/send', [ContactController::class,'send'])->name("contact_sendmessage");
 Route::any('/references', [ReferenceController::class,'show'])->name("references");
 Route::any('/appointment', [AppointmentController::class,'show'])->name("appointment");
-Route::any('/login', [AuthController::class,'login'])->name('login');
+Route::any('/login', [AuthController::class,'login'])->name("login");
 Route::any('/register', [AuthController::class,'register'])->name("register");
 Route::get('/logout', [AuthController::class,'logout'])->name("logout");
 

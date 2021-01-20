@@ -9,15 +9,23 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class AuthController extends Controller
 {
+
+	
 	public function login (LoginRequest $request)
 	{
 		$credentials = $request->only('email', 'password');
 		
-		return response()->json([
-			"auth"		=> Auth::attempt($credentials),
-			"role"		=> (is_null(Auth::user()) ? "null" : Auth::user()->role),
-			"redirect"	=> "refresh"
-		]);
+		$auth = Auth::attempt($credentials);
+		
+		if ($request->ajax()) {
+			return response()->json([
+				"auth"		=> $auth,
+				"role"		=> (is_null(Auth::user()) ? "null" : Auth::user()->role),
+				"redirect"	=> "refresh"
+			]);
+		}
+		return back();
+
 		
 	}
 	

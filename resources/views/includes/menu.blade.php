@@ -95,7 +95,6 @@
 											<a href="{{route("profile_userinfo")}}" >Bilgilerim</a>
 											<a href="{{route("profile_appointment")}}" >Randevularım</a>
 											<a href="{{route("profile_review")}}" >Yorumlarım</a>
-											<a href="{{route("profile_message")}}" >Mesajlarım</a>
 											<a href="{{route("logout")}}" >Çıkış</a>
 										</li>
 

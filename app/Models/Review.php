@@ -18,6 +18,8 @@ class Review extends Model
 		'tedavi_id'
 	];
 	
+
+	
 	public function tedavi()
 	{
 		return $this->belongsTo(Tedavi::class);
@@ -26,5 +28,6 @@ class Review extends Model
 	{
 		return $this->belongsTo(User::class);
 	}
+	
 	
 }

@@ -5,7 +5,12 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Tedavi;
 use App\Models\Faq;
-
+use App\Models\Image;
+use App\Models\Message;
+use App\Models\Process;
+use App\Models\Review;
+use App\Models\Setting;
+use App\Models\Randevu;
 
 class SystemController extends Controller
 {
@@ -26,16 +31,8 @@ class SystemController extends Controller
 	}
 
 	public static function gallery()
-	{
-		$r=[];
-		$doc = \DB::table('images')->get()->toArray();
-		if (count($doc) > 0) {
-			foreach ($doc as $k=>$v) {
-				$r[] = (object)["title" => $v->title,"image" => $v->image,"id" => $v->id];
-			}
-
-			return $r;
-		}
+	{		
+		return Image::all();
 	}
 
 	public static function faq($type="")
@@ -44,6 +41,30 @@ class SystemController extends Controller
 			return Faq::all();	
 		}
 		return Faq::where("status",1)->get();
+	}
+	public static function usercount()
+	{
+		return User::all()->count();
+	}
+	public static function tedavicount()
+	{
+		return Tedavi::all()->count();
+	}
+	public static function faqcount()
+	{
+		return Faq::all()->count();
+	}
+	public static function messagecount()
+	{
+		return Message::all()->count();
+	}
+	public static function reviewcount()
+	{
+		return Review::all()->count();
+	}
+	public static function randevucount()
+	{
+		return Randevu::all()->count();
 	}
 
 	public static function getdoctors()
