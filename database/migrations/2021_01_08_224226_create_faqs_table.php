@@ -18,8 +18,8 @@ class CreateFaqsTable extends Migration
 			$table->text('question');
 			$table->text('answer')->nullable();
 			$table->string('status',1);
-			$table->timestamp('created_at');
-			$table->timestamp('updated_at');
+			$table->timestamp('created_at')->nullable();
+			$table->timestamp('updated_at')->nullable();
         });
     }
 

@@ -22,8 +22,8 @@ class CreateReviewsTable extends Migration
 			$table->integer('tedavi_id',5)->autoIncrement(false)->nullable();
 			$table->string('ip',255);
 			$table->string('status')->default(0);
-			$table->timestamp('created_at');
-			$table->timestamp('updated_at');
+			$table->timestamp('created_at')->nullable();
+			$table->timestamp('updated_at')->nullable();
         });
     }
 
