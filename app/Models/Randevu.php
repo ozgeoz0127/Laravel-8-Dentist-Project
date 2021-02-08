@@ -8,11 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Randevu extends Model
 {
     use HasFactory;
-    
+
 	public function user()
 	{
-		return $this->belongsTo(User::class,"hekim_id","id");
+		return $this->belongsTo(User::class);
 	}
+
 	public function tedavi()
 	{
 		return $this->belongsTo(Tedavi::class);

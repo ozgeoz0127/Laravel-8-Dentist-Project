@@ -19,7 +19,7 @@ use App\Http\Controllers\Admin\AdminAppointmentController;
 use App\Http\Controllers\Admin\AdminSettingsController;
 use App\Http\Controllers\Admin\AdminCuresController;
 use App\Http\Controllers\Admin\AdminGallerysController;
-use App\Http\Controllers\Admin\AdminCommentController;
+use App\Http\Controllers\Admin\AdminReviewController;
 use App\Http\Controllers\Admin\AdminContactController;
 use App\Http\Controllers\Admin\AdminFaqController;
 
@@ -43,14 +43,16 @@ Route::group( ['prefix' => 'admin',"middleware" => "auth"], function() {
 		Route::get('/', [AdminHomeController::class,'show'])->name("admin_home");
 		Route::get('users', [AdminUserController::class,'show'])->name("admin_user");
 		Route::any('appointments', [AdminAppointmentController::class,'show'])->name("admin_appointment");
+		    Route::any('appointments/delete/{id}', [AdminAppointmentController::class,'delete'])->name("admin_appointment_delete");
+		    Route::any('appointments/status/{id}', [AdminAppointmentController::class,'status'])->name("admin_appointment_status");
 		Route::any('settings', [AdminSettingsController::class,'show'])->name("admin_setting");
 		Route::any('settings/save', [AdminSettingsController::class,'save'])->name("admin_setting_save");
 
 		Route::any('gallerys', [AdminGallerysController::class,'show'])->name("admin_gallery");
 			Route::any('gallerys/save', [AdminGallerysController::class,'save'])->name("admin_gallery_save");
 			Route::any('gallerys/delete/{id}', [AdminGallerysController::class,'delete'])->name("admin_gallery_delete");
-			
-			
+
+
 	Route::group( ['prefix' => 'cures'], function() {
 		Route::any('/', [AdminCuresController::class,'index'])->name("admin_cure");
 		Route::any('edit/{id}', [AdminCuresController::class,'edit'])->name("admin_cure_edit");
@@ -59,7 +61,7 @@ Route::group( ['prefix' => 'admin',"middleware" => "auth"], function() {
 		Route::any('delete/{id}', [AdminCuresController::class,'destroy'])->name("admin_cure_delete");
 		Route::any('update/{id}', [AdminCuresController::class,'update'])->name("admin_cure_update");
 	});
-			
+
 	Route::group( ['prefix' => 'faq'], function() {
 		Route::any('/', [AdminFaqController::class,'index'])->name("admin_faq");
 		Route::any('new', [AdminFaqController::class,'create'])->name("admin_faq_new");
@@ -68,10 +70,15 @@ Route::group( ['prefix' => 'admin',"middleware" => "auth"], function() {
 		Route::any('update/{id}', [AdminFaqController::class,'update'])->name("admin_faq_update");
 		Route::any('delete/{id}', [AdminFaqController::class,'destroy'])->name("admin_faq_delete");
 	});
-			
-		Route::any('comment', [AdminCommentController::class,'show'])->name("admin_comment");
 
-		
+    Route::group( ['prefix' => 'review'], function() {
+        Route::any('/', [AdminReviewController::class,'show'])->name("admin_review");
+        Route::any('save', [AdminReviewController::class,'store'])->name("admin_review_save");
+        Route::any('edit/{id}', [AdminReviewController::class,'edit'])->name("admin_review_edit");
+        Route::any('update/{id}', [AdminReviewController::class,'update'])->name("admin_review_update");
+        Route::any('delete/{id}', [AdminReviewController::class,'destroy'])->name("admin_review_delete");
+    });
+
 	Route::group( ['prefix' => 'contact'], function() {
 		Route::any('/', [AdminContactController::class,'index'])->name("admin_contact");
 		Route::any('save', [AdminContactController::class,'store'])->name("admin_contact_save");
@@ -79,7 +86,7 @@ Route::group( ['prefix' => 'admin',"middleware" => "auth"], function() {
 		Route::any('update/{id}', [AdminContactController::class,'update'])->name("admin_contact_update");
 		Route::any('delete/{id}', [AdminContactController::class,'destroy'])->name("admin_contact_delete");
 	});
-		
+
 });
 
 
@@ -96,7 +103,7 @@ Route::group( ['prefix' => 'profile'], function() {
 		Route::any('/userupdate', [ProfileController::class,'userupdate'])->name("user_update");
 	Route::any('/appointment', [ProfileController::class,'appointment'])->name("profile_appointment");
 	Route::any('/review', [ProfileController::class,'review'])->name("profile_review");
-	
+
 });
 
 

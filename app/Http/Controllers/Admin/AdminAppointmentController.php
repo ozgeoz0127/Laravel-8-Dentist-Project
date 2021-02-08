@@ -15,5 +15,17 @@ class AdminAppointmentController extends Controller
 		$s["appointment"] = Randevu::all();
 		return view("admin.appointment",$s) ;
 	}
+    public function status($id)
+    {
+        $new = Randevu::find($id);
+        $new->status = 1;
+        $new->save();
+        return redirect()->back();
+    }
+    public function delete($id)
+    {
+        Randevu::find($id)->delete();
+        return redirect()->back();
+    }
 
 }

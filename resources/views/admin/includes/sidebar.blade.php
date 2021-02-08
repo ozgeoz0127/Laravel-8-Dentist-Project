@@ -26,7 +26,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="{{Route("admin_comment")}}">
+				<a href="{{Route("admin_review")}}">
 					<i class="nc-icon nc-chat-33"></i>
 					<p>Kullanıcı Yorumları</p>
 				</a>
@@ -37,7 +37,7 @@
 					<p>İletişim Mesajları</p>
 				</a>
 			</li>
-			
+
 			<li>
 				<a href="{{Route("admin_appointment")}}">
 					<i class="nc-icon nc-bell-55"></i>

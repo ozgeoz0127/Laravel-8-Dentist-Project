@@ -35,13 +35,12 @@
 							<tbody>
 
 								@foreach ($appointment as $k=>$v)
-
 								<tr>
 									<td>
-										{{$v->username}}
+										{{$v->user->name." ".$v->user->surname}}
 									</td>
 									<td>
-										{{$settings["cures"][$v->tedavi_id]->name}}
+										{{$v->tedavi->title}}
 									</td>
 									<td>
 										{{$v->date." ".$v->time}}
@@ -52,15 +51,15 @@
 									<td>
 										@if($v->status == "0")
 										<span class="text-danger">Onay Beleniyor</span> @else
-										<span class="text-success">Onay Beleniyor</span> @endif
+										<span class="text-success">Onaylandı</span> @endif
 									</td>
 									<td class="text-right">
-										<button type="button" data-toggle="tooltip" data-placement="top" class="btn btn-success btn-icon btn-sm " title="Onayla">
-											<i class="fa fa-check-square-o"></i>
-										</button>
-										<button type="button" data-toggle="tooltip" data-placement="top" class="btn btn-danger btn-icon btn-sm "  title="Kaldır">
-											<i class="fa fa-times"></i>
-										</button>
+                                        <a href='{{Route("admin_appointment_status",$v->id)}}'"  data-toggle="tooltip" class="btn btn-success btn-icon btn-sm "  title="Onayla">
+                                        <i class="fa fa-check-square"></i>
+                                        </a>
+                                        <a href='{{Route("admin_appointment_delete",$v->id)}}'" data-toggle="tooltip" class="btndelete btn btn-danger btn-icon btn-sm "  title="Kaldır">
+                                        <i class="fa fa-times"></i>
+                                        </a>
 									</td>
 								</tr>
 

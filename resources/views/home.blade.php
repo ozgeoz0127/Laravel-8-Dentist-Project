@@ -1,5 +1,6 @@
 @extends('layouts.default')
 @section('content')
+<!--
 <div class="site-blocks-cover " style="background-image: url(images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
 	<div class="container">
 		<div class="row align-items-center">
@@ -11,16 +12,51 @@
 		</div>
 	</div>
 </div>
+-->
+
+
+<div class="site-blocks-cover ">
+    <div id="demo" class="carousel slide" data-ride="carousel" style="height:100%">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/hero_bg_1.jpg" style="width:100%;height:100%" >
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/1600x800?text=slide2" style="width:100%;height:100%" >
+            </div>
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/1600x800?text=slide3" style="width:100%;height:100%">
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</div>
 
 
 <script>
 	$(function(){
 		$(".servicelink").hover(
 		function(){
-			$(this).find(".site-block-feature").css("background","rgba(0, 0, 0, 0.8)");	
+			$(this).find(".site-block-feature").css("background","rgba(0, 0, 0, 0.8)");
 		},
 		function(){
-			$(this).find(".site-block-feature").css("background","rgba(0, 0, 0, 0.5)");	
+			$(this).find(".site-block-feature").css("background","rgba(0, 0, 0, 0.5)");
 		}
 		)
 	});
@@ -60,7 +96,7 @@
 					<div class="site-block-feature d-flex p-4 rounded mb-4">
 						<div class="mr-3">
 							<span class="icon flaticon-first-aid-kit font-weight-light text-white h2"></span>
-							
+
 						</div>
 						<div class="text">
 							<h3>ÖNLEYİCİ BAKIM</h3>
@@ -71,7 +107,7 @@
 			</div>
 		</div>
 	</div>
-</div>  
+</div>
 
  <div class="site-section site-block-3 ">
 	<div class="container">
