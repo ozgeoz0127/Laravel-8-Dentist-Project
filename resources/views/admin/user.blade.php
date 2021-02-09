@@ -6,7 +6,6 @@
 			<div class="card">
 				<div class="card-header">
 					<h4 class="card-title"> Kullanıcılar</h4>
-					<button clasS="btn btn-success"> + Yeni Ekle</button>
 				</div>
 				<div class="card-body">
 					<div class="table-responsive">
@@ -28,7 +27,7 @@
 								</tr>
 							</thead>
 							<tbody>
-							
+
 								@foreach ($users as $k=>$v)
 
 								<tr>
@@ -42,9 +41,9 @@
 										{{$v->role}}
 									</td>
 									<td class="text-right">
-										<button type="button" data-toggle="tooltip" class="btn btn-danger btn-icon btn-sm "  title="Kaldır">
-											<i class="fa fa-times"></i>
-										</button>
+                                        <a href="{{Route("admin_user_delete",$v->id)}}" data-toggle="tooltip" class="btn btn-danger btn-icon btn-sm "  title="Kaldır">
+                                            <i class="fa fa-times"></i>
+                                        </a>
 									</td>
 								</tr>
 

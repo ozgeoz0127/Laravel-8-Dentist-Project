@@ -19,6 +19,7 @@ use App\Http\Controllers\Admin\AdminAppointmentController;
 use App\Http\Controllers\Admin\AdminSettingsController;
 use App\Http\Controllers\Admin\AdminCuresController;
 use App\Http\Controllers\Admin\AdminGallerysController;
+use App\Http\Controllers\Admin\AdminHomeSlaytController;
 use App\Http\Controllers\Admin\AdminReviewController;
 use App\Http\Controllers\Admin\AdminContactController;
 use App\Http\Controllers\Admin\AdminFaqController;
@@ -42,6 +43,7 @@ Route::any('admin/login', function() {
 Route::group( ['prefix' => 'admin',"middleware" => "auth"], function() {
 		Route::get('/', [AdminHomeController::class,'show'])->name("admin_home");
 		Route::get('users', [AdminUserController::class,'show'])->name("admin_user");
+		    Route::get('users/delete/{id}', [AdminUserController::class,'delete'])->name("admin_user_delete");
 		Route::any('appointments', [AdminAppointmentController::class,'show'])->name("admin_appointment");
 		    Route::any('appointments/delete/{id}', [AdminAppointmentController::class,'delete'])->name("admin_appointment_delete");
 		    Route::any('appointments/status/{id}', [AdminAppointmentController::class,'status'])->name("admin_appointment_status");
@@ -52,6 +54,9 @@ Route::group( ['prefix' => 'admin',"middleware" => "auth"], function() {
 			Route::any('gallerys/save', [AdminGallerysController::class,'save'])->name("admin_gallery_save");
 			Route::any('gallerys/delete/{id}', [AdminGallerysController::class,'delete'])->name("admin_gallery_delete");
 
+    Route::any('slayts', [AdminHomeSlaytController::class,'show'])->name("admin_slayt");
+        Route::any('slayts/store', [AdminHomeSlaytController::class,'store'])->name("admin_slayt_store");
+        Route::any('slayts/delete/{id}', [AdminHomeSlaytController::class,'destroy'])->name("admin_slayt_delete");
 
 	Route::group( ['prefix' => 'cures'], function() {
 		Route::any('/', [AdminCuresController::class,'index'])->name("admin_cure");
@@ -73,7 +78,6 @@ Route::group( ['prefix' => 'admin',"middleware" => "auth"], function() {
 
     Route::group( ['prefix' => 'review'], function() {
         Route::any('/', [AdminReviewController::class,'show'])->name("admin_review");
-        Route::any('save', [AdminReviewController::class,'store'])->name("admin_review_save");
         Route::any('edit/{id}', [AdminReviewController::class,'edit'])->name("admin_review_edit");
         Route::any('update/{id}', [AdminReviewController::class,'update'])->name("admin_review_update");
         Route::any('delete/{id}', [AdminReviewController::class,'destroy'])->name("admin_review_delete");

@@ -44,6 +44,12 @@
 					<p>Randevular</p>
 				</a>
 			</li>
+            <li>
+                <a href="{{Route("admin_slayt")}}">
+                    <i class="nc-icon nc-album-2"></i>
+                    <p>Anasayfa Slayt</p>
+                </a>
+            </li>
 			<li>
 				<a href="{{Route("admin_gallery")}}">
 					<i class="nc-icon nc-album-2"></i>

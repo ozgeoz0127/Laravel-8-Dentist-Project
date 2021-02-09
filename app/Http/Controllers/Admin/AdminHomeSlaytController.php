@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\SystemController;
+use App\Models\Slayt;
 use Illuminate\Http\Request;
-use App\Models\Review;
+use Illuminate\Support\Facades\Storage;
 
-class AdminReviewController extends Controller
+class AdminHomeSlaytController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,9 +24,9 @@ class AdminReviewController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+
     }
 
     /**
@@ -37,7 +37,10 @@ class AdminReviewController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $im =new Slayt;
+        $im->image     = Storage::disk('public')->putFile('images', $request->file("image"));
+        $im->save();
+        return redirect()->back();
     }
 
     /**
@@ -48,7 +51,7 @@ class AdminReviewController extends Controller
      */
     public function show(Request $request)
     {
-        return  view('admin/review',["review" => Review::all()]);
+        return  view('admin/slayt',["gallery" => Slayt::all()]);
     }
 
     /**
@@ -59,7 +62,7 @@ class AdminReviewController extends Controller
      */
     public function edit($id)
     {
-        return  view('admin/review_edit',["message" => Review::find($id)]);
+        //
     }
 
     /**
@@ -71,10 +74,7 @@ class AdminReviewController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $new = Review::find($id);
-        $new->status 		= $request->input('status');
-        $new->save();
-        return back()->with("success","Status güncellendi.");
+        //
     }
 
     /**
@@ -85,7 +85,7 @@ class AdminReviewController extends Controller
      */
     public function destroy($id)
     {
-        Review::find($id)->delete();
+        Slayt::find($id)->delete();
         return redirect()->back();
     }
 }

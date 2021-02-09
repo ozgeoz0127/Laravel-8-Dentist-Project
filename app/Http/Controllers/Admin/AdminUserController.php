@@ -12,7 +12,11 @@ class AdminUserController extends Controller
     public function show(){
 		$list = User::all();
 		return  view('admin/user',["users" => $list]);
-		
+
     }
-    
+    public function delete($id){
+        User::find($id)->delete();
+        return redirect()->back();
+    }
+
 }

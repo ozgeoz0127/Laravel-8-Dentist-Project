@@ -26,17 +26,15 @@
         </ul>
 
         <!-- The slideshow -->
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="images/hero_bg_1.jpg" style="width:100%;height:100%" >
-            </div>
-            <div class="carousel-item">
-                <img src="https://via.placeholder.com/1600x800?text=slide2" style="width:100%;height:100%" >
-            </div>
-            <div class="carousel-item">
-                <img src="https://via.placeholder.com/1600x800?text=slide3" style="width:100%;height:100%">
-            </div>
+        <div class="carousel-inner" style="max-height:900px;overflow: hidden">
+            @foreach ($settings["slayt"] as $k=>$v)
+                <div class="carousel-item @if ($k==0) active @endif">
+                    <img src="{{asset("storage/".($v->image))}}" style="width:100%;" >
+                </div>
+            @endforeach
         </div>
+
+
 
         <!-- Left and right controls -->
         <a class="carousel-control-prev" href="#demo" data-slide="prev">

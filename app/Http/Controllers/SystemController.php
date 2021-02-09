@@ -11,11 +11,12 @@ use App\Models\Process;
 use App\Models\Review;
 use App\Models\Setting;
 use App\Models\Randevu;
+use App\Models\Slayt;
 
 class SystemController extends Controller
 {
-	
-	
+
+
 	public static function settings()
 	{
 		$arr 						= [];
@@ -23,22 +24,27 @@ class SystemController extends Controller
 
 		$arr["settings"]["doctors"] = self::getdoctors();
 		$arr["settings"]["cures"] 	= self::getcure();
-	
+
 		$arr["settings"]["gallery"]	= self::gallery();
 		$arr["settings"]["faq"]		= self::faq();
+		$arr["settings"]["slayt"]	= self::slayt();
 
 		return $arr;
 	}
 
 	public static function gallery()
-	{		
+	{
 		return Image::all();
 	}
+    public static function slayt()
+    {
+        return Slayt::all();
+    }
 
 	public static function faq($type="")
 	{
 		if ($type=="all") {
-			return Faq::all();	
+			return Faq::all();
 		}
 		return Faq::where("status",1)->get();
 	}
@@ -99,12 +105,5 @@ class SystemController extends Controller
 		}
 		return $r;
 
-		if (count($td) > 0) {
-			foreach ($td as $k=>$v) {
-				$r[$v->id] = ["name" => $v->title,"image"=> $v->image,"url"=>$v->url,"id" => $v->id,"keywords" => $v->keywords,"description" => $v->description,"detail" => $v->detail];
-			}
-
-			return $r;
-		}
 	}
 }

@@ -65,7 +65,7 @@
 										{{($v->status == 1 ? "Okundu" : "Yeni")}}
 									</td>
 									<td class="text-right">
-										<a href="javascript:;" onclick="myPopup('{{Route("admin_contact_edit",$v->id)}}', '',750,550);"  data-toggle="tooltip" class="btn btn-success btn-icon btn-sm "  title="Düzenle">
+										<a href="javascript:;" onclick="myPopup('{{Route("admin_review_edit",$v->id)}}', '',750,550);"  data-toggle="tooltip" class="btn btn-success btn-icon btn-sm "  title="Düzenle">
 											<i class="fa fa-edit"></i>
 										</a>
 										<a href='{{Route("admin_contact_delete",$v->id)}}'" data-toggle="tooltip" class="btndelete btn btn-danger btn-icon btn-sm "  title="Kaldır">
