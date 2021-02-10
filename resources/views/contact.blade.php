@@ -16,7 +16,7 @@
 <div class="site-block-half d-block d-lg-flex ">
 	<div class="image order-2 bg-light">
 		<h2 class="site-heading text-black mb-3">&nbsp;</h2>
-		
+
 		<form action="{{route("contact_sendmessage")}}" method="POST" class="p-5 ">
 			@include('includes.message')
 			@csrf
@@ -64,29 +64,21 @@
 		<h2 class="site-heading text-black mb-3">İletişim
 			<strong>Bilgileri</strong></h2>
 
-		<a href="{{$settings["twitter"]}}" class="p-2 pl-0">
+		<a href="{{$settings["twitter"]}}" target="_blank" class="p-2 pl-0">
 			<span class="icon-twitter"></span> / {{$settings["twitter"]}}
 			</a>
-		<a href="{{$settings["facebook"]}}" class="p-2 pl-0">
+		<a href="{{$settings["facebook"]}}" target="_blank" class="p-2 pl-0">
 			<span class="icon-facebook"></span> / {{$settings["facebook"]}}
 		</a>
-		<a href="{{$settings["instagram"]}}" class="p-2 pl-0">
+		<a href="{{$settings["instagram"]}}" target="_blank" class="p-2 pl-0">
 			<span class="icon-instagram"></span> / {{$settings["instagram"]}}
 		</a>
-		
+
 		<p class="lead">{!! $settings["address"] !!}</p>
 		<p >Telefon : {{$settings["phone"]}} - Fax : {{$settings["fax"]}}</p>
 		<p >{{$settings["email"]}}</p>
 	</div>
 </div>
 
-
-<div class="promo py-5 bg-primary">
-	<div class="container text-center">
-		<span class="d-block h4 mb-3 font-weight-light text-white"> Yeni yılda Diş temizleme ve Beyazlatma
-			<strong class="font-weight-bold">%50</strong> indirim !</span>
-		<div id="date-countdown" class="mt-0"></div>
-	</div>
-</div>
 
 @stop

@@ -27,11 +27,11 @@
 						<h3 class="footer-heading mb-4">Takip Edin</h3>
 
 						<div>
-							<a href="{{$settings["facebook"]}}" class="pl-0 pr-3">
+							<a href="{{$settings["facebook"]}}" target="_blank" class="pl-0 pr-3">
 								<span class="icon-facebook"></span></a>
-							<a href="{{$settings["twitter"]}}" class="pl-3 pr-3">
+							<a href="{{$settings["twitter"]}}" target="_blank" class="pl-3 pr-3">
 								<span class="icon-twitter"></span></a>
-							<a href="{{$settings["instagram"]}}" class="pl-3 pr-3">
+							<a href="{{$settings["instagram"]}}" target="_blank" class="pl-3 pr-3">
 								<span class="icon-instagram"></span></a>
 						</div>
 					</div>
