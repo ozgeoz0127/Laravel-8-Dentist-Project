@@ -8,7 +8,7 @@
 				</button>
 			</div>
 			<div class="modal-body">
-				<div class="col-md-12 col-xs-12 text-right" style="padding-left:0px;padding-right:0px">
+				<div class="col-md-12 col-xs-12 text-right" style="padding-left:0px;padding-right:0px;margin-bottom:10px">
 					<a href="javascript:;" id="loginformbutton"  class="col-md-6 col-xs-6 active">Giriş Formu</a>
 					<a href="javascript:;" id="registerbuttonbutton"  class="col-md-6 col-xs-6 ">Üyelik Formu</a>
 				</div>
@@ -49,7 +49,7 @@
 
 <script>
 	$(function(){
-		
+
 		$("#registerform").submit(function() {
 
 			event.preventDefault();
@@ -80,10 +80,10 @@
 			return false;
 
 		});
-		
-		
+
+
 		$("#loginform").submit(function(){
-			
+
 			event.preventDefault();
 			formurl 	= $(this).attr("action");
 			load = $("#loginmodal .loadlogin");
@@ -100,7 +100,7 @@
 						if (c.redirect == "refresh") {
 							location.reload(false);
 						}else {
-							location.href = c.redirect;	
+							location.href = c.redirect;
 						}
 
 					} ,1500);
@@ -109,22 +109,22 @@
 				}
 			});
 			return false;
-			
+
 		});
-		
-		
+
+
 		$("#registerbuttonbutton").click(function() {
-			$(".loginform").hide();				
-			$(".registerform").show();		
-			$("#loginmodal .active").removeClass("active");		
-			$(this).addClass("active");		
+			$(".loginform").hide();
+			$(".registerform").show();
+			$("#loginmodal .active").removeClass("active");
+			$(this).addClass("active");
 		});
 		$("#loginformbutton").click(function() {
 			$(".loginform").show();
 			$(".registerform").hide();
 			$("#loginmodal .active").removeClass("active");
-			$(this).addClass("active");		
+			$(this).addClass("active");
 		});
 	})
-	
+
 </script>

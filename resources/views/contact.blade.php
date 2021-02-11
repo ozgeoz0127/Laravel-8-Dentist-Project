@@ -1,17 +1,16 @@
 @extends('layouts.default')
 @section('content')
 
-<div class="site-blocks-cover inner-page" style="background-image: url({{asset("images/contact_header.jpg")}});" data-aos="fade" data-stellar-background-ratio="0.5">
-	<div class="container">
-		<div class="row align-items-center">
-			<div class="col-md-7">
-				<span class="sub-text">Temas Kurun</span>
-				<h1>
-					<strong>İletişim</strong></h1>
-			</div>
-		</div>
-	</div>
-</div>
+    <div class="site-blocks-cover aos-init aos-animate inner-page" style="height:200px;min-height:150px;background-image: url({{asset("images/hero_bg_2.jpg")}});" data-aos="fade" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-12 col-xs-12 pagestitle">
+                    <h1>
+                        <strong> iletişim</strong></h1>
+                </div>
+            </div>
+        </div>
+    </div>
 
 <div class="site-block-half d-block d-lg-flex ">
 	<div class="image order-2 bg-light">
@@ -64,15 +63,7 @@
 		<h2 class="site-heading text-black mb-3">İletişim
 			<strong>Bilgileri</strong></h2>
 
-		<a href="{{$settings["twitter"]}}" target="_blank" class="p-2 pl-0">
-			<span class="icon-twitter"></span> / {{$settings["twitter"]}}
-			</a>
-		<a href="{{$settings["facebook"]}}" target="_blank" class="p-2 pl-0">
-			<span class="icon-facebook"></span> / {{$settings["facebook"]}}
-		</a>
-		<a href="{{$settings["instagram"]}}" target="_blank" class="p-2 pl-0">
-			<span class="icon-instagram"></span> / {{$settings["instagram"]}}
-		</a>
+
 
 		<p class="lead">{!! $settings["address"] !!}</p>
 		<p >Telefon : {{$settings["phone"]}} - Fax : {{$settings["fax"]}}</p>
@@ -80,5 +71,7 @@
 	</div>
 </div>
 
+
+</div>
 
 @stop

@@ -18,5 +18,11 @@ class AdminUserController extends Controller
         User::find($id)->delete();
         return redirect()->back();
     }
+    public function status($id){
+        $user = User::find($id);
+        $user->status = 1;
+        $user->save();
+        return redirect()->back();
+    }
 
 }

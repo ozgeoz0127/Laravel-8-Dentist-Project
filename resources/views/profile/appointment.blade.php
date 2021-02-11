@@ -15,9 +15,9 @@
 			<span class="text-danger">Onay bekliyor</span> @else
 			<span class="text-success">Onaylandı</span> @endif</td>
 		<td>
-			<button type="button" data-toggle="tooltip" class="btn btn-danger btn-icon btn-sm " title="" data-original-title="Kaldır">
-				X
-			</button></td>
+            <a href='{{Route("profile_appointment_delete",$v->id)}}' class="btn btn-danger" data-toggle="tooltip" title="Kaldır">X</a>
+
+        </td>
 	</tr>
 	@endforeach
 

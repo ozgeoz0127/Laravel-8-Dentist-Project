@@ -39,7 +39,7 @@ class UserTableSeeder extends Seeder
 		],
 
 	];
-	
+
     /**
      * Run the database seeds.
      *
@@ -54,9 +54,10 @@ class UserTableSeeder extends Seeder
 			$new->email = $user['email'];
 			$new->role = $user['role'];
 			$new->password = Hash::make($user['password']);
+			$new->status    = 1;
 			$new->save();
 		}
-		
+
     }
 }
 

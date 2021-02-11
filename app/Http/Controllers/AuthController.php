@@ -14,7 +14,7 @@ class AuthController extends Controller
 	public function login (LoginRequest $request)
 	{
 		$credentials = $request->only('email', 'password');
-
+        $credentials["status"] = 1;
 		$auth = Auth::attempt($credentials);
 
 		if ($request->ajax()) {
@@ -46,6 +46,7 @@ class AuthController extends Controller
 		$new->email 	= $user['email'];
 		$new->role 		= "user";
 		$new->password 	= Hash::make((isset($user["password"]) ? $user["password"] : "012701"));
+		$new->status 	= 0;
 		$new->save();
 
 		return $new->id;
@@ -61,12 +62,10 @@ class AuthController extends Controller
 			// kullanıcıyı kaydediyoruz
 			$user = self::adduser($post);
 
-			// yeni kullanıcıyı login yapıyoruz
-			$credentials = $post->only('email', 'password');
-
 			return response()->json([
-				"auth"		=> Auth::attempt($credentials),
-				"redirect"	=> "refresh"
+				"auth"		=> false,
+				"redirect"	=> "refresh",
+                "error"     => "Üyeliğiniz onaylandıktan sonra giriş yapabilirsiniz"
 			]);
 
 

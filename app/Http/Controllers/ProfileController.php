@@ -11,18 +11,18 @@ use App\Models\Randevu;
 
 class ProfileController extends Controller
 {
-	
+
 	public function show(Request $request)
 	{
-		
+
 		//login kontrol
 		if (!Auth::check()) {
 			$s = SystemController::settings();
 			return view("profilelogin",$s);
-		}	
+		}
 
 		$s = SystemController::settings();
-		
+
 		/*if ($url == "appointment") {
 			$s["appointment"]	= $this->appointmentlist();
 		}*/
@@ -31,24 +31,28 @@ class ProfileController extends Controller
 
 		return view('profile',$s);
     }
-    
+
     public function userinfo(){
 		$s = SystemController::settings();
 		$s["detailpage"]	= view('profile/userinfo');
-		return view('profile',$s); 
-    	
+		return view('profile',$s);
+
     }
-    
+
 	public function review()
 	{
 		$s = SystemController::settings();
 		$s["detailpage"]	= view('profile/review',["review" => Review::where("user_id",Auth::user()->id)->get()]);
-		return view('profile',$s); 
-		
+		return view('profile',$s);
+
 	}
-	
-   
-    
+	public function review_delete($id){
+        Review::find($id)->delete();
+        return redirect()->back();
+    }
+
+
+
 	public function userupdate(Request $request)
 	{
 		$new = User::find(Auth::user()->id);
@@ -59,14 +63,18 @@ class ProfileController extends Controller
 		$new->save();
 		return redirect()->route("logout");
 	}
-    
-    
+
+
 	public function appointment(){
-		
+
 		$s = SystemController::settings();
 		$s["detailpage"]	= view('profile/appointment',["appointment" => Randevu::where("user_id",Auth::user()->id)->get()]);
-		return view('profile',$s); 
-		
+		return view('profile',$s);
+
 	}
-    
+    public function appointment_delete($id){
+        Randevu::find($id)->delete();
+        return redirect()->back();
+    }
+
 }

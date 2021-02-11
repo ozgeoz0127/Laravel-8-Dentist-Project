@@ -24,14 +24,13 @@
 				<label for="" title="2 star"></label>
 				<input type="radio" id="star1" @if ($v->rate == 1) checked @endif name="rating{{$v->id}}" value="1" />
 				<label for="" title="1 star"></label>
-			</div>			
-			
+			</div>
+
 		</td>
 		<td>@if ($v->status == "0") <span class="text-danger">Onaylanmadı</span> @else <span class="text-success">Onaylandı</span> @endif</td>
 		<td>
-			<button type="button" data-toggle="tooltip" class="btn btn-danger btn-icon btn-sm " title="" data-original-title="Kaldır">
-				X
-			</button></td>
+            <a href='{{Route("profile_review_delete",$v->id)}}' class="btn btn-danger" data-toggle="tooltip" title="Kaldır">X</a>
+        </td>
 	</tr>
 	@endforeach
 

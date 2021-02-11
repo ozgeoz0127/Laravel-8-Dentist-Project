@@ -21,6 +21,9 @@
 									<th>
 										Rol
 									</th>
+                                    <th>
+                                        Durum
+                                    </th>
 									<th class="text-right">
 										İşlem
 									</th>
@@ -40,7 +43,13 @@
 									<td>
 										{{$v->role}}
 									</td>
+                                    <td>
+                                        @if ($v->status == 0) Onaylanmadı @else Onaylandı @endif
+                                    </td>
 									<td class="text-right">
+                                        <a href="{{Route("admin_user_status",$v->id)}}" data-toggle="tooltip" class="btn btn-success btn-icon btn-sm "  title="Onayla">
+                                            <i class="fa fa-check-square"></i>
+                                        </a>
                                         <a href="{{Route("admin_user_delete",$v->id)}}" data-toggle="tooltip" class="btn btn-danger btn-icon btn-sm "  title="Kaldır">
                                             <i class="fa fa-times"></i>
                                         </a>

@@ -35,16 +35,17 @@
 
 					<div id="collapse{{$k}}" class="collapse @if ($k == 0) show @endif" aria-labelledby="headingOne" data-parent="#accordion">
 						<div class="card-body">
-							{!! $v->answer !!}
+							{!! $v->answer !!} 							
 						</div>
 					</div>
 				</div>
 				@endforeach
-
-			</div>
+				
+			</div>					
 		</div>
 	</div>
 </div>
 
+@include("includes.usercomment")
 
 @stop

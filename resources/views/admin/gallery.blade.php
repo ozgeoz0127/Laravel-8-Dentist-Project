@@ -23,7 +23,7 @@
 								</div>
 								<div class="form-group col-md-3 col-xs-6">
 									<label class="control-label">Resim Başlık</label>
-									<input type="text" class="form-control" name="title">
+									<input required type="text" class="form-control" name="title">
 								</div>
 								<div class=" col-md-3 col-xs-6">
 									<label class="control-label">Dosya Seçiniz</label>
@@ -33,7 +33,7 @@
 									<input type="submit" class="form-control btn btn-success" style="margin-top:21px" value="Kaydet">
 								</div>
 
-							
+
 						</form>
 					</div>
 					</div>

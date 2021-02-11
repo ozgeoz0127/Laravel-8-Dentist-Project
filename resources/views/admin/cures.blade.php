@@ -47,10 +47,10 @@
 										{{($v->status == 1 ? "Aktif" : "Pasif")}}
 									</td>
 									<td class="text-right">
-										<a href='{{Route("admin_cure_edit",$v->id)}}'"  data-toggle="tooltip" class="btn btn-success btn-icon btn-sm "  title="Düzenle">
+										<a href='{{Route("admin_cure_edit",$v->id)}}'  data-toggle="tooltip" class="btn btn-success btn-icon btn-sm "  title="Düzenle">
 											<i class="fa fa-edit"></i>
 										</a>
-										<a href='{{Route("admin_cure_delete",$v->id)}}'" data-toggle="tooltip" class="btndelete btn btn-danger btn-icon btn-sm "  title="Kaldır">
+										<a href='{{Route("admin_cure_delete",$v->id)}}' data-toggle="tooltip" class="btndelete btn btn-danger btn-icon btn-sm "  title="Kaldır">
 											<i class="fa fa-times"></i>
 										</a>
 									</td>
