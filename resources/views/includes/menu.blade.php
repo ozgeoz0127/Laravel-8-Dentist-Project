@@ -84,6 +84,12 @@
 											<a href="{{route("profile_userinfo")}}" >Bilgilerim</a>
 											<a href="{{route("profile_appointment")}}" >Randevularım</a>
 											<a href="{{route("profile_review")}}" >Yorumlarım</a>
+                                            @php
+                                                $userRoles = Auth::user()->roles->pluck("name");
+                                            @endphp
+                                            @if( $userRoles->contains('Admin') )
+                                                <a href="{{route("admin_home")}}" >Yönetim Alanı</a>
+                                            @endif
 											<a href="{{route("logout")}}" >Çıkış</a>
 										</li>
 

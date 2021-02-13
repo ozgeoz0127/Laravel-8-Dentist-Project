@@ -14,28 +14,36 @@ class UserTableSeeder extends Seeder
 			'surname' => 'Admin',
 			'email' => 'admin@user',
 			'password' => '012701',
-			'role' => 'admin'
+			'role' => '1',
+            'phone' => "05556664488",
+            'address'   => "Adana"
 		],
 		[
 			'name' => 'Yüksel',
 			'surname' => 'Çelik',
 			'email' => 'yuksel@user',
 			'password' => '012701',
-			'role' => 'dishekimi',
+			'role' => '2',
+            'phone' => "05556664488",
+            'address'   => "Adana"
 		],
 		[
 			'name' => 'Özge',
 			'surname' => 'Öz',
 			'email' => 'ozge@user',
 			'password' => '012701',
-			'role' => 'dishekimi',
+			'role' => '2',
+            'phone' => "05556664488",
+            'address'   => "Adana"
 		],
 		[
 			'name' => 'Test',
 			'surname' => 'test',
 			'email' => 'test@user',
 			'password' => '012701',
-			'role' => 'user',
+			'role' => '4',
+            'phone' => "05556664488",
+            'address'   => "Adana"
 		],
 
 	];
@@ -54,6 +62,8 @@ class UserTableSeeder extends Seeder
 			$new->email = $user['email'];
 			$new->role = $user['role'];
 			$new->password = Hash::make($user['password']);
+            $new->phone = $user['phone'];
+            $new->address = $user['address'];
 			$new->status    = 1;
 			$new->save();
 		}

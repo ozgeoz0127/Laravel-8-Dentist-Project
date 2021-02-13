@@ -29,6 +29,8 @@
 						<p><input type="text" class="form-control" name="name" placeholder="Ad"></p>
 						<p><input type="text" class="form-control" name="surname" placeholder="Soyad"></p>
 						<p><input type="text" class="form-control" name="email" placeholder="Email"></p>
+						<p><input type="text" class="form-control" name="phone" placeholder="Telefon"></p>
+						<p><input type="text" class="form-control" name="address" placeholder="Adres"></p>
 						<p><input type="password" class="form-control" name="password" placeholder="Şifre"></p>
 						<div class="row">
 							<div class="col-md-3">

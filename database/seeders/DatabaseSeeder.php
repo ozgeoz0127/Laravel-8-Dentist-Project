@@ -17,8 +17,10 @@ class DatabaseSeeder extends Seeder
 		UserTableSeeder::class,
 		SettingTableSeeder::class,
 		TedaviTableSeeder::class,
-		FaqTableSeeder::class
-		
+		FaqTableSeeder::class,
+            RoleTableSeeder::class,
+            RoleUserTableSeeder::class
+
 		]);
 
 		$this->command->info('Table seeded!');

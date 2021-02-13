@@ -32,7 +32,8 @@
 							</div>
 						</div>
 						<div class="card-body ">
-							<div class="input-group">
+                            @include('includes.message')
+                            <div class="input-group">
 								<div class="input-group-prepend">
 									<span class="input-group-text">
 										<i class="nc-icon nc-single-02"></i>
@@ -52,7 +53,8 @@
 						<div class="card-footer ">
 							<input type="submit" class="btn btn-warning btn-round btn-block mb-3" value="Sisteme Giriş">
 							<div class="load col-md-12 col-xs-12"></div>
-						</div>
+
+                        </div>
 					</div>
 				</form>
 			</div>
@@ -64,7 +66,7 @@
 	<script src="{{asset("js/admin/core/bootstrap.min.js")}}"> </script>
 	<script>
 		$(function(){
-
+            /*
 			$.ajaxSetup({
 				headers: {
 					'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -83,7 +85,7 @@
 					url: formurl,
 					data: $(this).serialize()
 				}).done(function(c) {
-					if (c.auth && c.role=="admin") {
+					if (c.auth && c.role=="1") {
 						load.html("<span class='text-success'>Hoşgeldiniz.</span>");
 						setTimeout(function() {
 							location.href = formurl.replace("login","admin");
@@ -95,7 +97,7 @@
 				});
 				return false;
 
-			});
+			});*/
 
 		});
 	</script>

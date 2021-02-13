@@ -23,7 +23,11 @@ class AuthController extends Controller
 				"role"		=> (is_null(Auth::user()) ? "null" : Auth::user()->role),
 				"redirect"	=> "refresh"
 			]);
-		}
+		}else {
+		    if($auth) {
+                return redirect()->route('admin_home');
+            }
+        }
 		return back();
 
 
@@ -44,8 +48,10 @@ class AuthController extends Controller
 		$new->name 		= $user['name'];
 		$new->surname 	= $user['surname'];
 		$new->email 	= $user['email'];
+		$new->phone 	= $user['phone'];
+		$new->address 	= $user['address'];
 		$new->role 		= "user";
-		$new->password 	= Hash::make((isset($user["password"]) ? $user["password"] : "012701"));
+		$new->password 	= Hash::make($user["password"]);
 		$new->status 	= 0;
 		$new->save();
 

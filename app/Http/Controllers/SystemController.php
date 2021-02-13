@@ -76,7 +76,7 @@ class SystemController extends Controller
 	public static function getdoctors()
 	{
 		$r=[];
-		$doc = \DB::table('users')->where('role', "dishekimi")->get()->toArray();
+		$doc = \DB::table('users')->where('role', "2")->get()->toArray();
 		if (count($doc) > 0) {
 			foreach ($doc as $k=>$v) {
 				$r[$v->id] = ["name" => $v->name,"surname" => $v->surname,"id" => $v->id];
