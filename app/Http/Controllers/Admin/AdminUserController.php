@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\SystemController;
 use App\Models\User;
 use App\Models\Role;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 
 
@@ -31,7 +32,7 @@ class AdminUserController extends Controller
      */
     public function create()
     {
-        //
+        return view("admin.user_create");
     }
 
     /**
@@ -42,7 +43,20 @@ class AdminUserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = new User;
+        $data->name     = $request->input("name");
+        $data->surname  = $request->input("surname");
+        $data->email    = $request->input("email");
+        $data->phone    = $request->input("phone");
+        $data->address  = $request->input("address");
+        $data->status   = $request->input("status");
+        $data->role 		= "user";
+        $data->password 	= Hash::make($request->input(["password"]));
+        if($request->file("image") != null) {
+            $data->profile_photo_path = Storage::disk('public')->putFile('profile_photos',$request->file("image"));
+        }
+        $data->save();
+        return redirect(route('admin_user'))->with("success","Yeni kullanıcı başarı ile eklendi");
     }
 
     /**

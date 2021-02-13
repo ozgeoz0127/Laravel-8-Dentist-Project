@@ -48,6 +48,8 @@ Route::group( ['prefix' => 'admin',"middleware" => "auth"], function() {
             Route::get('/', [AdminUserController::class,'index'])->name("admin_user");
             Route::get('delete/{id}', [AdminUserController::class,'destroy'])->name("admin_user_delete");
             Route::get('edit/{id}', [AdminUserController::class,'edit'])->name("admin_user_edit");
+            Route::get('create/', [AdminUserController::class,'create'])->name("admin_user_create");
+            Route::post('store/', [AdminUserController::class,'store'])->name("admin_user_store");
             Route::post('update/{id}', [AdminUserController::class,'update'])->name("admin_user_update");
             Route::get('userrole/{id}', [AdminUserController::class,'user_roles'])->name("admin_user_roles");
             Route::post('userrolestore/{id}', [AdminUserController::class,'user_role_store'])->name("admin_user_role_add");

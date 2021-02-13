@@ -6,9 +6,12 @@
 			<div class="card">
 				<div class="card-header">
 					<h4 class="card-title"> Kullanıcılar</h4>
-				</div>
+                    <a href='{{Route('admin_user_create')}}' clasS="btn btn-success "> + Yeni Ekle</a>
+                </div>
 				<div class="card-body">
-					<div class="table-responsive">
+                    @include('includes.message')
+
+                    <div class="table-responsive">
 						<table class="table">
 							<thead class=" text-primary">
 								<tr>
